@@ -1,4 +1,4 @@
-# Released under MIT License
+# The MIT License for Poole
 
 Copyright (c) 2013 Mark Otto.
 
