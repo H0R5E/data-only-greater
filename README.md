@@ -10,8 +10,8 @@ The inspiration for using Jekyll this way came from here: http://joshualande.com
 
 The Poole source code is licenced under the [MIT license](LICENSE_Poole.md).
 
-For everything else...
+For this project:
 
-&copy; Mathew Topper and dataonlygreater.com, 2015. Unauthorized use and/or duplication of this material without express and written permission from the author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to Mathew Topper and dataonlygreater.com with appropriate and specific direction to the original content.
+&copy; Mathew Topper and http://www.dataonlygreater.com, 2015. Unauthorized use and/or duplication of this material without express and written permission from the author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to Mathew Topper and http://www.dataonlygreater.com with appropriate and specific direction to the original content.
 
 
