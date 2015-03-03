@@ -2,7 +2,7 @@
 
 This is the repository for the Jekyll source of http://www.dataonlygreater.com, a website by Mathew Topper
 
-The original site was a copy of the Poole repository at https://github.com/poole/poole
+This began as a copy of the Poole repository at https://github.com/poole/poole
 
 The inspiration for using Jekyll this way came from here: http://joshualande.com/jekyll-github-pages-poole/
 
