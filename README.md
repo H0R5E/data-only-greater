@@ -6,9 +6,11 @@ This began as a copy of the Poole repository at https://github.com/poole/poole
 
 The inspiration for using Jekyll this way came from here: http://joshualande.com/jekyll-github-pages-poole/
 
-## License
+## Poole License
 
 The Poole source code is licenced under the [MIT license](LICENSE_Poole.md).
+
+## Copyright
 
 **For this project**:
 
