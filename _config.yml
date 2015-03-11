@@ -1,19 +1,28 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
 # Permalinks
 permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Data Only Greater
+title:            Data only Greater
 tagline:          Everything Mathew Topper...
+description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
 url:              http://www.dataonlygreater.com
-paginate:         1
 baseurl:          /
+
 author:
   name:           Mathew Topper
   url:            https://twitter.com/H0R5E
   email:          damm_horse@yahoo.co.uk
 
+paginate:         5
+paginate_path:    "/main/page:num/"
+
 # Custom vars
 version:          0.0.1
 github:
   repo:           https://github.com/H0R5E/data-only-greater
+

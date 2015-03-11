@@ -1,0 +1,75 @@
+---
+layout: notes
+title: Notes on Cheung et al. (2011)
+---
+
+<p><em>Cheung, S. H., Oliver, T. A., Prudencio, E. E., Prudhomme, S., &amp; Moser, R. D.
+(2011). Bayesian uncertainty analysis with applications to turbulence modeling.
+Reliability Engineering &amp; System Safety, 96(9), 1137-1149.</em></p>
+<h3 id="general">General</h3>
+<p>Recent paper using Bayesian uncertainty analysis to investigate the uncertainty
+of various turbulence models was using a RANS solver. Unlike the work of
+O&#8217;Hagan (2006), they do not use an emulator, instead, using Bayesian techniques
+to select an appropriate uncertainty model to embed within the simulator (being
+OpenFOAM).</p>
+<h3 id="validation">Validation</h3>
+<p>There is an interesting quote about the use of the term <em>validation</em>:</p>
+<blockquote>
+<p>&#8220;we follow Babu&scaron;ka <em>et al.</em> and define validation as the process of
+determining whether a mathematical model is a sufficient representation of
+reality to be used in making particular decisions&#8230; Note, however, that the
+word &#8220;validation&#8221; has also been used differently by other authors.</p>
+<p>This validation of the use of a model for a particular purpose is somewhat
+different from validation of a model (or theory) as a description of the
+physical world.  In the latter case, the critical question is whether the
+theory is consistent with observations, and any inconsistency is grounds for
+rejection of the theory.  Alternatively, in this work, we accept that a model
+may be inconsistent with observations; the critical question is whether the
+inconsistency is so large as to introduce unacceptably large discrepancies in
+the predictions.&#8221;</p>
+</blockquote>
+<p>This appears more like a discussion on adequacy, than validation, and perhaps
+it is the &#8220;model (or theory)&#8221; part that is the issue. The model and the theory
+are not the same as far as I am concerned, but perhaps it reflects on it.</p>
+<h3 id="multiple-stochastic-model-classes">Multiple Stochastic Model Classes</h3>
+<p>Much of the paper is dedication to the selection of a stochastic model to fit
+the uncertainty in the turbulence model. 3 different statistical model classes,
+$M_{j}$, are attempted and a better one is found by some crazy maths.  When the
+best model is found, they use it to calculate the calibration parameters.</p>
+<h3 id="the-discrete-model">The Discrete Model</h3>
+<p>As mentioned earlier, the numerical model used was OpenFOAM. Two meshes were
+used for 3 cases, being 2080 cells and 4200 cells. These are quite coarse
+really and they do a convergence study on this, but then do not consider the
+numerical error is the statistical analysis, which is odd. They put it that </p>
+<blockquote>
+<p>&#8220;the discretization errors are smaller than the uncertainties in the problem
+(i.e., the model and data uncertainties described in the next sections).&#8221;</p>
+</blockquote>
+<p>I think this is a real indicator of the difference in approaches, in that the
+foibles of the numerical model itself is not really of interest to the
+statistician.</p>
+<h3 id="results">Results</h3>
+<p>Of the three stochastic model classes addressed, the $M_{3}$ class is found to
+be the most plausible. The $M_{3}$ model has the form of a &#8220;<em>Correlated
+Gaussian Uncertainty</em>&#8221;, given by</p>
+<p>$$\mathbf{\eta} \sim N(\mathbf{1}, K_{m})$$</p>
+<p>where $K_{m}$ is covariance matrix determined from a Gaussian random field
+model of the velocity field. That model is quite complicated, so I guess there
+is good reason for it to be the most plausible.</p>
+<p>Interestingly, both in the calibration and validation of predicted outcomes,
+the $M_{3}$ model has the most uncertain outcomes. Thus, they stress it is
+quite important to ascertain how good an uncertainty model is being used.</p>
+<h3 id="conclusions">Conclusions</h3>
+<p>The paper concludes by stating there are <strong>a lot</strong> of remaining challenges to
+solve including evaluating more uncertainty models and different turbulence
+models.</p>
+<p>They also say that the computational effort is an issue and that emulators
+might be required.</p>
+<p>There is also a realisation that although the methodology allows for some
+models to be rejected, it does not ensure validation. This may require
+additional experimental data and examination of its effect.</p>
+<p>Finally, some discussion of validation failure and what that mean to the model
+is broached. This highlights the difficulties with the separation of model
+development with Bayesian approaches.</p>
+<h6 id="wzxhzdk0-2013-mathew-b-r-topper">&copy; 2013 Mathew B. R. Topper</h6>
+

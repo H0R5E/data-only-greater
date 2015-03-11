@@ -1,0 +1,128 @@
+---
+layout: notes
+title: Notes on O&#8217;Hagan (2006)
+---
+
+<p><em>O&#8217;Hagan, A. (2006). Bayesian analysis of computer code outputs: a tutorial.
+Reliability Engineering &amp; System Safety, 91(10), 1290-1300.</em></p>
+<h3 id="general">General</h3>
+<p>This is an excellent paper for describing some of the essence of the Bayesian
+statistical approach to model calibration and validation. It has a strong
+emphasis on <em>emulators</em>, being statistical models to represent the output of a
+numerical model, but it is the uncertainty associated with the emulator which
+is the common theme among all Bayesian works, whether this is to represent the
+uncertainty in the emulator or the numerical model itself.</p>
+<p>The paper is laid out to deconstruct the taxonomy of the statistical approach
+to model uncertainty quantification and is somewhat different from that of the
+model developer approach to V&amp;V.</p>
+<h3 id="simulators">Simulators</h3>
+<p>A <em>simulator</em> is the numerical model in question. This includes the conceptual
+model <em>and</em> the numerical implementation. [This distinction is subtle and
+important as the Roy approach carefully separates all of these parts of a
+model.] A simulator is given the symbology $f(\,.)$.</p>
+<blockquote>
+<p>&#8220;The outputs y of a simulator are a prediction of the real-world phenomena
+that are simulated by the model, but as such will inevitably be imperfect.
+There will be uncertainty about how close the true real-world quantities will
+be to the outputs y. This uncertainty arises from many sources, particularly
+uncertainty in the correct values to give the inputs x and uncertainty about
+the correctness of the model $f(\,.)$ in representing the real-world
+system;&#8221;</p>
+</blockquote>
+<p>The purpose of the process is to &#8220;quantify, analyse and reduce uncertainty in
+simulator outputs&#8221;.</p>
+<h3 id="bayesian-methods">Bayesian Methods</h3>
+<p>This section is trying to draw the distinction between Bayesian and
+<em>frequentist</em> statistics. Frequentist statistics is familiar, in that it is the
+probability we all know and hate, i.e. it the probability that something might
+happen given an infinite occurrences of the event. This is described as
+<em>aleatory</em> uncertainty, as it concerns the outcomes of random events.</p>
+<p>As expected, a great deal of uncertainty is not due to inherent randomness, but
+from not knowing enough about a parameter, for instance, through lack of
+knowledge. Its not random in itself. This is an <em>epistemic</em> uncertainty.
+&#8220;Within the Bayesian framework we are free to quantify all kinds of
+uncertainty, whether aleatory or epistemic, through probabilities.&#8221;</p>
+<p>[Bayesian probability is often presented in probability density functions where
+the area under the curve represents the probability for an interval. This is
+why there are sometimes high numbers on pdf graphs. See
+probabilitydensity.pdf.]</p>
+<h3 id="emulators">Emulators</h3>
+<p><em>Emulators</em> are statistical models of the outputs of simulators. This
+approximation to $f(\,.)$ is given as $\hat{f}(\,.)$. The important distinction
+is made that $\hat{f}(\mathbf{x})$ is the mean of the statistical emulator and
+that there is a <strong>statistical distribution</strong> about the mean, which describes
+the uncertainty of the emulator to the true $f(\mathbf{x})$.</p>
+<p>Emulators are built by <em>training</em> them to data from $f(\,.)$, providing an
+estimate of $f(\,.)$. The emulator must then:</p>
+<ol>
+<li>Hit the design points exactly with no uncertainty.</li>
+<li>Away from the training data the estimate should give a plausible mean value
+and a realistic probability distribution about that mean which is a realistic
+expression of the uncertainty in interpolating the simulation.</li>
+</ol>
+<p>The best choice of emulator to achieve this is a <em>Gaussian Process</em> emulator
+(GP).</p>
+<p>The uncertainty created by using an emulator as an approximation to $f(\,.)$ is
+called <em>code uncertainty</em>.</p>
+<p>A large section is dedicated to demonstrating the application of a GP emulator,
+but that is not necessarily important for the Bayesian concepts.</p>
+<h3 id="uncertainty-analysis">Uncertainty Analysis</h3>
+<blockquote>
+<p>&#8220;If the input vector $\mathbf{x}$ is uncertain, we can consider it as a
+random vector.  In statistics, we denote this by writing it as $\mathbf{X}$.
+The output is of course now also a random variable, and we write
+$Y=f(\mathbf{X})$&#8221;.</p>
+</blockquote>
+<p>The probability distribution for $\mathbf{X}$ is denoted as $G$.</p>
+<p>Monte Carlo techniques can be used on sample inputs from $G$ and compute them
+in the emulator. However, the uncertainty can be analytically calculated from
+the GP using uncertain data $\mathbf{X}$.  $G$, can be used to get the emulated
+mean $\hat{M}$, and a associated uncertainty distribution which will be normal,
+assuming $G$ is normal. Thus the simulator has only been required to generate
+the GP emulator.</p>
+<p>Note that its the uncertainty model in the GP that is most important here,
+rather than the GP itself. As seen in other papers, the uncertainty model can
+be embedded in the simulator and then inferences made from that. This does
+remove a number of the efficiency advantages of using an emulator, however.</p>
+<h3 id="other-uses-of-emulators">Other Uses of Emulators</h3>
+<ul>
+<li>
+<p>Emulators can be used for sensitivity analysis, reducing the computational
+  burden on the simulator significantly.</p>
+</li>
+<li>
+<p>Calibration can be achieved for model parameters. The approach gives an
+  uncertainty measure in the inputs which is reduced, but not lost. The
+  validation metric is known as a <em>model discrepancy function</em> which can also be
+  considered as a GP.</p>
+</li>
+</ul>
+<h3 id="extensions-and-challenges">Extensions and Challenges</h3>
+<ul>
+<li>
+<p>There seem to be a number of issues with emulators, particularly to do with 
+  multiple outputs and computing the GP itself. </p>
+</li>
+<li>
+<p>There is also a problem that the emulator may be unnaturally smooth compared
+  to the reality of the computation.</p>
+</li>
+<li>
+<p>Correlation between outputs is an issue. Emulators can be built for multiple
+  outputs separately, but if they are correlated, information may be lost.</p>
+</li>
+<li>
+<p>Emulators don&#8217;t seem to do &#8220;dynamic&#8221; models, like time series I guess.</p>
+</li>
+<li>
+<p>Bayesian approaches can be used for validation (as seen in other papers), by
+  setting bounds on the uncertainty in the model emulator, or otherwise.</p>
+</li>
+<li>
+<p>No <em>general</em> softwares exist for this yet.</p>
+</li>
+</ul>
+<h5 id="some-babble">Some Babble</h5>
+<p>I need a \$1. I might also need another \$1. $e^{i\pi}=1$</p>
+<h6 id="wzxhzdk0-2013-mathew-b-r-topper">&copy; 2013 Mathew B. R. Topper</h6>
+

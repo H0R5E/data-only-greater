@@ -1,0 +1,55 @@
+---
+layout: notes
+title: Notes on Roache (1997)
+---
+
+<p><em>Roache, P. J. (1997). Quantification of uncertainty in computational fluid
+dynamics. Annual Review of Fluid Mechanics, 29(1), 123-160.</em></p>
+<h3 id="introduction">Introduction</h3>
+<p>This is a review paper on the quantification of uncertainty within
+computational fluid dynamics.</p>
+<p>Note the use of <em>final calculation</em> in the first paragraph. This is trying to separate
+these errors from those of grid adaptation, for instance.</p>
+<p>Discusses prohibition of methods of <em>first order spatial accuracy</em>. Much like a
+wave energy model then.</p>
+<ul>
+<li>Verification: <em>&#8220;solving the equations right&#8221;</em></li>
+<li>Validation: <em>&#8220;solving the right equations&#8221;</em></li>
+</ul>
+<p>Another nice quote:</p>
+<blockquote>
+<p><em>&#8220;a code cannot be validated; only a calculation&#8221;</em></p>
+</blockquote>
+<h3 id="error-taxonomies-p127">Error Taxonomies (p127)</h3>
+<p>Roache is quite unique in defining (or critiquing) error taxonomies. I think it
+just shows how hard it is to do such a thing.</p>
+<p>Note that the taxonomies in Mackay (2010) are a joke. He talks of random, mean
+internal and external errors which is all over the place.</p>
+<p>I don&#8217;t understand all of the terminology, particularly <em>ordering</em>. OK, here is
+something that might help:</p>
+<blockquote>
+<p>&#8220;The defining characteristic of the non- ordered approximation is that, as
+mesh size tends to zero, the algebraic equations do not converge to any
+continuum&#8221;</p>
+</blockquote>
+<p>This is from <em>Verification of Computer Codes in Computational Science and
+Engineering By Patrick Knupp, Kambiz Salari</em>.</p>
+<p>The paper then bangs on about verification techniques for a long time.</p>
+<h3 id="time-accuracy-estimation-p151">Time Accuracy Estimation (p151)</h3>
+<p>To be frank, there is not a lot of discussion about time evolving solutions in
+the V&amp;V literature, so this is quite useful.</p>
+<p><em>&#8220;Estimation of the numerical error of the time discretisation can be done in
+the same manner as the spatial errors, but simpler methods may also be used.&#8221;</em></p>
+<p>He offers a method for producing error estimates, but basically warns that
+testing the time step of a code is very important too.</p>
+<h3 id="cafe-curves-p153">Cafe Curves (p153)</h3>
+<p>This is one of the few places I have ever seen Cafe Curves written about
+(cumulative area fraction error) and they are used to represent domain errors.
+It might be interesting to try and do it with our grids, perhaps, rather than
+just trying to do point estimates?</p>
+<p>Obviously, there is some interest in what is going on in the point estimates,
+but the uncertainty in the global field is the final aim.</p>
+<p>There is also some discussion of how the error norms are useful or not. These
+are the  $L_{2}$ and $L_{\infty}$ norms.</p>
+<h6 id="wzxhzdk0-2013-mathew-b-r-topper">&copy; 2013 Mathew B. R. Topper</h6>
+

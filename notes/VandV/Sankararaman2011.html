@@ -1,0 +1,55 @@
+---
+layout: notes
+title: Notes on Sankararaman &amp; Mahadevan (2011)
+---
+
+<p><em>Sankararaman, S., &amp; Mahadevan, S. (2011). Model validation under epistemic
+uncertainty. Reliability Engineering &amp; System Safety, 96(9), 1232-1241.</em></p>
+<h3 id="general">General</h3>
+<p>One of the cited issues with using Bayesian analysis for validation is given by
+Roy &amp; Oberkampf (2011) is that it does not deal with epistemic uncertainty in
+the inputs. This paper, and the work of Sankararaman in general, seeks to
+address this issue. Note, however, that only poorly understood stochastic data
+is addressed, not poorly understood deterministic data, as we would find in
+certain inputs to wave models (like bathymetry, perhaps).</p>
+<p>There is some disagreement about how epistemic uncertainty can be handled and I
+think this quote illuminates some of these issues and some solutions:</p>
+<blockquote>
+<p>&#8220;of sparse and/or imprecise data. Some researchers argue against a
+probabilistic approach to handle interval data because information may be
+added to the problem. However, if the quantity is stochastic to begin with,
+it is only appropriate to represent it with a probability distribution.
+Regarding faithfulness to the available information, the proposed method
+addresses this concern either (1) by quantifying the uncertainty in the
+parameters of the probability distribution and using a family of
+distributions in the parametric approach or (2) by constructing
+non-parametric probability distributions that are more flexible than
+parametric distributions and more faithful to the available information.&#8221;</p>
+</blockquote>
+<h3 id="probabilistic-representation-of-epistemic-model-inputs">Probabilistic Representation Of Epistemic Model Inputs</h3>
+<p>These &#8220;mixed&#8221; uncertain inputs are dealt with in two different ways in this
+paper. Either, they form families of parametric distributions to describe them
+and then integrate them together or they form a single non-parametric
+representation of the uncertainty. I don&#8217;t want to go into a great deal of
+detail due to time constraints but a Guassian Process appears in the
+non-paremetric case.</p>
+<h3 id="calibration-validation">Calibration &amp; Validation</h3>
+<p>Note that, in this case, an emulator does not appear to be used. The paper also
+deals with uncertain model data in the form of <em>interval data</em>. This has not
+been considered in Bayesian validation before. It does this by using an error
+interval from the minimum and maximum errors.</p>
+<h3 id="conclusions">Conclusions</h3>
+<p>An interesting admission in the conclusions:</p>
+<blockquote>
+<p>&#8220;This integration is computationally efficient and meaningful for model
+validation by integrating the contribution of different types/sources of
+uncertainty into a single validation metric, which is helpful for
+decision-making purposes.  However, it may not be suitable for sensitivity
+analysis where the quantification of individual contributions of aleatory and
+epistemic uncertainties to the model output uncertainty is of interest.&#8221;</p>
+</blockquote>
+<p>Basically, there is this issue of differing focus again, from whether you want
+to determine where the uncertainty originates or simply whether the model is OK
+for use.</p>
+<h6 id="wzxhzdk0-2013-mathew-b-r-topper">&copy; 2013 Mathew B. R. Topper</h6>
+

@@ -1,0 +1,220 @@
+---
+layout: notes
+title: Notes on Oberkampf &amp; Trucano (2002)&#58; Sections 1 and 2
+---
+
+<p><em>Oberkampf, W. L., &amp; Trucano, T. G. (2002). Verification and validation in
+computational fluid dynamics. Progress in Aerospace Sciences, 38(3), 209-272.</em></p>
+<h2 id="contents">Contents</h2>
+<ol>
+<li><a href="#general">General</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#terminology">Historical Terminology</a></li>
+<li><a href="#contributors">Historical Contributors</a></li>
+<li><a href="#verification_method">Verification Methodology</a> </li>
+<li><a href="#validation_method">Validation Methodology</a></li>
+</ol>
+<hr>
+<h3 id="wzxhzdk0wzxhzdk1general"><a id="General"></a>General</h3>
+<p>Good historical reference, with masses of references. Somewhat focuses on the
+<em>validation experiment</em> being an experiment that is focused on the validation
+of numerical code rather than its purpose being primarily about physical
+insight.</p>
+<h4 id="useful-quotes">Useful Quotes</h4>
+<p>Why numerically model? (Page 211):</p>
+<blockquote>
+<p>&#8220;This new trend of modeling and simulation based design&#8230; is also driven by
+the high cost and time that are required for laboratory testing or field
+components, as well as complete systems.&#8221;</p>
+</blockquote>
+<p>How well established is V&amp;V? (Page 211):</p>
+<blockquote>
+<p>&#8220;The state of the art has not developed to the point where one can clearly
+point out all of the actual methods, procedures, and process steps that
+<em>must</em> be undertaken for V&amp;V.&#8221;</p>
+</blockquote>
+<p>Present process is not OK (Page 211):</p>
+<blockquote>
+<p>&#8220;The present method of qualitative &#8220;graphical validation,&#8221; i.e., comparison
+of computational results and experimental data on a graph, is inadequate.&#8221;</p>
+</blockquote>
+<p>V&amp;V is difficult! (Page 211):</p>
+<blockquote>
+<p>&#8220;We recognise, however, that the complexities of the quantification of V&amp;V
+are substantial, from both a research perspective and a practical
+perspective.&#8221;</p>
+</blockquote>
+<p>V&amp;V is important in complex systems (Page 214):</p>
+<blockquote>
+<p>&#8220;Regardless of the difﬁculties and constraints, methods must be devised for
+measuring the accuracy of the model for as many conditions as the model is
+deemed appropriate. As the complexity of a model increases, its accuracy and
+range of applicability can become questionable.&#8221;</p>
+</blockquote>
+<p>Code Verification is challenging (Page 215):</p>
+<blockquote>
+<p>&#8220;the veracity, correctness, and accuracy of a computational model cannot be
+demonstrated for all possible conditions and applications, except for trivial
+models.&#8221;</p>
+</blockquote>
+<p>Verification is only for tested cases (Page 215):</p>
+<blockquote>
+<p>V&amp;V activities can only assess the correctness or accuracy of the speciﬁc
+cases tested.</p>
+</blockquote>
+<p>General V&amp;V doctrine (Page 215):</p>
+<blockquote>
+<p>&#8220;Verification is the ﬁrst step of the validation process and, while not
+simple, is much less involved than the more comprehensive nature of
+validation. Validation addresses the question of the ﬁdelity of the model to
+speciﬁc conditions of the real world. The terms &#8220;evidence&#8221; and &#8220;fidelity&#8221;
+both imply the concept of &#8220;estimation of error,&#8221; not simply &#8220;yes&#8221; or &#8220;no&#8221;
+answers.&#8221;</p>
+</blockquote>
+<p>Graphical comparisons are not good enough (Page 216):</p>
+<blockquote>
+<p>&#8220;The typical validation procedure in CFD, as well as other ﬁelds, involves
+graphical comparison of computational results and experimental data. If the
+computational results &#8220;generally agree&#8221; with the experimental data, the
+computational results are declared &#8220;validated&#8221;. Comparison of computational
+results and experimental data on a graph, however, is only incrementally
+better than a qualitative comparison.&#8221;</p>
+</blockquote>
+<p>Missing information in graphical comparison (Page 216):</p>
+<blockquote>
+<p>With a graphical comparison, one does not commonly see quantiﬁcation of the
+numerical error or quantiﬁcation of computational uncertainties due to
+missing initial conditions, boundary conditions, or modeling parameters.
+Also, an estimate of experimental uncertainty is not typically quoted, and in
+most cases it is not even available.</p>
+</blockquote>
+<p>Poor verification practises in academic (Page 217):</p>
+<blockquote>
+<p>&#8220;Upon examining the CFD literature as a whole, it is our view that
+verification testing of computer codes is severely inadequate.&#8221;</p>
+</blockquote>
+<h2 id="section-1">Section 1</h2>
+<h3 id="wzxhzdk2wzxhzdk3introduction"><a id="introduction"></a>Introduction</h3>
+<p>References to leading authorities in V&amp;V, for instance:</p>
+<ul>
+<li>The <em>Defence Modeling and Simulation Office</em> (DMSO) of the US Department of
+Defence.</li>
+<li>The <em>Accelerated Strategic Computing Initiative</em> (ASCI) of  the US 
+Department of Energy.</li>
+</ul>
+<p>The paper issues some <em>critical needs</em> on page 212 such as:</p>
+<ul>
+<li>&#8220;detailed characterization of the experimental conditions and the uncertainty
+estimation of the experimental measurements.&#8221;</li>
+<li>&#8220;quantification of numerical error estimation&#8221;</li>
+<li>&#8220;nondeterministic simulations, i.e., multiple deterministic simulations that
+reflect uncertainty in experimental parameters, initial conditions, and
+boundary conditions that exist&#8221;.</li>
+</ul>
+<p>There is a distinction between error, uncertainty, code verification and
+solution verification, apparently, discussed in section 3.</p>
+<p>There is significant emphasis on the <em>hierarchical methodology</em> for validation.</p>
+<h2 id="section-2">Section 2</h2>
+<h3 id="wzxhzdk4wzxhzdk5historical-terminology-p213"><a id="terminology"></a>Historical Terminology (p213)</h3>
+<p>Historical figures in V&amp;V were <em>Popper</em>, <em>Carnap</em> and the <em>Operations Research</em>
+(OR) community. Because of the complexities of the systems that OR attempted to
+deal with, Validation is virtually impossible in this case.</p>
+<p>The <em>Society of Computer Simulations</em> (SCS) published the first definitions of
+verification and validation. Talked a lot about <em>substantiation</em>, evidence of
+correctness.</p>
+<p>Something called <em>Qualification</em> was also defined by the SCS, which is to ask
+the question of how well does the conceptual model represent reality. This is
+not validation, which asks how well the numerical model represents reality. See
+the Fig. 1 on page 213.</p>
+<p>IEEE definitions are given but may not be appropriate for computational sciences
+as they are referential, as in they need another document to define the
+requirements. Yet, </p>
+<blockquote>
+<p>&#8220;the IEEE definitions are the more prevalent deﬁnitions used in engineering,
+and one must be aware of the potential confusion when other definitions are
+used.&#8221;</p>
+</blockquote>
+<p>The <em>American Institute of Aeronautics and Astronautics</em> (AIAA) provided the
+defacto definitions of validation and verification:</p>
+<ul>
+<li><em>Verification</em>: the process of determining that a model implementation
+  accurately represents the developer’s conceptual description of the model and
+the solution to the model.  </li>
+<li><em>Validation</em>: the process of determining the degree to which a model is an
+  accurate representation of the real world from the perspective of the
+intended uses of the model.</li>
+</ul>
+<p>V&amp;V is an <em>ongoing activity</em>, i.e. there is no completion, we are always
+building evidence, as Roach also asserts.</p>
+<p><em>Accuracy</em> is common to most definitions of V&amp;V which implies that a measure of
+correctness can be determined.</p>
+<h3 id="wzxhzdk6wzxhzdk7historical-contributors-p215"><a id="contributors"></a>Historical Contributors (p215)</h3>
+<p>Talks about contributors from the CFD community and also environmental quality
+modelling such as surface and ground water flows. The water-quality work relates
+to wave energy modelling. As Oberkampf puts it:</p>
+<blockquote>
+<p>&#8220;it addresses validation for complex processes in the physical sciences where
+validation of models is extremely difﬁcult, if not impossible.  Second,
+because of the limited knowledge, the environmental-modeling ﬁeld has adopted
+statistical methods of calibration and validation assessment.&#8221;</p>
+</blockquote>
+<p>There is discussion on the lack of information in purely graphical comparisons
+and some discussion on the selection of metrics for validation, such as</p>
+<blockquote>
+<p>&#8220;A metric would quantify both errors and uncertainties in the comparison of
+computational results and experimental data.&#8221;</p>
+</blockquote>
+<p>There is also some information on validation databases although these are
+described as &#8220;ad hoc and duplicative&#8221;! I had an idea here about having <em>&#8220;open
+tests&#8221;</em> rather than open code, so at least people could independently verify
+and validate black box codes.</p>
+<h3 id="wzxhzdk8wzxhzdk9verification-methodology-p217"><a id="verification_method"></a>Verification Methodology (p217)</h3>
+<p>Why is the UK not represented on the AIAA committee?</p>
+<p>The AIAA guide was one of the first standards published for V&amp;V and is a &#8220;first
+level&#8221; document, denoting the early developmental stage of the processes.</p>
+<p>Oberkampf states that benchmarks (or a fiducial) are required for verification,
+but if you&#8217;re verifying the numerics for a solution then there are no
+benchmarks, right?</p>
+<blockquote>
+<p>&#8220;Verification, thus, provides evidence (substantiation) that the conceptual
+(continuum mathematics) model is solved correctly by the discrete mathematics
+embodied in the computer code.&#8221;</p>
+</blockquote>
+<p><em>Important note on the sources of error:</em></p>
+<blockquote>
+<p>&#8220;Given a numerical procedure that is stable, consistent, and robust, the five
+major sources of errors in CFD solutions are insufﬁcient spatial
+discretization convergence, insufficient temporal discretization convergence,
+insufficient convergence of an iterative procedure, computer round-off, and
+computer programming errors.&#8221;</p>
+</blockquote>
+<p>There is a distinction made between solution verification (the first 4 of the
+errors listed above) and code verification (the last error). Code verification
+is a matter of <em>Software Quality Engineering</em> (SQE), which academics don&#8217;t do
+very well for reasons we know too well.</p>
+<h3 id="wzxhzdk10wzxhzdk11validation-methodology-p218"><a id="validation_method"></a>Validation Methodology (p218)</h3>
+<p>&#8220;Comparison between sufficiently accurate computational results and
+experimental data.&#8221; But what is &#8220;sufficiently accurate. Oberkampf does go on to
+discuss the quantification of numerical accuracy later in this document but its
+not driven home early, like in later work.</p>
+<p>Note that validation does not, &#8220;specifically address the inference of the
+models accuracy for cases different from the validation comparison.&#8221;</p>
+<blockquote>
+<p>&#8220;validation involves identification and quantiﬁcation of the error and
+uncertainty in the conceptual and computational models, quantification of the
+numerical error in the computational solution, estimation of the experimental
+uncertainty, and finally, comparison between the computational results and
+the experimental data.&#8221;</p>
+</blockquote>
+<p>So there is discussion of the numerical error in the validation process, rather
+than the verification process. I guess the paper sort of tries to drive that
+home a little bit, but there is a lot of cross-over of the processes, which is
+a tad confusing.</p>
+<p>Continued discussion of the validation hierarchy. Most discussion is about
+experimental measurements at each tier of the problem.</p>
+<p>There is definitely this &#8220;verification of calculation&#8221; distinction, with the
+error calculations reappearing in the validation part. This is discussed in
+more details in sections 3 and 4, but it appears these things are less
+segregated in the latest thinking.</p>
+<h6 id="wzxhzdk12-2013-mathew-b-r-topper">&copy; 2013 Mathew B. R. Topper</h6>
+

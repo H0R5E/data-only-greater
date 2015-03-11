@@ -1,0 +1,567 @@
+---
+layout: notes
+title: Notes on Cavaleri (2009)
+---
+
+<p><em>Cavaleri, L. (2009). Wave modeling-missing the peaks. Journal of Physical
+Oceanography, 39(11), 2757-2778.</em></p>
+<h2 id="contents">Contents</h2>
+<ol>
+<li><a href="#general">General</a></li>
+<li><a href="#worry">What to Worry About</a></li>
+<li><a href="#stateart">The State of the Art</a></li>
+<li><a href="#reasons">Reasons for the Errors</a><ol>
+<li><a href="#physics_wind">Physics: Wind</a></li>
+<li><a href="#physics_wave">Physics: Wave Generation</a></li>
+<li><a href="#physics_whitecapping">Physics: Whitecapping</a></li>
+<li><a href="#physics_nonlinear">Physics: Nonlinear Interactions</a></li>
+<li><a href="#numerics">Numerics</a></li>
+<li><a href="#modeling">Modeling</a></li>
+</ol>
+</li>
+<li><a href="#general_comments">General Comments</a></li>
+<li><a href="#act">Where to Act</a></li>
+</ol>
+<hr>
+<h3 id="wzxhzdk0wzxhzdk1-general"><a id="general"></a> General</h3>
+<p>This is a very interesting paper, which although focussed on extreme
+conditions, &#8220;analyzes the capability of the present wave models of properly
+reproducing the conditions during and at the peak of severe and extreme
+storms&#8221;,  it identifies a lot of potential issues with spectral wave models.
+Even in the abstract there are some very interesting quotes, such as:</p>
+<blockquote>
+<p>&#8220;wind accuracy is still a relevant factor at the peak of the storms.&#8221;</p>
+<p>&#8220;a sensitivity study is suggested to identify the most critical areas in a
+wave model to determine where to invest for further improvements.&#8221;</p>
+<p>&#8220;The limits on the description of the physics of the processes when using the
+spectral approach, particularly in extreme conditions, are considered.&#8221;</p>
+</blockquote>
+<h3 id="wzxhzdk2wzxhzdk3-what-to-worry-about-pp-2757-2758"><a id="worry"></a> What to Worry About (pp. 2757&#8212;2758)</h3>
+<p>Basically the introduction, this section presents some of the apparent issues
+and what to do about them. The following quotes are self explanatory:</p>
+<p>Issues with parameterisation:</p>
+<blockquote>
+<p>&#8220;The strong demand for practical results has also led to solutions where the
+complexity of the problem and the difficulties of getting enough data in the
+right conditions have required partially empirical solutions.&#8221;</p>
+</blockquote>
+<p>Issues with calibration over time scales:</p>
+<blockquote>
+<p>&#8220;tuning is generally completed on the bulk of the data. The more rare a
+special case is, the more likely it is to be poorly represented by the
+&#8220;tuned&#8221; rule, especially if in these &#8220;different&#8221; conditions the physics of
+the process does change.&#8221;</p>
+</blockquote>
+<p>Issues with validation:</p>
+<blockquote>
+<p>&#8220;Of course, a low bias does not exclude positive and negative errors by the
+model, for whatever reason. This is why we also use correlations and scatter
+indices. However, a straight-forward study of several scatter diagrams or
+time series comparisons and related statistics will quickly reveal that the
+models have a marked tendency to under-estimate the largest wave heights, and
+in particular the peaks, more in heavy storm conditions.&#8221;</p>
+</blockquote>
+<p>Identification of errors:</p>
+<blockquote>
+<p>&#8220;Obviously the first step is to identify the reasons for our errors. This
+paper is an attempt in this direction for what concerns spectral wave
+modeling.&#8221;</p>
+<p>&#8220;This leads to a rather long, possibly discouraging, list of potential
+sources of errors.&#8221;</p>
+</blockquote>
+<p>Solutions to the problems:</p>
+<blockquote>
+<p>&#8220;we try to discuss where it is possible to act, where work can be done, and
+which actions could be taken to overcome at least part of the present
+limitations.&#8221;</p>
+<p>&#8220;there is a wide spectrum of opinions of where exactly we are and which are
+the right ways to go.&#8221;</p>
+</blockquote>
+<h3 id="wzxhzdk4wzxhzdk5-the-state-of-the-art-pp-2758-2761"><a id="stateart"></a> The State of the Art (pp. 2758&#8212;2761)</h3>
+<p>General discussion that normal conditions of wave models perform quite well,
+particularly local models which can be calibrated specifically</p>
+<blockquote>
+<p>&#8220;Nowadays, the average error of an advanced wave model is easily down to a
+few, typically negative, percents, with a bias of the order of 10 cm or
+fewer.&#8221;</p>
+<p>&#8220;Compared to the quoted general performance of operational global models, even
+better results are achieved by special studies, typically concerning some
+specific storms.&#8221;</p>
+</blockquote>
+<p>The focus on the poor performance in high wave heights is emphasized:</p>
+<blockquote>
+<p>&#8220;when we analyze the statistics with respect to wave height&#8230; it is
+immediately evident that the average error, both as bias and rms, is strongly
+dependent on $H_{s}$, the largest wave heights suffering underestimates up to
+1m or more.&#8221;</p>
+</blockquote>
+<p>The ability for local models to perform better is generally attributed to
+improved description of wind fields:</p>
+<blockquote>
+<p>&#8220;Indeed, the improvements in the description of the surface wind fields,
+derived from the model&#8217;s higher resolutions, and an improved description of
+the physical processes at work, particularly at the air-sea interface, have
+been key elements in the improvement of the wave results.&#8221;</p>
+</blockquote>
+<p>This relationship of improved wind fields leading to multiplicative
+improvements in the wave field, has led to a belief that errors in the wind
+field is the main source of error in wave modelling. Yet, this (lengthy) quote
+and perhaps our own investigations in Hebmarine may indicate this is not
+entirely the case:</p>
+<blockquote>
+<p>&#8220;[There was an] assumption that the wind field inaccuracy was the main reason
+for the, typically negative, errors in wave modeling. However, &#8230;  this
+attitude is rapidly approaching an end.  Although the wind errors should
+certainly still be considered, wave modelers also have to look into their own
+machines if they want to decrease further the differences between wave model
+results and the measured truth.&#8221;</p>
+</blockquote>
+<p>There is a lot of evidence of missing peaks and troughs in wave modelling. The
+time series in Figure 2 (p. 2760) shows that, even for non-extreme conditions,
+models perform better in the average than in the extremes</p>
+<blockquote>
+<p>&#8220;The one-month plot (March 2008) shows very clearly the repeated tendency
+of the model to miss the peaks.&#8221;</p>
+</blockquote>
+<p>Figures 3 and 4 show an interesting relationship that shows that the average
+wind speeds become asymptotic with resolution quickly, with a similar (but not
+complete) convergence for average wave heights. Figure 4 shows that no such
+convergence is apparent for peak wind speeds or wave heights. There is an
+argument that problems in the wave field are all related to the wind field,
+however, this quote aims to dispel that:</p>
+<blockquote>
+<p>&#8220;with increasing resolution the area [influenced] by the wind underestimate
+is getting smaller and smaller. Because the waves are an integrated effect,
+in space and time, of the driving wind fields, we should expect to see a
+progressively reduced effect of these &#8220;wind misses&#8221; on the waves - something
+obviously not true from the right panel of Fig. 4.  Therefore, although the
+wind quality has obviously an effect, we must conclude that the problem lies
+also within the wave model itself.&#8221;</p>
+</blockquote>
+<h3 id="wzxhzdk6wzxhzdk7-reasons-for-the-errors-p-2761-2771"><a id="reasons"></a> Reasons for the Errors (p. 2761&#8212;2771)</h3>
+<p>This section (actually called &#8220;The search for a good reason (where we find we
+have to deal with a whole plethora of processes)&#8221;) tries to identify the
+problems leading to the underestimation of extremes and splits the discussion
+into the physics within models, the numerics of the models and a more general
+modelling discussion.</p>
+<h4 id="wzxhzdk8wzxhzdk9-physics-wind-p-2762"><a id="physics_wind"></a> Physics: Wind (p. 2762)</h4>
+<p>I think I&#8217;ll just quote the summary here:</p>
+<blockquote>
+<p>&#8220;<em>Summary</em>. Underestimates of the surface wind speeds are more frequent in
+the high value range. Model resolution is critical. Smoothing of the fields,
+a frequent practice in meteorological modeling, leads to lower peak values.
+Gustiness is not properly considered. Air density can vary substantially,
+directly affecting wave generation.&#8221;</p>
+</blockquote>
+<p>The interesting part about resolution is capturing the gradients, so that a
+small area storm can be more difficult to model that a large one and the
+gradients will be more substantial. The term <em>Limited-Area Model</em> (LAM) is
+defined, which might describe the Hebmarine model, although it may be larger,
+being defined, roughly, as <em>not global</em>.</p>
+<h4 id="wzxhzdk10wzxhzdk11-physics-wave-generation-p-2764"><a id="physics_wave"></a> Physics: Wave Generation (p. 2764)</h4>
+<p>Miles (1957) is the method used for the generation of waves from wind in
+numerical models. It was improved by Snyder (1981), but the measurements were
+taken for wind speeds of about 7-10 ms${}^{-1}$. This has issues:</p>
+<blockquote>
+<p>&#8220;It is natural to wonder if we are allowed, as we presently do, to use the
+same findings in extreme storms, with winds up to 30 or 40 ms${}^{-1}$, much
+higher in hurricanes. The nice orderly picture that the Miles process implies
+is likely not to correspond to the truth once we move to high winds.&#8221;</p>
+</blockquote>
+<p>The physics in high wave heights is different&#8230;</p>
+<blockquote>
+<p>&#8220;Banner and Melville (1976) had shown that the transfer of energy to waves is
+characterized by a series of bursts that happen when the surface air boundary
+layer detaches from the sea surface soon after the crest of breaking waves.
+In severe, and more so in extreme, conditions this can be expected to be the
+case for practically each single wave.&#8221;</p>
+</blockquote>
+<p>Apparently, as waves get bigger the physics changes somewhat. Water droplets
+being blown off the waves can have an impact as their acceleration is felt by
+the atmosphere and creates higher surface drag, whilst they also kill the short
+waves which enable momentum transfer.</p>
+<p>At the very high wind speeds, so much foam is generated that there is no
+troughs in the wave, which invalidates the Miles (1975) approach apparently.</p>
+<p>There are also issues with linear theory, even for deep water problems, when
+large waves are considered:</p>
+<blockquote>
+<p>&#8220;All the spectral wave models use linear wave kinematics; that is, the phase
+speed $c$ of a given spectral component is evaluated on the basis of linear
+theory. However, the infinitesimal approximation implied and the finite
+dimension of real waves may lead to appreciable differences.&#8221;</p>
+</blockquote>
+<p>The phase speed being higher for steeper waves decreases the difference between
+the wind speed, $U$, and $c$ (which would reduce transfer) but longer waves
+also mean that the waves could be larger.</p>
+<p>Interestingly gustiness causes waves to grow faster than the equivalent uniform
+wind speed. There is also a phenomena that happens when the phase speed of the
+waves is close to the wind speed. Something called the <em>&#8220;diode&#8221;</em> effect (from
+Abdalla and Calaleri (2002)).</p>
+<blockquote>
+<p>The differences can be significant: straightforward numerical experiments
+showing that a 30% wind variability can lead, in a longer time scale, to a
+30% increase of the maximum significant wave height.&#8221;</p>
+</blockquote>
+<p>Here is the summary for this section:</p>
+<blockquote>
+<p>&#8220;<em>Summary</em>. Doubts exist on the validity of the Miles (1957) theory (although
+modified) in extreme conditions. The physics does change in such a situation.
+At present we do not have a good physical, hence numerical, model of what is
+going on at very high wind speeds.  </p>
+<p>The finite, large amplitude of stormy waves, particularly the dominant ones,
+implies a phase speed greater than dictated by linear theory. In the end this
+may lead to larger wave heights.</p>
+<p>The level of gustiness experienced in the field is often underestimated in
+meteorological models. Therefore, its consideration in wave models does not
+lead to the related enhancements found in the measured results.  Besides,
+models do not reproduce the possible longer-term oscillations of both the
+winds and wave fields. In certain conditions, but typically in the very
+severe storms, this leads to a strong underestimate of the possible maximum
+values.</p>
+<p>Cold, hence frequently gusty, winds are also characterized by a higher air
+density. Neglecting its variations often leads to an underestimate of the
+resulting wave heights.&#8221;</p>
+</blockquote>
+<h4 id="wzxhzdk12wzxhzdk13-physics-whitecapping-p-2765"><a id="physics_whitecapping"></a> Physics: Whitecapping (p. 2765)</h4>
+<p>There are two main whitecapping models in use, but they seem to vary in
+outputs, which is particularly interesting in terms of uncertainty
+quantification as this is being &#8220;made up&#8221; somewhere in the models:</p>
+<blockquote>
+<p>&#8220;If used in their correct software environment, both of these approaches
+provide reasonable and often good results in most practical applications;
+however, it is stunning that their quantifications of the process differ by
+100% or more, which tells a lot about the difference between sound physics
+and correct operational results.&#8221;</p>
+</blockquote>
+<p>Better approaches have been found recently, which has improved the bias
+significantly for low wave heights (see Figure 1). This Ardhuin <em>et al.</em> (2008)
+formulation still requires parameterisation, however, and does still not work
+well in the high ranges.</p>
+<p>Here is the section summary:</p>
+<blockquote>
+<p>&#8220;<em>Summary</em>. During the present decade, progress has been made in
+understanding the physics of breaking waves. These results have only recently
+found their way into one operational model. Notwithstanding these advances,
+there is still a good level of empiricism in the way we attack the problem,
+and most of the operational models still cling to very empiric, often totally
+inconsistent, approaches. All the proposed and used solutions require some
+tunable constants. As such, they are tuned to the bulk of the results and may
+fail in extreme conditions, when the physics of the process is likely to be
+substantially different.&#8221;</p>
+</blockquote>
+<h4 id="wzxhzdk14wzxhzdk15-physics-nonlinear-interactions-p-2766"><a id="physics_nonlinear"></a> Physics: Nonlinear Interactions (p. 2766)</h4>
+<p>So non-linear interactions are solved with exact solutions, but under some
+strong assumptions. Nonetheless, the computing power required is very high for
+the original formulation of Hasselmann (1962 etc.) so a less intensive version
+called the <em>discrete interaction approximation</em> (DIA) has been used instead.</p>
+<p>There are some issues with DIA, particularly with the transfer of too much
+energy into the low frequencies or to spread the energy directionally, will
+cause less growth through wind inputs.</p>
+<p>Efforts are being made to provide solutions closer to the original Hasselmann
+formulation as more computing power becomes available, but the strong
+assumptions of the original formulation are still &#8220;not exact&#8221;, for reasons such
+as</p>
+<blockquote>
+<p>&#8220;the model is a large time limit closure and neglects near-resonant modes
+that can change the spectrum on much shorter scales&#8230; and in a region of
+rapid changes.&#8221;</p>
+<p>&#8220;the Hasselmann model presumes a homogeneous and Gaussian sea state, which is
+of course an idealization, especially in heavy and extreme conditions.&#8221;</p>
+<p>&#8220;it is a truncated model of a weakly nonlinear system. In other words, it
+includes the lowest-order resonances, whereas on longer time and space
+scales, other nonlinear contributions may become important.&#8221;</p>
+</blockquote>
+<p>Finally, this is the summary:</p>
+<blockquote>
+<p>&#8220;<em>Summary</em>. Beside its sometime incorrect spectral distribution, the present
+widely used DIA approximation leads to too-wide energy distributions in the
+spectra, both in frequency and in direction. This decreases the wind input to
+waves. New, better solutions are on the way. It is expected that these
+solutions will be implemented in operational models in the near future.
+However, all these solutions are still approximations, based on some strong
+hypotheses that are likely not to be satisfied in heavy and extreme sea
+conditions. The related implications for wave modeling have not yet been
+explored.&#8221;</p>
+</blockquote>
+<h4 id="wzxhzdk16wzxhzdk17-numerics-p-2767"><a id="numerics"></a> Numerics (p. 2767)</h4>
+<p>The role of the numerics are described as:</p>
+<blockquote>
+<p>&#8220;to import into the spectral energies the inputs-outputs derived from the
+physical processes, and then to advect the resulting energy in the direction
+of the speciﬁc components.&#8221;</p>
+</blockquote>
+<p>The main issue with the numerics, particularly for extremes in the diffusion of
+energy throughout the spatial and frequency domains. Caverli says that &#8220;the
+problem is unavoidably linked to the discontinuity associated to a grid&#8221;,
+although there are some arguments that grid refinement is perhaps not always
+ideal. However, I think this relates more to the time-step size, so without a
+fixed CFL number.</p>
+<blockquote>
+<p>&#8220;In some numerical schemes, the spreading due to diffusion can be reduced by
+using a higher-resolution grid or, where possible, using larger integration
+time steps, that is, reducing their number in a given time interval.&#8221;</p>
+<p>&#8220;a careful analysis is required to achieve the best balance between diffusion
+and overall integration time.&#8221;</p>
+</blockquote>
+<p>Other fixes include higher order numerical schemes, although these have some
+risk from the &#8220;<em>garden sprinkler effect</em>&#8221;. Also higher frequency resolution can
+be used but this has a double hit in terms of computing time as more non-linear
+interaction calculations must be done as well.</p>
+<p>Generally these issues effect small area storms with large gradients, but the
+correct advection of swell is also important.</p>
+<blockquote>
+<p>&#8220;A large-scale storm will be marginally affected by diffusion. However, a
+strong isolated peak will be substantially decreased during advection, its
+energy being redeployed at the neighboring grid points.&#8221;</p>
+<p>&#8220;a lower Hs also implies a lower peak period and in turn an underestimate of
+the consequent swell period, hence group speed.&#8221;</p>
+<p>&#8220;the correct advection of swell may happen to be of relevance for our present
+discussion.&#8221;</p>
+</blockquote>
+<p>Here is the summary:</p>
+<blockquote>
+<p>&#8220;<em>Summary</em>. Diffusion, unavoidably associated to the use of discrete grids,
+leads to a smoothing of the fields, hence to an underestimate of the
+extremes.  Although higher-order schemes may improve the situation, they
+often do so at the expenses of other details. Engineering solutions have been
+devised for practical applications.</p>
+<p>Higher-resolution grids or, Courant number permitting, larger time steps may
+ help. However, in each case a careful analysis is required to be sure that
+ the introduced changes act in the right direction.</p>
+<p>A higher spectral resolution would also be beneficial, especially for
+ long-distance swell. This could be relevant in cross-sea conditions.&#8221;</p>
+</blockquote>
+<h4 id="wzxhzdk18wzxhzdk19-modeling-p-2768"><a id="modeling"></a> Modeling (p. 2768)</h4>
+<p>This section considers other modelling considerations. These include combined
+effects, spectrum impacts and sensitive modelling phenomena such as &#8220;dynamic
+generation&#8221;.</p>
+<p>In terms of wave-current interactions, the paper say this:</p>
+<blockquote>
+<p>&#8220;Most of the currents we find in the sea are not strong enough to affect at a
+significant level the waves that characterize a storm. However, in certain
+areas where the current speed is not negligible with respect to the group
+speed of the relevant wave system - typically the Gulf Stream, the Kuroshio
+and the Agulhas Current - the interaction with currents may substantially
+enhance the height of the waves.&#8221;</p>
+</blockquote>
+<p>Currents can reduce the wavelength of waves and enhance their wave height, with
+increased steepness. This increased steepness can lead to more energy transfer
+from wind. Getting accurate current information (ocean circulation, rather than
+tidal), is very difficult.</p>
+<p>There are some issues with the classical Pierson Moskowitz spectrum, in that
+models don&#8217;t tend to converge to this spectrum in all cases. This may be due to
+the model, or the development of the spectrum.</p>
+<blockquote>
+<p>&#8220;the very concept of fully developed conditions is still a matter of debate
+(see, e.g., Glazman and Pilorz 1990; Glazman 1994; Hwang and Wang 2004). As
+Alves et al. (2003) point out, the present convenient use of P-M64 is more a
+matter of a lack of conclusive evidence in either direction than scientific
+truth.&#8221;</p>
+</blockquote>
+<p>There are also issues with model quirks, such as the use of limiters in some
+models to control energy exchange. The model parts do not interchange either,
+for the same physical processes, which is not easily explained:</p>
+<blockquote>
+<p>&#8220;[We cannot take] part of the physics of WAM, for example, the whitecapping
+subroutines, and plunge it into WAVEWATCH. Surprisingly, at least the first
+time, we find that the $H_{s}$ results may change up to 40%.&#8221;</p>
+</blockquote>
+<p><em>Dynamic generation</em>, &#8220;the case when the heart of the storm, that is, its more
+energetic waves, moves with the weather system that generates it&#8221;, is a
+particular test for wave modelling as many of the talked about issues
+(particularly the correct phase speed) come into play. This is why, for some
+cases, &#8220;all the wave models substantially underestimated the measured peak
+values (Cardone et al 1996)&#8221;.</p>
+<p>Finally, the analytical modelling of the tail of the energy spectrum in models
+may cause some problems. A tail is required because the number of frequency
+bins is finite [although a lot of the high frequency bins tend to be empty in
+Hebmarine data]. The spectrum has a cut-off frequency and the selection of
+this frequency, and the power of the analytical tail leads to differences:</p>
+<blockquote>
+<p>&#8220;it implies possible $H_{s}$ differences of some tens of centimeters,
+particularly in heavy and extreme conditions, when the cutoff can be at a
+relatively low frequency.&#8221;</p>
+</blockquote>
+<p>The tail can also impact on the &#8220;level of input&#8221; and the losses due to
+whitecapping. There is also a general issue of models frequency components and
+real waves which is illucidated by this quote:</p>
+<blockquote>
+<p>&#8220;For advection a spectral model considers separately all the spectral
+components, the motion of each one independent of the other components. This
+is not the case for a buoy, especially in the high-frequency range, where the
+single components ride on top of the larger and longer ones, with a potential
+nonnegligible influence on their spectral representation.&#8221;</p>
+</blockquote>
+<p>Finally, this is the summary:</p>
+<blockquote>
+<p>&#8220;<em>Summary</em>. A highly detailed knowledge of the distribution of currents in
+the oceans is required for a proper evaluation of the wave-current
+interactions, hence the possibility of enhanced or focused wave fields.  Such
+knowledge is not yet available.</p>
+<p>Even when fetch and duration allow, wave models do not necessarily converge
+to the classical Pierson-Moskowitz spectrum. On the other hand, given the
+present level of accuracy of wave models and measurements, one could wonder
+about the accuracy of the data that led to this spectrum. Also the very
+concept of fully developed conditions is still a matter of debate.</p>
+<p>The use of limiters is in itself a strong indicator of the approximation with
+which the physics is represented in wave models, especially in extreme
+conditions; similarly so for the impossibility of exchanging sections of the
+programs representing the same physical process between two different models.</p>
+<p>The importance of accurately representing the phase and group speeds in
+extreme conditions becomes apparent in the case of dynamical generation.</p>
+<p>&#8220;The frequency after which to apply a tail and the slope of the tail is still
+a matter of debate. This may imply a nonnegligible contribution to the
+overall energy of the system, hence to the resulting wave height.&#8221;</p>
+</blockquote>
+<h3 id="wzxhzdk20wzxhzdk21general-comments-pp-2771-2773"><a id="general_comments"></a>General Comments (pp. 2771&#8212;2773)</h3>
+<p>This section considers more general wave modelling issues, rather than
+focussing on the extremes. A discussion of other sources of error is given:</p>
+<blockquote>
+<p>&#8220;Easy examples are the theoretical approximations implied in modeling, and
+the convergence and the accuracy of the numerical procedure.&#8221;</p>
+</blockquote>
+<p>A mention of nearshore processes and there issues is also given, with reference
+to the WISE group paper for further details.</p>
+<p>There is an interesting discussion on the <em>balance</em> of wave models and how they
+have been tweaked to get the errors from each process to cancel in some effect.
+[This, obviously, stands in the way of software process. You almost have
+deliberate failure in the unit testing]. Discussing the main drivers, which
+are wind and wave breaking, the author says:</p>
+<blockquote>
+<p>&#8220;We succeed, within limits, because the system is self-regulating. For
+instance, if at a certain time breaking is underestimated, the wave
+conditions rapidly grow to a level where breaking becomes impelling again,
+bringing the system under control.&#8221;</p>
+</blockquote>
+<p>This appears to be a hindrance to further development in wave models as &#8220;the
+present results of the operational wave models are in general surprisingly
+good.&#8221; This means that there is a reluctance to change the operational models
+for more exact physics, because of these special balances.</p>
+<blockquote>
+<p>&#8220;The dominant rule in practical applications is the following: a change to a
+model becomes permanent if and only if its effect is positive, that is, the
+score of prolonged applications improves.&#8221;</p>
+<p>&#8220;that the present models, good as they are, represent a careful balance among
+the different processes, each one with its larger or smaller inaccuracies.
+Having one process correct and all the other ones with their own previous
+approximations does not necessarily imply better results.&#8221;</p>
+</blockquote>
+<p>Issues with modelling and <em>measurement</em> for extreme conditions are mentioned.
+There is also some discussion about the validity of the spectral approach,
+although an alternative method seems somewhat daunting. There is an interesting
+quote from another paper, Komen <em>et al.</em> (1994) about trying to improve the
+quality of existing models:</p>
+<blockquote>
+<p>&#8220;one should not be too optimistic about the effect of further refinements&#8230;&#8221;</p>
+</blockquote>
+<h3 id="wzxhzdk22wzxhzdk23where-to-act-pp-2773-2776"><a id="act"></a>Where to Act (pp. 2773&#8212;2776)</h3>
+<p>This section considers what can be done to improve the present situation and
+has some good quotes for justifying work on uncertainty quantification. It
+considers the itemised issues for large amplitude waves and then the general
+case for modelling.</p>
+<p>Model resolution is discussed for both wind:</p>
+<blockquote>
+<p>&#8220;Starting as before with the wind, the most obvious possible improvement,
+particularly for the most intense areas of severe and extreme storms, is an
+increased resolution of the meteorological models&#8230; each additional step
+ahead $\alpha$ in resolution implying a much larger increase, $\alpha^{3}$ or
+$\alpha^{4}$, of the computer capabilities.&#8221;</p>
+</blockquote>
+<p>and wave:</p>
+<blockquote>
+<p>&#8220;Here, too, an $\alpha$ increase implies an $\alpha^{3}$ increase in computer
+time.&#8221;</p>
+</blockquote>
+<p>A highlighted issue with adding additional computer power, is that in the large
+centers wave modelling is not as important as other climate factors,</p>
+<blockquote>
+<p>&#8220;there are larger scientific and social interests driving the advance of the
+meteorological models, interests for which the wave modeling community is
+probably a minority.&#8221;</p>
+</blockquote>
+<p>Also, although meteorological models are advancing, &#8220;doubling the resolution of
+the meteorological models every five years or so&#8221;, issues with a lack of
+understanding of gustiness and a lack of proper modelling of the atmospheric
+spectrum.</p>
+<p>Regarding computing power for waves, adapted meshes are proposed:</p>
+<blockquote>
+<p>&#8220;what we really need is a flexible, most likely finite element, dynamical
+grid whose density in space is able to adapt continuously to the local
+gradients while the wave system moves from one area to another.&#8221;</p>
+</blockquote>
+<p>Not only refinement of spatial grid, but also refinement of the spectral
+representation should be of benefit:</p>
+<blockquote>
+<p>&#8220;a better spectral resolution, both in frequency and direction, and improved
+advection algorithms are key elements to reducing the smoothing of the
+fields, the consequent lowering of the maxima, and the error in the swell
+arrival time in a certain area. Although the former is only a matter of
+computer power, the latter one is a subtle compromise with the need to avoid
+unnaturally patchy fields.&#8221;</p>
+</blockquote>
+<p>The need for more computing power also extends into the underlying physical
+processes, particularly the <strong>nonlinear interactions</strong>.</p>
+<blockquote>
+<p>&#8220;The nonlinear interactions are probably the single item where the problem we
+face is the lack of sufficient computer power.&#8221;</p>
+</blockquote>
+<p>In the broader context of current interaction, <em>again</em>, a lack of computation
+power comes to the fore, although understanding and a lack of data also play a
+part:</p>
+<blockquote>
+<p>&#8220;The problem for the circulation modelers has its roots both in the physics
+of the processes at work, in the computer power for higher resolution, and in
+the lack of data.&#8221;</p>
+</blockquote>
+<p>This raises an issue of whether some of these problems can be modelling
+deterministically. In terms of ocean currents, given the lack of data, this is
+extremely difficult, thus &#8220;It seems that, at least for certain aspects, we will
+have to live more and more in a probabilistic world.&#8221;</p>
+<p>Other, not often considered phenomena and also mentioned, such as Stokes drift
+(non-linear transfer of mass by Stokes waves) and current-wind interactions.</p>
+<p><em>Most excitingly</em>, a short discussion of uncertainty quantification and model
+testing is hiding in the back of the paper. For instance, when considering how
+best to distribute future resources:</p>
+<blockquote>
+<p>&#8220;a more rational way could be to analyze the sensitivity of the final results
+to a refinement in the various processes and decide to invest along the most
+sensitive lines&#8221;.</p>
+<p>&#8220;it is not immediately obvious which elements the model is more sensitive
+to.&#8221;</p>
+<p>&#8220;It seems that a sensitivity study would be a useful exercise.&#8221;</p>
+</blockquote>
+<p><strong>I believe that a general uncertainty analysis process ideally lends itself to
+the above issues.</strong></p>
+<p>Interestingly, there is mention of Bayesian techniques for uncertainty
+quantification (is this how I found this paper?), although the difficulties
+with them are acknowledged</p>
+<blockquote>
+<p>&#8220;Sophisticated methods for model reproduction based on a Bayesian approach
+have recently been proposed&#8230; However, the sheer complexity and variety of
+the possible situations suggest that this is not a practical way, especially
+when we expect, as we presently do, to go beyond the classically integrated
+parameters $H_{s}$, $T_{m}$ and $\Theta_{m}$ (mean period and direction,
+respectively) and on to argue about the structure of the spectra.&#8221;</p>
+</blockquote>
+<p>Finally, there is some discussion of using cutting edge simulation to move away
+from, but also maybe inform the processes used in spectral modelling, &#8220;I
+believe a possibility is offered by the direct numerical simulation of what is
+going on in the sea&#8221;. Thus, some higher resolution CFD type studies of large
+and breaking waves would be beneficial.</p>
+<blockquote>
+<p>&#8220;Even a two-dimensional realization (i.e., a vertical section of the
+atmosphere and the sea surface), although with its limitations, would be a
+valuable start. Given these high waves, we could model the wind flow over it
+and evaluate from basic principles how much energy is passing from the
+atmosphere to the waves.&#8221;</p>
+</blockquote>
+<p>The last mention is of the ultimate mega total atmosphere model, which we are
+working towards, but might never reach.</p>
+<blockquote>
+<p>&#8220;Obviously, the full simulation of air and sea, possibly starting as before
+from already developed conditions and modeling their physical evaluation with
+all the processes at work: wind, boundary layer, vortex shedding, waves,
+breaking, limited crest length, foam, turbulence, shear currents, and so on.&#8221;</p>
+</blockquote>
+<h6 id="wzxhzdk26-2013-mathew-b-r-topper">&copy; 2013 Mathew B. R. Topper</h6>
+
