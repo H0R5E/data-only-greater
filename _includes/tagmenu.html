@@ -1,0 +1,17 @@
+<div class="tag-menu">
+  <ul>
+    <li><a class="{% if page.url == '/blog/' %}active{% endif %}{% if page.url == '/blog/latest/' %}active{% endif %}" href="/blog/latest"><span class="tag-wrapper">Latest</span></a></li>
+  {% assign tags_list = site.categories %}  
+  {% if tags_list.first[0] == null %}
+  {% else %}
+  {% for tag in tags_list %}
+  {% if tag[0] == "latest" %}
+  {% else %}
+  {% capture cat_url %}/blog/{{ tag[0] }}/{% endcapture %}
+    <li ><a class="{% if page.url == cat_url %}active{% endif %}" href="/blog/{{ tag[0] }}"><span class="tag-wrapper">{{ tag[0] | capitalize }}</span></a></li>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+  {% assign tags_list = nil %}
+  </ul>
+</div>

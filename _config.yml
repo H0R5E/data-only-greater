@@ -1,15 +1,16 @@
 # Dependencies
 markdown:         redcarpet
 highlighter:      pygments
+gems: [octopress-paginate]
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
+relative_permalinks: false
 
 # Setup
 title:            Data only Greater
-tagline:          Everything Mathew Topper...
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+tagline:          Mathew Topper's website
+description:      "Welcome to Mathew Topper's fabulous internet experience."
 url:              http://www.dataonlygreater.com
 baseurl:          /
 
@@ -18,11 +19,15 @@ author:
   url:            https://twitter.com/H0R5E
   email:          damm_horse@yahoo.co.uk
 
-paginate:         5
-paginate_path:    "/main/page:num/"
+pagination:
+  limit: false
+  per_page: 5
+  title_suffix: " (page :num)"
 
 # Custom vars
 version:          0.0.1
 github:
   repo:           https://github.com/H0R5E/data-only-greater
+
+
 

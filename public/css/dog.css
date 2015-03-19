@@ -31,3 +31,73 @@
     margin-right: auto; 
     font-size: 2.75rem;
 }
+
+.share-bar {
+    text-align: center;
+    background: #404040;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.share-bar a {
+        font-weight: 700;
+        color: #87ceeb;
+        margin-left: 10px;
+
+        &:hover {
+            border-bottom: 1px dashed #fff;
+        }
+
+}
+
+/* *********************************************
+* This notice MUST stay intact for legal use.
+* This script was created for FREE CSS Menus.
+* Visit: www.freecssmenus.co.uk for more CSS.
+* Also visit our Free online menu creator.
+************************************************ */
+/* credits:www.freecssmenus.co.uk */
+
+.tag-menu{
+  margin-bottom: 1.5rem;
+}
+
+.tag-menu ul{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.tag-menu ul li{
+  display: inline;
+  padding-right: 5px;
+}
+
+.tag-menu ul li a{
+    background: #404040;
+    display: inline-block;
+    padding: 5px 10px 6px;
+    margin-bottom: 5px;
+    color: #87ceeb;
+    text-decoration: none;
+    border-radius: 5px;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer
+}
+
+.tag-menu ul li a:hover{
+  color: #fff;
+}
+
+.tag-menu ul li a.active {
+  color: #fff;
+  font-weight: bold;
+}
+
+.tag-wrapper{padding:0px}
+

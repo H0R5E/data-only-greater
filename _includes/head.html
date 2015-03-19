@@ -18,7 +18,7 @@
   <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         "HTML-CSS": { linebreaks: { automatic: true } },
-        extensions: ["matchwebfonts.js"],
+        extensions: ["MatchWebFonts.js"],
         tex2jax: {
           inlineMath: [[ '$', '$' ]],
           processEscapes: true
@@ -43,7 +43,17 @@
       });
   </script>
   <script type="text/javascript"
-      src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <!-- Javascript -->
+  <!-- Always go to the content container div on page load -->
+  <script type="text/javascript">
+	  window.onload = function showTop()
+		  {
+			  var el = document.getElementById('top');
+			  el.scrollIntoView(true);
+		  }
   </script>
 
   <!-- CSS -->

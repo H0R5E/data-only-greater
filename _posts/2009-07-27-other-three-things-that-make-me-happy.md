@@ -1,0 +1,22 @@
+---
+layout: post
+title: The other three things that make me happy
+categories : [latest, personal]
+---
+
+Like any good bit of writing I shall steal the first paragraph from myself. That's academic writing, you understand. I'm not suggesting all writers are as devoid of imagination as the great thinkers of our country. Anyway, in a sappy moment, some time ago, I wrote this,
+
+> Someone once asked me for a top 5 of the things I loved in life, and to be honest with you I was unsatisfied with the answer I gave (even though it took me ages to think of). But, at last, now I have the first two. Firstly, I have a thing for rain, I find it very comforting, but one of the most beautiful sights to me is a city illuminated in the rain: the reflections, the feel of the air, it really floats my sensory boat. Second is a fond memory of mine, from not so long ago when I paid a visit home and went to our local pub to get drunk. Upon staggering back into the house one of our dogs, Cassie, was waiting patiently for me and as I entered I fell to the floor in a heap and she lay down next to me and we had a big cuddle and then I just stared at the ceiling for a bit, blissfully happy. So there you go, judge me by those if you please, and when I experience the other three I will let you know. :)
+
+In fact, I think I've been drunk and upside down with other dogs, so you should see Cassie here as an example, rather than the rule. Oh God! The cat is on me! What she doesn't understand is that there is a time and a place for this kind of thing and mostly it should be on the floor and late enough for my parents to be in bed. Phew. The look of depression she shot me there definitely put some weight behind the theory of transonic human cat communication OR it may have been the location of my finger. I'm not getting any brain-vibes from the cat, so I guess we'll never know.
+
+The real reason for the stream of bile currently hammering into my keyboard is to add to those 2 things I love in life? Two things? My mother is right, I am morose. Those have been sitting there for three years or so and I haven't been able to think of one more to add to it, either. Well, no more. This is part of my therapy. I shall add more. Where to start?
+
+I actually had the inspiration for one more a few months back and it was a moment of pure sensory delight. I was just about to cross the road at the Newington end of Melville Drive and then into the meadows when I got it. Hanging on the air was the smell of freshly cut grass. In that moment I was transported back to so many happy places I had been before, I can't fix a location or a time, just a feeling. Thinking about it, was a beautiful day, and if I had thought that the almighty was in a good mood, it was confirmed to me as, just at the moment of recognition of the (green) grass smell, a delicious perfume was added to the mix by a girl walking by me. This was truly a moment of love, and appreciation for my nose.
+
+I have two more responses that define life for me, but I am sure they are not uncommon and sadly, also,  incredibly passive. In fact, all of my things are passive aren't they? Oh dear. I shall have to recall some that I can influence. Ok, I can't avoid it anymore… I love crying over movies. Right, before you get ideas, I'm not talking about Bridget Jones or Failure to Lunch or any of that tat. I'm talking about Finding Neverland, Schindler's List, Spirited Away, and, recently, Benjamin Button. It's pure emotional connection for me. I love losing myself in a story. I love to feel the emotion, the heart.
+
+The last one, I shall dedicate to a great band I saw by accident. They're called The State Broadcasters and they're based in Glasgow and they're fabulous. And this is the last thing for now. There is a moment when a piece of music is so special to me that it will send a tingle down my spine. These guys were the last band to do this to me, as I sat on the floor in front of them in that tiny cellar, and I must thank them for the moment.
+
+So there you go - five. Enough to see me through a happy life? Well, I hope so. Surely there must be other things? There aren't just five things in the world that make me happy? Well, I hope not. I'm looking forward to the next moments of recognition. Of the smile and the little rush of blood. As they come, I shall try to write them down, because five in thirty years is too low a ratio, in which case I must have a very bad memory.
+
