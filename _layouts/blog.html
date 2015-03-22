@@ -1,15 +1,30 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
-<h6>Post categories:</h6>
+  {% include head.html %}
 
-{% include tagmenu.html %}
+  <body>
 
-<div class="page">
+    {% include sidebar.html %}
 
-  {{ content }}
+    <div class="content container blog" id="top">
 
-  {% include posts.html %}
+      <h6>Post categories:</h6>
 
-</div>
+      {% include tagmenu.html %}
+
+      <div class="page">
+
+        {{ content }}
+
+        {% include posts.html %}
+
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
+
+
