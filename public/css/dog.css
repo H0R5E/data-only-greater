@@ -53,6 +53,11 @@
 
 }
 
+.share-bar span {
+        margin-left: 5px;
+        font-size: 0.8rem;
+}
+
 /* *********************************************
 * This notice MUST stay intact for legal use.
 * This script was created for FREE CSS Menus.
@@ -100,4 +105,16 @@
 }
 
 .tag-wrapper{padding:0px}
+
+.tweet {
+    margin-top: 10px;
+}
+
+.tweet-button {
+    font-size: 0.8rem;
+    color: #fff;
+    background: #2897d9;
+    padding: 2px 15px;
+    border-radius: 5px;
+}
 

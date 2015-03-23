@@ -27,9 +27,11 @@
         {% endif %}
       {% endfor %}
 
+      <a class="sidebar-nav-item{% if page.url == '/archive/' %} active{% endif %}" href="{{ site.baseurl }}archive">Archive</a>
     </nav>
 
-    <p>Built on <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and <a href="http://hyde.getpoole.com" target="_blank">Hyde.</a><br>
-    &copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+    <div>Built on <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and <a href="http://hyde.getpoole.com" target="_blank">Hyde.</a></div>
+    <div>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</div>
+    <div class="tweet"><a href="https://twitter.com/intent/tweet?user_id={{ site.twitter.userid }}"><span class="tweet-button">Tweet @H0R5E</span></a></div>
   </div>
 </div>

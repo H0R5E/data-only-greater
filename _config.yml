@@ -1,7 +1,7 @@
 # Dependencies
 markdown:         redcarpet
 highlighter:      pygments
-gems: [octopress-paginate]
+gems: [octopress-paginate, jekyll-archives]
 
 # Permalinks
 permalink:        pretty
@@ -24,10 +24,21 @@ pagination:
   per_page: 5
   title_suffix: " (page :num)"
 
+jekyll-archives:
+  enabled:
+    - year
+    - tags
+  permalinks:
+    year: 'archive/:year/'
+    tag: 'archive/tag/:name/'
+
 # Custom vars
 version:          0.0.1
 github:
   repo:           https://github.com/H0R5E/data-only-greater
+twitter:
+  username:       H0R5E
+  userid:         142661495
 
 
 

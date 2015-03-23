@@ -1,30 +1,15 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+---
+layout: sidebar
+---
 
-  {% include head.html %}
+<div class="content container blog">
+  <h6>Post categories:</h6>
+  {% include tagmenu.html %}
+  <div class="page">
+    {{ content }}
+    {% include posts.html %}
+  </div>
+</div>
 
-  <body>
-
-    {% include sidebar.html %}
-
-    <div class="content container blog" id="top">
-
-      <h6>Post categories:</h6>
-
-      {% include tagmenu.html %}
-
-      <div class="page">
-
-        {{ content }}
-
-        {% include posts.html %}
-
-      </div>
-
-    </div>
-
-  </body>
-
-</html>
 
 
