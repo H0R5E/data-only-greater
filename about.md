@@ -29,6 +29,14 @@ except other awful F1 geeks!
 A few of the pursuits mentioned above have led me to have some other homes on the internet.
 These are described in the sections below.
 
+### Professional
+
+I have profession profiles on the following services:
+
+* [LinkedIn](https://uk.linkedin.com/pub/mathew-topper/35/512/531)
+* [ResearchGate](http://www.researchgate.net/profile/Mathew_Topper)
+* [Google Scholar](http://scholar.google.co.uk/citations?user=di-ePxIAAAAJ&hl=en)
+
 ### Computerising
 
 I have some open source code projects (mainly in Python), that are described
