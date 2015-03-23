@@ -34,7 +34,7 @@
 html {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
 }
-@media (min-width: 48em) and (min-height: 30em) {
+@media (min-width: 48em) and (min-height: 32em) {
   html {
     font-size: 16px;
   }
@@ -62,7 +62,7 @@ html {
   outline: 3px solid #202020;
 }
 
-@media (min-width: 48em) and (min-height: 30em) {
+@media (min-width: 48em) and (min-height: 32em) {
   .sidebar {
     position: fixed;
     top: 0;
@@ -123,7 +123,7 @@ a.sidebar-nav-item:focus {
  * contents to the bottom of the sidebar in tablets and up.
  */
 
-@media (min-width: 48em) and (min-height: 30em) {
+@media (min-width: 48em) and (min-height: 32em) {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
@@ -148,7 +148,7 @@ a.sidebar-nav-item:focus {
   padding-top:    0.25rem;
 }
 
-@media (min-width: 48em) and (min-height: 30em) {
+@media (min-width: 48em) and (min-height: 32em) {
   .content {
     max-width: 36rem;
     margin-left: 22rem;
@@ -156,7 +156,7 @@ a.sidebar-nav-item:focus {
   }
 }
 
-@media (min-width: 64em) and (min-height: 30em) {
+@media (min-width: 64em) and (min-height: 32em) {
   .content {
     margin-left: 24rem;
     margin-right: 4rem;
@@ -170,7 +170,7 @@ a.sidebar-nav-item:focus {
  * Flip the orientation of the page by placing the `.sidebar` on the right.
  */
 
-@media (min-width: 48em) and (min-height: 30em) {
+@media (min-width: 48em) and (min-height: 32em) {
   .layout-reverse .sidebar {
     left: auto;
     right: 0;
