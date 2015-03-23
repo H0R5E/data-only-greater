@@ -1,30 +1,73 @@
 ---
-layout: default
+layout: simple
 title: About
 ---
 
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+  Hey there! You're interested in the author of this website... me!
+  This page describes something about me and my presence across the interwebs.
 </p>
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+## Introduction
 
-There are currently two themes built on Poole:
+I'm Mathew Bernard Robert Topper, an English guy currently living in Bilbao.
+I have a PhD from from the [Engineering department](http://www.eng.ed.ac.uk/)
+of the [University of Edinburgh](http://www.ed.ac.uk/) based on the topic of
+[Marine Renewable Energy](http://en.wikipedia.org/wiki/Marine_energy#Renewable)
+in the field of [Scientific Computing](http://en.wikipedia.org/wiki/Computational_science).
+I continue to work both on this topic and within this field.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+In my spare time, I like to mess about with computers (obviously), but I also
+like sports such as cycling, snowboarding, and many more. I also enjoy normal
+pursuits like listening to music and watching films. I'm a particularly
+awful Formula One (F1) geek, to the point where I'm willing to get up very early to watch
+not even the race and own hats and little cars that mean nothing to anyone
+except other awful F1 geeks!
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+## Where to Find Me
 
-## Setup
+A few of the pursuits mentioned above have led me to have some other homes on the internet.
+These are described in the sections below.
 
-Some fun facts about the setup of this project include:
+### Computerising
 
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
+I have some open source code projects (mainly in Python), that are described
+on the Software page, and most of these are hosted at
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+* [Bitbucket.org](https://bitbucket.org/topper)
+
+I also am a keen user of the
+[Anaconda Scientific Python Distribution](https://store.continuum.io/cshop/anaconda/)
+and I package various python projects for Anaconda which can be found at
+
+* [Binstar.org](https://binstar.org/topper)
+
+Because I contribute bug reports to various python projects I also have a 
+[GitHub](https://github.com/H0R5E) account, but I do not tend to develop code over
+this platform as I think Mercurial is easier to use than Git (especially on
+Windows).
+
+### Music
+
+I like to share my music preferences with those that are interested. You
+can listen to some of my favourite new and old stuff at:
+
+* [Soundcloud.com](https://soundcloud.com/h0r5e/)
+* [Last.fm](http://www.last.fm/user/H0R5E)
+
+### Formula One
+
+Just a quick plug for [F1Technical.net](http://www.f1technical.net/), where I like
+to be boring with all the other F1 geeks. I'm sure you can work out my user name!
+
+## Contact
+
+If you would like to contact me, why not try my twitter account
+[@H0R5E](https://twitter.com/h0r5e). I am a terrible twitter ignorer, so maybe
+some chat will encourage me to engage with it some more!
+
+## Acknowledgements
+
+Big love to Mum and Lucy Cradden for being so awesome!
 
 Thanks for reading!
