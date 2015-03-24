@@ -1,7 +1,7 @@
 # Dependencies
 markdown:         redcarpet
 highlighter:      pygments
-gems: [octopress-paginate, jekyll-archives]
+gems:             [octopress-paginate, jekyll-archives, jekyll-last-modified-at, jekyll-sitemap]
 
 # Permalinks
 permalink:        pretty
@@ -12,7 +12,7 @@ title:            Data only Greater
 tagline:          Mathew Topper's website
 description:      "Welcome to Mathew Topper's fabulous internet experience."
 url:              http://www.dataonlygreater.com
-baseurl:          /
+baseurl:          ""
 
 author:
   name:           Mathew Topper
@@ -20,17 +20,17 @@ author:
   email:          damm_horse@yahoo.co.uk
 
 pagination:
-  limit: false
-  per_page: 5
-  title_suffix: " (page :num)"
+  limit:          false
+  per_page:       5
+  title_suffix:   " (page :num)"
 
 jekyll-archives:
   enabled:
     - year
     - tags
   permalinks:
-    year: 'archive/:year/'
-    tag: 'archive/tag/:name/'
+    year:         'archive/:year/'
+    tag:          'archive/tag/:name/'
 
 # Custom vars
 version:          0.0.1

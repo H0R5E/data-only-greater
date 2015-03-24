@@ -6,7 +6,7 @@ layout: default
   <h1 class="page-title">Archive of posts from {{ page.date | date: "%Y" }}:</h1>
   {% for post in page.posts %}
   <div class="share-bar">
-    <a href="{{ post.url | prepend: site.baseurl | replace:'//','/'}}">{{ post.title }}</a>
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     <span>[ {{ post.date | date_to_string }} ]</span>
   </div>
   {% endfor %}
