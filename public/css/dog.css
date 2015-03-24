@@ -36,7 +36,7 @@
     text-align: center;
     background: #404040;
     color: #fff;
-    padding: 8px 15px;
+    padding: 6px 15px 8px;
     border-radius: 5px;
     margin-top: 1.5rem;
     margin-right: 1.5rem;
@@ -84,7 +84,7 @@
 .tag-menu ul li a{
     background: #404040;
     display: inline-block;
-    padding: 5px 10px 6px;
+    padding: 3px 0 6px;
     margin-bottom: 5px;
     color: #87ceeb;
     text-decoration: none;
@@ -104,7 +104,9 @@
   font-weight: bold;
 }
 
-.tag-wrapper{padding:0px}
+.tag-wrapper {
+    padding: 0 0.6em;
+}
 
 .tweet {
     margin-top: 10px;

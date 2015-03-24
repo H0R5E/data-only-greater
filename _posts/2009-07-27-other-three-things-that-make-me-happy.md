@@ -1,7 +1,8 @@
 ---
 layout: post
 title: The other three things that make me happy
-categories : [latest, personal]
+categories: [latest, personal]
+tags:       [biographical, happiness]
 ---
 
 Like any good bit of writing I shall steal the first paragraph from myself. That's academic writing, you understand. I'm not suggesting all writers are as devoid of imagination as the great thinkers of our country. Anyway, in a sappy moment, some time ago, I wrote this,

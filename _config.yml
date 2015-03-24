@@ -31,6 +31,9 @@ jekyll-archives:
   permalinks:
     year:         'archive/:year/'
     tag:          'archive/tag/:name/'
+  layouts:
+    year:         archive-year
+    tag:          archive-tag
 
 # Custom vars
 version:          0.0.1

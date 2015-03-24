@@ -1,7 +1,8 @@
 ---
-layout: post
-title: Time Management
-categories : [latest, personal]
+layout:     post
+title:      Time Management
+categories: [latest, personal]
+tags:       [introspection, motivation, work]
 ---
 
 So I did a time management course on Wednesday of last week and it was very very embarrassing. I couldn't help but cringe when the nice lady giving the course put on the slide "Time Wasters". I was like, "Yes, that's me, I'm a timewaster." The main gist of the whole thing was to re-prioritise our time by setting "priorities" to them. The scheme goes something like this:

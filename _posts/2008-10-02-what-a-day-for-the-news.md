@@ -1,7 +1,8 @@
 ---
-layout: post
-title: What a day for the news...
-categories : [latest, personal]
+layout:     post
+title:      What a day for the news...
+categories: [latest, personal]
+tags:       [Austria, Monbiot, morality, news, Paulson, Pettifor, politics]
 ---
 
 Southampton airport, 7.30pm, September 30th. After purchasing a banana I decide to return to the shop to buy the last lonely copy of The Guardian sitting on the rack. What a great decision that was; for once I had boarded my plane and moved to a seat away from the melee (why do Flybe stuff everyone at the back of a half empty plane?) I was treated to a meal of news that had my head racing with ideas.

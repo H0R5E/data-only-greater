@@ -3,7 +3,7 @@ layout: simple
 title: Archive
 ---
 
-#### Posts by Year:
+### Posts by Year:
 
 <div class="tag-menu">
   <ul>
@@ -14,5 +14,7 @@ title: Archive
   </ul>
 </div>
 
-#### Posts by Tag:
+### Posts by Tag:
+
+{% tag_cloud %}
 

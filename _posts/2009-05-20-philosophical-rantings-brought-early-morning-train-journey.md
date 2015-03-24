@@ -1,7 +1,8 @@
 ---
-layout: post
-title: Philosophical rantings brought on by an early morning train journey
-categories : [latest, personal]
+layout:     post
+title:      Philosophical rantings brought on by an early morning train journey
+categories: [latest, personal]
+tags:       [climate change, DNA, philosophy]
 ---
 
 The 6.15am from Kings Cross to Edinburgh may seem like a strange place to be inspired into writing about the nature of our existence. Looking back on it now, I was thinking big in the presence of my own company on issues that, well, could only be confirmed by those that I'm unlikely to meet for a few years, I hope. Anyway, whilst staring out of the window at the fields of green and wondering why solar panels are not also green combined with some musing on how different man's invention is compared to that of nature, I had a small epiphany about what was going on. It goes a little like this:

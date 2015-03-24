@@ -1,7 +1,8 @@
 ---
-layout: post
-title: Back in the habit
-categories : [latest, professional]
+layout:     post
+title:      Back in the habit
+categories: [latest, professional]
+tags:       [waves, CFD, Python, fifthwave, SuperGen, web development, MSc, solitary waves, experiments]
 ---
 
 No, I’m not talking about nun head wear. I’m talking about using this blog effectively by using it at all. So, I thought I would try and update it at least once a week with what is going on, so what is going on?

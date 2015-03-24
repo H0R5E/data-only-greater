@@ -1,7 +1,8 @@
 ---
-layout: post
-title: The Dilemma of Thatcher's Children
-categories : [latest, personal]
+layout:     post
+title:      The Dilemma of Thatcher's Children
+categories: [latest, personal]
+tags:       [politics, revolution, values, biographical]
 ---
 
 Sometimes we just have to sit down and ask ourselves, "What sort of a person am I?". I recently asked this question of myself on a bus, in the morning, heading to Peebles. I was in a particularly antisocial mood; this was mainly due to the time of day and the distance walked to catch the bus and, anyway, it seemed like a good opportunity to do some much needed reading far from anything that was breathing.

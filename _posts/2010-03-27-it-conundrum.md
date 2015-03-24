@@ -1,7 +1,8 @@
 ---
-layout: post
-title: The I.T. Conundrum
-categories : [latest, professional]
+layout:     post
+title:      The I.T. Conundrum
+categories: [latest, professional]
+tags:       [IT, simulation, waves, currents]
 ---
 
 Well it's a little to sad to make my first post without anything to show for it, but there you go. I'm afraid for the last two weeks I have been waiting on an upgrade of the computational fluid mechanics software I am using, starccm+, from version 4.02 to version 5.02. Unfortunately the simulation I wish to undertake requires I use this version as all attempts with the previous version have failed. CD-Adapco (who make starccm+) have had their tech support trying to aid me with this simulation for the last six months and the best advice they can offer at the moment is an upgrade with the possibility that it may produce better results than the current version we are using. They may be right, but unfortunately I am powerless to test this hypothesis.
