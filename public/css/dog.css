@@ -3,6 +3,8 @@
  *
  */
 
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
 .front {
 	font-family: "Roboto", Helvetica, Arial, sans-serif;
 	text-align: center;
@@ -118,5 +120,49 @@
     background: #2897d9;
     padding: 2px 15px;
     border-radius: 5px;
+}
+
+/*
+ * http://isabelcastillo.com/error-info-messages-css
+ *
+ */
+ 
+.isa_info, .isa_success, .isa_warning, .isa_error {
+    margin: 20px 0px;
+    padding:12px;
+    border-radius:.5em;
+    position: relative;
+}
+
+.isa_info {
+    color: #00529B;
+    background-color: #BDE5F8;
+}
+
+.isa_success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+
+.isa_warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+}
+
+.isa_error {
+    color: #D8000C;
+    background-color: #FFBABA;
+}
+
+.isa_info i, .isa_success i, .isa_warning i, .isa_error i {
+    font-size:2rem;
+    left: 20px;
+    top: 10px;
+		position: absolute;
+}
+
+.isa_info p, .isa_success p, .isa_warning p, .isa_error p {
+    padding: 0 0 0 65px;
+    margin-bottom: 0.25rem;
 }
 
