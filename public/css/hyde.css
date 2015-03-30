@@ -83,21 +83,28 @@ html {
 
 /* Sidebar h1 links */
 .sidebar h1 a {
-  color: #87ceeb;
+  color: #F52887;
 }
 
 .sidebar h1 a:hover {
   color: #fff;
+  text-shadow: 2px 2px 0px #000,
+               0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 30px #ff00de,
+               0 0 40px #ff00de;
   text-decoration: none;
 }
 
 /* About section */
 .sidebar-about h1 {
   color: #fff;
-  text-shadow: 2px 2px 0px #000;
   margin-top: 0;
-  font-family: "Abril Fatface", serif;
+  font-family: 'Luckiest Guy', cursive;
+/* font-family: "Abril Fatface", serif; */
   font-size: 3.25rem;
+  font-weight: normal;
+  text-shadow: 2px 2px 0px #fff;
 }
 
 /* Sidebar nav */
