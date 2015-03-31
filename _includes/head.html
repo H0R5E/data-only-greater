@@ -22,17 +22,18 @@
         tex2jax: {
           inlineMath: [[ '$', '$' ]],
           processEscapes: true
-        },
+          },
         TeX: { extensions: ["color.js"] },
         MatchWebFonts: {
 	    matchFor: {
 	      "HTML-CSS": true,
 	      NativeMML: false,
 	      SVG: false
-	},
+	    },
 	fontCheckDelay: 2000,
-	fontCheckTimeout: 30 * 1000
-        }
+	fontCheckTimeout: 30 * 1000,
+          },
+        messageStyle: "none"
       });
       //
       //  The document is hidden until MathJax is finished, then
