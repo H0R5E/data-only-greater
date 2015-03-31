@@ -21,23 +21,19 @@ title:  Engineering Latex Thesis Template
 This page describes how to download and compile the engineering thesis
 latex template.
 
-
-Introduction
-============
+## Introduction
 
 This page is for recording information about the usage of the latex
 thesis template that was authored by Mathew Topper over 2010 and 2011.
 This template is appropriate for the current thesis regulations which
-**[can be found
-here](http://www.ed.ac.uk/schools-departments/academic-services/policies-regulations/regulations/assessment)**
+**[can be found here](http://www.ed.ac.uk/schools-departments/academic-services/students/postgraduate-research/thesis-submission)**
 and, yes, they do want a Sans font for the titles. Fortunately, the
 template has a number of built in options (which can use just serif
 fonts, for instance) so there is a level of customisation available.
 These options will be explained in greater detail, along with
 installation and usage instructions, below.
 
-Installation
-============
+## Installation
 
 <div class="isa_warning">
      <i class="fa fa-warning"></i>
@@ -47,8 +43,7 @@ Installation
      </p>
 </div>
 
-Standard Version
-----------------
+### Standard Version
 
 The template is easily downloaded via a linux terminal. If you don't
 know what a linux terminal is then [this
@@ -70,8 +65,7 @@ files for download from my personal webspace. To get hold of these go to:
 The standard template is in the *edengths-trunk.zip* file which, once
 downloaded, can be extracted to the folder of your choice.
 
-Nomenclature Version
---------------------
+### Nomenclature Version
 
 <div class="isa_success">
      <i class="fa fa-check"></i>
@@ -95,8 +89,7 @@ and the build in
 [http://www.see.ed.ac.uk/\~mtopper/public\_download/edengths-builds/](http://www.see.ed.ac.uk/~mtopper/public_download/edengths-builds/)
 will be named *edengths-nomencl.zip*.
 
-Choosing an Editor and Compiling
-================================
+## Choosing an Editor and Compiling
 
 If you've never done latex before then it can be a bit daunting. Some
 people never really get it, but if you do then the strength of this
@@ -141,8 +134,7 @@ Unfortunately, this template has not been ported to Lyx.
    </p>
 </div>
 
-Kile (Linux)
-------------
+### Kile (Linux)
 
 Assuming that you are comfortable starting a Linux program (if not you
 can look [here](/display/iesscicomp/Starting+a+Linux+Program)), the you
@@ -247,8 +239,7 @@ run **twice** in order to finish the cross referencing.
    </p>
 </div>
 
-TeXnicCenter (Windows)
-----------------------
+### TeXnicCenter (Windows)
 
 <div class="isa_warning">
    <i class="fa fa-warning"></i>
@@ -259,7 +250,7 @@ TeXnicCenter (Windows)
    </p>
 </div>
 
-**Preparing the MiKTeX distribution**
+#### Preparing the MiKTeX distribution
 
 TeXnicCenter uses MiKTeX as its Latex backend; it will call commands
 provided by MiKTeX to compile your documents. **It is not fully
@@ -300,7 +291,7 @@ packages and you should see this happen in the output window.
    </p>
 </div>
 
-**Setting up TeXnicCenter**
+#### Setting up TeXnicCenter
 
 When TeXnicCenter is first starting it needs to know the location of the
 Latex distribution.
@@ -317,7 +308,7 @@ It will also ask for the path to other viewers. If you want a postscript
 viewer you will have to install **GhostView 4.9**. The path to the
 exucatable for ghostview is **C:\\Program Files\\gsview\\gsview32.exe**.
 
-**Open the template and choose a compilation route**
+#### Open the template and choose a compilation route
 
 Similar to the method used for
 [\#Kile](#EngineeringLatexThesisTemplate-Kile) there are a number of
@@ -342,7 +333,7 @@ could be handy if you wanted to do Latex =\> DVI =\> PDF, for instance.
 It will also do multiple conversion in one go which the current version
 of kile is not capable of.
 
-**Compile the Bibliography with BibTeX**
+#### Compile the Bibliography with BibTeX
 
 Again, to get the references and bibliography correct in the template,
 BibTeX must be run after Latex has been called. There is no button for
@@ -353,8 +344,7 @@ BiBTeX, so it must be called through the menus as illustrated below:
 Assuming BibTeX compiled successfully, LateX will need to be run
 **twice** more before all of the cross referencing is completed.
 
-Compiling the Nomenclature Version
-==================================
+## Compiling the Nomenclature Version
 
 Generally the compilation for the Nomenclature version of the template
 follows the steps above for the standard version. In addition to the
@@ -364,8 +354,7 @@ different in Linux and Windows so I will now describe both separately.
 In both cases a special invocation of the program "makeindex" is
 required.
 
-Linux
------
+### Linux
 
 For Linux I have prepared a bash script that will make the necessary
 call. Once latex or pdf latex had been called once, [open a
@@ -399,8 +388,7 @@ If the script has run successfully you should see output like this:
 Finally, in a similar manner to bibtex, you will need to run latex or
 pdflatex **twice** more to finish the nomenclature.
 
-Windows - TeXnicCenter
-----------------------
+### Windows - TeXnicCenter
 
 For using TeXnicCenter we need to create a special build profile that will
 invoke makeindex in the correct fashion. This is not too hard to  do.
@@ -438,3 +426,4 @@ twice maybe three times** for the compilation to complete.
 
 This section was reproduced from
 [http://eldemet.wordpress.com/2009/08/06/using-nomenclatures-in-texniccenter/](http://eldemet.wordpress.com/2009/08/06/using-nomenclatures-in-texniccenter/)
+
