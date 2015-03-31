@@ -209,8 +209,8 @@ data file should appear in the directory structure.
 
 
 So now we can create a mesh file. To do this right click on the **=
-Model Inputs** folder and create another sub-folder called **B=
-athymetry**. Once that's made, right click on the **Bathymetry=** folder
+Model Inputs** folder and create another sub-folder called **Bathymetry**.
+Once that's made, right click on the **Bathymetry** folder
 and select **Add File...**. The **New File** dialogue box ([as seen in
 the figure above](3D"#WaveResourceEstimationUsingDHIMIKE-D=)) should
 appear. From the **MIKE Zero** window, select **Mesh Generator (.m=
