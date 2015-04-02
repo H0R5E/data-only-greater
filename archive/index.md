@@ -1,10 +1,11 @@
 ---
-layout: simple
+layout: pagex
 title: Archive
 ---
 
-### Posts by Year:
+## Posts by Year:
 
+<p>
 <div class="tag-menu">
   <ul>
     <li><a href="2011/index.html"><span class="tag-wrapper">2011</span></a></li>
@@ -13,8 +14,10 @@ title: Archive
     <li><a href="2008/index.html"><span class="tag-wrapper">2008</span></a></li>
   </ul>
 </div>
+</p>
 
-### Posts by Tag:
+## Posts by Tag:
 
+<p>
 {% tag_cloud %}
-
+</p>

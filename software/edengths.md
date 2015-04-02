@@ -18,8 +18,10 @@ title:  Engineering Latex Thesis Template
      </p>
 </div>
 
+<p class="message">
 This page describes how to download and compile the engineering thesis
 latex template.
+</p>
 
 ## Introduction
 

@@ -1,5 +1,5 @@
 ---
-layout: simple
+layout: pagex
 title: About
 ---
 
@@ -76,6 +76,6 @@ some chat will encourage me to engage with it some more!
 
 ## Acknowledgements
 
-Big love to Mum and Lucy Cradden for being so awesome!
+Big love to Mum and Lucy for being so awesome!
 
 Thanks for reading!

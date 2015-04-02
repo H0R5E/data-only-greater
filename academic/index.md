@@ -3,6 +3,10 @@ layout: page
 title: Academic
 ---
 
+<p class="message">
+  This is a page where I pretend to be clever. Oh dear.
+</p>
+
 <hr>
 <ol>
 <li><a href="#topics">Research Topics</a></li>

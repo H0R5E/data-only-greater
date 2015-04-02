@@ -1,5 +1,5 @@
 # Dependencies
-markdown:         redcarpet
+markdown:         kramdown
 highlighter:      pygments
 gems:             [octopress-paginate, jekyll-archives, jekyll-last-modified-at, jekyll-sitemap]
 
@@ -21,7 +21,7 @@ author:
 
 pagination:
   limit:          false
-  per_page:       5
+  per_page:       3
   title_suffix:   " (page :num)"
 
 jekyll-archives:

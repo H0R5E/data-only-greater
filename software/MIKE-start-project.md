@@ -3,18 +3,34 @@ layout: simple
 title:  Wave Resource Estimation Using DHI MIKE - Starting a MIKE project
 ---
 
+<p class="message">
 This page provides a brief tutorial for starting a DHI MIKE project
 for the first time.
+</p>
+
+## Contents
+{:.no_toc}
+
+1. This will become a table of contents (this text will be scraped).
+{:toc}
+
+## Mike ZERO
 
 The graphical user interface (GUI) for DHI MIKE Zero is a little
-counter intuitive to the uninitiated. Thus, this section will briefly
-describe the steps for starting a MIKE Zero project. There is just one
-interface to MIKE and that is MIKE Zero. So no matter what simulations
-you will be doing (MIKE 21 HD, SW, etc, etc) it will all be controlled
-from MIKE Zero. So, to begin, start MIKE Zero from the Windows All
-Programs menu and you will be greeted by the following screen:
+counter intuitive to the uninitiated. Thus, this page will briefly
+describe the steps for starting a MIKE Zero project.
 
-*Image*
+There is just one interface to MIKE and that is MIKE Zero. So no
+matter what simulations
+you will be doing (MIKE 21 HD, SW, etc, etc) it will all be controlled
+from MIKE Zero. 
+
+So, to begin, start MIKE Zero from the Windows "All
+Programs" menu and you will be greeted by the following screen:
+
+![]({{ site.baseurl }}/assets/images/MIKE_ZERO_start_page.png)
+
+## Projects
 
 At this point, a short discussion regarding the operating methodology
 of MIKE Zero would be beneficial. The above start page looks rather
@@ -31,7 +47,7 @@ in the resulting dialogue box select the **General** template and
 provide a name for your project such as can be seen in the figure below.
 Click OK and a project file and directory structure will be set up.
 
-*Image*
+![]({{ site.baseurl }}/assets/images/MIKE_new_project.png)
 
 Your project should now appear in the start page and the directory
 structure for your project can now be loaded by clicking on it. To
@@ -41,18 +57,19 @@ Start Page (seen in green in the first figure of this section). An
 example folder structure populated with files from the training
 example for the MIKE 21 HD model is shown below.
 
+## Structuring MIKE Modules and Files
 
 The various folders provide a structure for storing files related to
 each particular task in the simulation. The **External Data** folder
-holds the data that will be imported into the model, the Model\<=
-/strong\> directory holds the MIKE specific files themselves, the
+holds the data that will be imported into the model, the **Model**
+directory holds the MIKE specific files themselves, the
 **Project Documents** folder holds written reports and the **Results**
 folder holds the results of the simulations. Other folders can also be
-created as suits the user. Note that files placed in this directory=
+created as suits the user. Note that files placed in this directory
 structure by an external program are not automatically recognised by
 MIKE,they must be linked by the MIKE project explorer.
 
-*Image*
+![]({{ site.baseurl }}/assets/images/MIKE_project_explorer.png)
 
 The basic operation of MIKE is to right click folders in the project
 explorer and select an appropriate task. To link existing files into
@@ -64,6 +81,8 @@ folder as you see fit. A similar process is used to create new
 folders, but folders created externally are not seen by the project
 explorer.
 
+## Adding Modules
+
 MIKE starts to become more interesting when you right click a folder
 and click **Add New File**. This provides access to all of the editors
 available in the MIKE suite. The resulting dialogue box is seen
@@ -73,7 +92,9 @@ relates is started. Once a file is saved with the editor, it can then
 be reopened by the same editor to continue work at a later date or be
 used by another file type later in the simulation process.
 
-*Image*
+![]({{ site.baseurl }}/assets/images/MIKE_add_new_file.png)
+
+## Saving your Work
 
 That completes the introduction to starting a MIKE project. Note, the
 project itself does not require saving, but the files being worked on
