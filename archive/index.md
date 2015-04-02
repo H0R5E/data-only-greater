@@ -3,6 +3,10 @@ layout: pagex
 title: Archive
 ---
 
+<p class="page-message">
+  It's all my blog posts distilled down into little words and numbers.
+</p>
+
 ## Posts by Year:
 
 <p>

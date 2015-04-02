@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>TypeError: float argument required
+</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript" src="sorttable.js"></script>
+
+</head>
+
+<body>
+  <div class="content"><div class="main">
+
+<h1>TypeError: float argument required
+</h1>
+
+
+<div class="backptr">
+<a href="index.html">fifthwave project page</a>
+</div>
+
+
+
+<div class="description">
+<p>Problem writing reports that was revealed by analysing the results from 2m_all test.
+
+Traceback (most recent call last):
+
+  File "/home/s0575124/star/version_5.02/wall_wave/base_refinement/test.py", line 19, in ?
+    test.cycle()
+
+  File "/home/s0575124/programming/python/fifthwave/trunk/src/flightdeck.py", line 324, in cycle
+    if self._cur_job.status != 9: self.analyse(sim_dat_point)
+
+  File "/home/s0575124/programming/python/fifthwave/trunk/src/flightdeck.py", line 291, in analyse
+    t_inter=self.t_delta)
+
+  File "/home/s0575124/programming/python/fifthwave/trunk/src/fifthwave.py", line 1000, in report
+    new_report.write()
+
+  File "/home/s0575124/programming/python/fifthwave/trunk/src/fifthwave.py", line 908, in write<br>
+    report_file.write('%20.8f | ' % record.met_pairs[metdex][1])</p>
+</div>
+
+<h2>Details</h2>
+
+
+<table>
+  <tbody>
+    <tr>
+      <td class="attrname">Id:</td>
+      <td class="attrval"><span class="id">1660525c5e15b1a360cb0a44ccfa251c7e7b9624</span></td>
+    </tr>
+
+    <tr>
+      <td class="attrname">Type:</td>
+      <td class="attrval">bugfix</td>
+    </tr>
+
+    <tr>
+      <td class="attrname">Creation time:</td>
+      <td class="attrval">2010-11-18 09:20</td>
+    </tr>
+
+    <tr>
+      <td class="attrname">Creator:</td>
+      <td class="attrval"><span class="person">Mathew Topper &lt;mathew.topper@...&gt;</span></td>
+    </tr>
+
+
+    <tr>
+      <td class="attrname">Release:</td>
+      <td class="attrval">
+	<a href="release-0.2.html">0.2</a>
+        (released 2011-02-09)
+      </td>
+    </tr>
+
+    <tr>
+      <td class="attrname">Component:</td>
+      <td class="attrval"><a href="component-fifthwave.py.html">fifthwave.py</a></td>
+    </tr>
+
+    <tr>
+      <td class="attrname">Status:</td>
+      <td class="attrval">
+	closed
+	: fixed
+	<img class="inline-status-image" alt="fixed" title="fixed" src="green-check.png">
+      </td>
+    </tr>
+
+    <tr>
+      <td class="attrname">In progress:</td>
+      <td class="attrval">
+	25 hours
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Issue log</h2>
+
+
+<table class="log">
+  <tbody>
+    <tr class="odd-row">
+    <td class="date">2010-11-23 10:38</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">closed with disposition fixed</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	There didn't seem to be a problem with the organisation of the feilds
+in the reports so the problem came from report types that contained
+spaces. That's fixed now and I've sanitised the file name by turning
+the report type (row_type) lower case and replacing spaces with
+underscores. That's in Report.__init__
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="even-row">
+    <td class="date">2010-11-22 11:12</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">commented</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	Fixed an issue where the report type (free variable) was not being
+deleted properly from the metric lists if it was more than one word long.
+
+Similarly, the file names contain spaces and I don't want that, so I 
+might try to sanitise that too.
+
+I still want to check what happens if the metrics are in different orders
+in an existing report and the current simulation.
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="odd-row">
+    <td class="date">2010-11-22 10:21</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">commented</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	Does Record.read() deal with blank entries properly. It seems to assume
+that a blank entry will be read as an empty string, but I think it's
+more likely that you'll just get two '|'s. Need to test this out.
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="even-row">
+    <td class="date">2010-11-22 09:29</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">changed status from unstarted to in_progress</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="odd-row">
+    <td class="date">2010-11-18 09:20</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">created</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+</div>
+</div>
+  <div class="footer">
+    Generated by <a href="http://pypi.python.org/pypi/pyditz">pyditz</a> version 0.8
+  </div>
+</body>

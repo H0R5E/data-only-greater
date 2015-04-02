@@ -1,7 +1,12 @@
 ---
 layout: simple
-title:  Engineering Latex Thesis Template
+title:  University of Edinburgh Latex Thesis Template
 ---
+
+<p class="message">
+This page describes how to download and compile the University of
+Edinburgh $\LaTeX$ thesis template, known as "edengths".
+</p>
 
 <div class="isa_success">
      <i class="fa fa-check"></i>
@@ -17,11 +22,6 @@ title:  Engineering Latex Thesis Template
      <a href="http://en.wikibooks.org/wiki/LaTeX/Document_Structure#Sectioning_commands"><b>parts</b></a>.
      </p>
 </div>
-
-<p class="message">
-This page describes how to download and compile the engineering thesis
-latex template.
-</p>
 
 ## Introduction
 
@@ -47,25 +47,17 @@ installation and usage instructions, below.
 
 ### Standard Version
 
-The template is easily downloaded via a linux terminal. If you don't
-know what a linux terminal is then [this
-page](/display/iesscicomp/Starting+a+Linux+Program) might help. The
-template is stored in a Subversion (SVN) repository and to make a copy
-of the main code (trunk) issue the command:
+The template is being stored under Mercurial on my bitbucket repository at the path:
 
-    svn export https://svn.ecdf.ed.ac.uk/repo/user/mtopper/latex/edengths/trunk edengths
+[https://bitbucket.org/topper/edengths](https://bitbucket.org/topper/edengths)
 
-This will create a folder called "edengths" within the directory which
-you ran the above command. This folder contains all the files to run the
-template and all latex commands should be run in this directory.
+Please feel free to clone the repository and contribute as you wish.
 
-If you are using Windows, then I am going to produce "builds" of the
-files for download from my personal webspace. To get hold of these go to:
+If you are using Windows, then I haved produced some "builds" of the
+files for download from the bitbucket site. For the standard version
+the direct link is:
 
-[http://www.see.ed.ac.uk/\~mtopper/public\_download/edengths-builds/](http://www.see.ed.ac.uk/~mtopper/public_download/edengths-builds/)
-
-The standard template is in the *edengths-trunk.zip* file which, once
-downloaded, can be extracted to the folder of your choice.
+[Standard Version](https://bitbucket.org/topper/edengths/downloads/edengths.zip)
 
 ### Nomenclature Version
 
@@ -81,15 +73,12 @@ There is a version of edengths which is set up to use the nomencl
 package (don't worry if you don't know what a package is yet), which
 allows you to build a nomenclature as you are writing your thesis. The
 effect of including this on the template was deemed significant enough
-to give this version of the code its own home (branch) and therefore it
-must be retrieved in a different manner. It get it via SVN, issue the
-command:
+to give this version of the code its own home (branch). This is collected
+along with the default code if you clone the reposity.
 
-     svn export https://svn.ecdf.ed.ac.uk/repo/user/mtopper/latex/edengths/branches/nomencl edengths
+The link for downloading the zipped folder containing this version is: 
 
-and the build in
-[http://www.see.ed.ac.uk/\~mtopper/public\_download/edengths-builds/](http://www.see.ed.ac.uk/~mtopper/public_download/edengths-builds/)
-will be named *edengths-nomencl.zip*.
+[Nomenclature Version](https://bitbucket.org/topper/edengths/downloads/edengths_nomencl.zip)
 
 ## Choosing an Editor and Compiling
 

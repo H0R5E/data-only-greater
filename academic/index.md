@@ -3,8 +3,8 @@ layout: page
 title: Academic
 ---
 
-<p class="message">
-  This is a page where I pretend to be clever. Oh dear.
+<p class="page-message">
+  This is where I pretend to be clever. Oh dear.
 </p>
 
 <hr>

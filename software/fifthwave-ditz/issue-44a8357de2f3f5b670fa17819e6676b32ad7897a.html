@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>gci fine zero division.
+</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript" src="sorttable.js"></script>
+
+</head>
+
+<body>
+  <div class="content"><div class="main">
+
+<h1>gci fine zero division.
+</h1>
+
+
+<div class="backptr">
+<a href="index.html">fifthwave project page</a>
+</div>
+
+
+
+<div class="description">
+<p>Got a zero devision error in gci fine for the 4m simulation data
+for the x refinement study in the wave zone.
+
+Trace is 
+Traceback (most recent call last):
+  File "/home/s0575124/programming/python/fifthwave/trunk/example.py", line 66, in ?
+    test.report_convergence()
+  File "/home/s0575124/programming/python/fifthwave/trunk/src/flightdeck.py", line 490, in report_convergence
+    verify.report(grid_list, report_file, met_name=name)
+  File "/home/s0575124/programming/python/fifthwave/trunk/src/verify.py", line 254, in report
+    gci_list.append([gci_fine(pair[0], pair[1], p, fsafe),
+  File "/home/s0575124/programming/python/fifthwave/trunk/src/verify.py", line 143, in gci_fine
+    absepsilon =  abs( (grid_2[1] - grid_1[1]) / grid_1[1] )
+ZeroDivisionError: float division</p>
+</div>
+
+<h2>Details</h2>
+
+
+<table>
+  <tbody>
+    <tr>
+      <td class="attrname">Id:</td>
+      <td class="attrval"><span class="id">44a8357de2f3f5b670fa17819e6676b32ad7897a</span></td>
+    </tr>
+
+    <tr>
+      <td class="attrname">Type:</td>
+      <td class="attrval">bugfix</td>
+    </tr>
+
+    <tr>
+      <td class="attrname">Creation time:</td>
+      <td class="attrval">2011-02-27 16:29</td>
+    </tr>
+
+    <tr>
+      <td class="attrname">Creator:</td>
+      <td class="attrval"><span class="person">Mathew Topper &lt;mathew.topper@...&gt;</span></td>
+    </tr>
+
+
+    <tr>
+      <td class="attrname">Release:</td>
+      <td class="attrval">
+	<a href="release-0.3.html">0.3</a>
+        (unreleased)
+      </td>
+    </tr>
+
+    <tr>
+      <td class="attrname">Component:</td>
+      <td class="attrval"><a href="component-verify.py.html">verify.py</a></td>
+    </tr>
+
+    <tr>
+      <td class="attrname">Status:</td>
+      <td class="attrval">
+	closed
+	: fixed
+	<img class="inline-status-image" alt="fixed" title="fixed" src="green-check.png">
+      </td>
+    </tr>
+
+    <tr>
+      <td class="attrname">In progress:</td>
+      <td class="attrval">
+	4 months
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Issue log</h2>
+
+
+<table class="log">
+  <tbody>
+    <tr class="odd-row">
+    <td class="date">2011-09-15 15:18</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">closed with disposition fixed</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	Basically this doesn't work if the metrics have no difference between them
+(like 0.,0. for instance), so I just wrapped a try around this and a 
+lame cop out if it doesn't work. This could probably be done better but
+not at this moment in time.
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="even-row">
+    <td class="date">2011-06-29 16:07</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">changed status from in_progress to paused</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	I'm uncertain whether this will still be an issue with
+the group analysis version of the code.
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="odd-row">
+    <td class="date">2011-02-27 18:07</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">changed status from unstarted to in_progress</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	Going to fix this now as it's a bit of a ball breaker.
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="even-row">
+    <td class="date">2011-02-27 16:40</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">commented</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	Undoubtably it's because of the two zeros that were recorded for the
+low res information. Probably have to trim any zero value results
+from the study.
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="odd-row">
+    <td class="date">2011-02-27 16:34</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">commented</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	This appears to have occured doing the convergence report for the 
+celerity part of the 1s report for x_wave_refinement test.
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="even-row">
+    <td class="date">2011-02-27 16:29</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">created</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+</div>
+</div>
+  <div class="footer">
+    Generated by <a href="http://pypi.python.org/pypi/pyditz">pyditz</a> version 0.8
+  </div>
+</body>

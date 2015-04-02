@@ -3,7 +3,7 @@ layout: pagex
 title: About
 ---
 
-<p class="message">
+<p class="page-message">
   Hey there! You're interested in the author of this website... me!
   This page describes something about me and my presence across the interwebs.
 </p>
