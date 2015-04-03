@@ -14,7 +14,7 @@ festivities.
 
 So what are we celebrating? Well dataonlygreater is the new conduit for me,
 Mathew Topper, (find out more [about me here]({{ site.baseurl }}/about)) to express my most geeky
-thoughts (both personal and proffesional) and share some of the stuff I have
+thoughts (both personal and professional) and share some of the stuff I have
 been working on, in some ways for the greater good, i.e. open source code.
 
 Currently, the content here is mostly a collection of other work that was
@@ -33,7 +33,7 @@ that I thoroughly recommend you try. I must also thank [@mdo](https://twitter.co
 for developing [Hyde](http://hyde.getpoole.com/) and [Joshua Lande](
 http://joshualande.com) for showing me the way. This template is the backbone of the site
 you see before you. There are also many little concepts and styles that I have
-pinched from places accross the web, so thanks for sharing!
+pinched from places across the web, so thanks for sharing!
 
 Well, that's it. Hopefully I will be adding more content on a regular basis and
 improving what is already here. And, if you're here looking for the University
