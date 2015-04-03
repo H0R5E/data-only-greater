@@ -1,0 +1,106 @@
+/**
+ * Design Shack Respnsive Menu
+ */
+
+
+
+.navmenu * {
+	padding: 0;
+	margin: 0;
+	
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.navmenu nav {
+	width: 95%;
+	margin: 10px auto;
+	overflow: hidden;
+	text-align:center;
+}
+
+.navmenu nav ul {
+	list-style: none;
+	overflow: hidden;
+}
+
+.navmenu nav li {
+	display:inline;
+}
+
+.navmenu nav li a {
+	background: #444;
+	border-right: 1px solid #fff;
+    border-radius: 10px;
+	color: #fff;
+	display: inline-block;
+    margin: 6px 8px;
+	text-decoration: none;
+	text-transform: uppercase;
+	vertical-align: middle; 
+	width: 60%;
+	font: 400 1rem 'Luckiest Guy', Helvetica, Verdana, Arial, sans-serif;
+	padding: 12px 4px;
+	
+	/*TRANSISTIONS*/
+	-webkit-transition: background 0.5s ease;
+	   -moz-transition: background 0.5s ease;
+	     -o-transition: background 0.5s ease;
+	    -ms-transition: background 0.5s ease;
+	        transition: background 0.5s ease;
+}
+
+
+/*HOVER*/
+.navmenu nav li a:hover {
+	background: #222;
+}
+
+/*SMALL*/
+.navmenu nav small {
+	font: 100 0.8rem Helvetica, Verdana, Arial, sans-serif;
+	text-transform: none;
+	color: #aaa;
+}
+
+/*BORDER FIX*/
+.navmenu nav li:last-child a {
+	border: none;
+}
+
+/*BLUE MENU*/
+.navmenu nav .blue {
+	margin-top: 50px;
+}
+
+.navmenu .blue li a {
+	background: #0099CC;
+}
+
+.navmenu .blue small {
+	color: white;
+}
+
+.navmenu .blue li a:hover {
+	background: #444;
+}
+
+
+/* MEDIA QUERIES*/
+
+@media (min-width: 48em) {
+	.navmenu.software nav li a {
+	    width: 46%;
+	    font: 400 1.5rem 'Luckiest Guy', Helvetica, Verdana, Arial, sans-serif;
+	}
+}
+
+@media (min-width: 48em) {
+	.navmenu.academic nav li a {
+	    width: 31%;
+	    font: 400 1.5rem 'Luckiest Guy', Helvetica, Verdana, Arial, sans-serif;
+	    margin: 4px;
+	}
+}
+

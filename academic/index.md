@@ -7,15 +7,17 @@ title: Academic
   This is where I pretend to be clever. Oh dear.
 </p>
 
-<hr>
-<ol>
-<li><a href="#topics">Research Topics</a></li>
-<li><a href="#notes">Notes</a></li>
-<li><a href="#publications">Publications</a></li>
-</ol>
-<hr>
+<div class="navmenu academic">
+<nav class="blue">
+	<ul>
+		<li><a href="#topics" class="scroll">Research Topics<br /> <small>The Stuff I Do</small></a></li>
+		<li><a href="#notes" class="scroll">Notes<br /> <small>Bedtime Reading</small></a></li>
+		<li><a href="#pubs" class="scroll">Publications<br /> <small>This is Serious</small></a></li>
+	</ul>
+</nav>
+</div>
 
-# Research Topics<a name="topics"></a>
+<h1 class="one" id="topics"><span>Research Topics</span></h1>
 
 The following sections describe some of the research challenges I have undertaken in my career so far.
 
@@ -41,7 +43,7 @@ Creating solitary waves (or waves of translation) in physical and numerical expe
 
 The use of strategic research planning techniques can improve the effectiveness of funding for numerical model development by targeting the problems having the most impact on the solution.
 
-# Notes<a name="notes"></a>
+<h1 class="one" id="notes"><span>Notes</span></h1>
 
 These are a collection of notes I made on academic papers whilst working as a post-doc in the University of Edinburgh between 2008 and 2013.
 
@@ -60,7 +62,7 @@ These are a collection of notes I made on academic papers whilst working as a po
 * [Notes on Cavaleri (2009)](wave_resource/Cavaleri2009)
 * [Notes on Mackay et al. (2010) [Part 1]](wave_resource/Mackay2010Part1)
 
-# Publications<a name="publications"></a>
+<h1 class="one" id="pubs"><span>Publications</span></h1>
 
 Currently empty...
 

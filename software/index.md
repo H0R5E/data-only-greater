@@ -7,16 +7,20 @@ title: Software
   My work - just for you! Aren't you lucky?
 </p>
 
-<hr>
-1. Stuff
-{:toc}
-<hr>
+<div class="navmenu software">
+<nav class="blue">
+	<ul>
+		<li><a href="#projects" class="scroll">Projects<br /> <small>Software For You!</small></a></li>
+		<li><a href="#guides" class="scroll">Guides<br /> <small>How to do Stuff</small></a></li>
+	</ul>
+</nav>
+</div>
 
-# Projects
+<h1 class="one" id="projects"><span>Projects</span></h1>
 
 <h3 class="project-title">edengths</h3>
 
-<dl class="definition-group">
+<dl class="project-def">
   <dt>Purpose</dt>
   <dd>
   PhD thesis template corresponding to the University of Edinburgh regulations
@@ -35,7 +39,7 @@ title: Software
 
 <h3 class="project-title">fifthwave</h3>
 
-<dl class="definition-group">
+<dl class="project-def">
   <dt>Purpose</dt>
   <dd>
   Deployment and analysis of CFD non-linear water wave simulations.
@@ -45,12 +49,12 @@ title: Software
   <dt>Last Updated</dt>
   <dd>12/02/2013</dd>
   <dt>Status</dt>
-  <dd>Uncertain. Requires restructuring into smaller components. See <a href="./fifthwave-ditz">ditz</a> issue tracker.</dd>
+  <dd>Uncertain. Requires restructuring into smaller components. See the <a href="./fifthwave-ditz">ditz</a> issue tracker.</dd>
   <dt>Source</dt>
   <dd><a href="https://bitbucket.org/topper/fifthwave">Bitbucket</a></dd>
 </dl>
 
-# Guides
+<h1 class="one" id="guides"><span>Guides</span></h1>
 
 ### Wave Resource Modelling with DHI MIKE
 {:.no_toc}

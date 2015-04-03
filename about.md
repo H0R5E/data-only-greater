@@ -8,7 +8,18 @@ title: About
   This page describes something about me and my presence across the interwebs.
 </p>
 
-## Introduction
+<div class="navmenu software">
+<nav class="blue">
+	<ul>
+		<li><a href="#introduction" class="scroll">Introduction<br /> <small>Hello!</small></a></li>
+		<li><a href="#where" class="scroll">Where to Find Me<br /> <small>Where am I?</small></a></li>
+		<li><a href="#contact" class="scroll">Contact<br /> <small>Hello?</small></a></li>
+		<li><a href="#acknowledgements" class="scroll">Acknowledgements<br /> <small>Thanks!</small></a></li>
+	</ul>
+</nav>
+</div>
+
+<h1 class="one" id="introduction"><span>Introduction</span></h1>
 
 I'm Mathew Bernard Robert Topper, an English guy currently living in Bilbao.
 I have a PhD from from the [Engineering department](http://www.eng.ed.ac.uk/)
@@ -24,7 +35,7 @@ awful Formula One (F1) geek, to the point where I'm willing to get up very early
 not even the race and own hats and little cars that mean nothing to anyone
 except other awful F1 geeks!
 
-## Where to Find Me
+<h1 class="one" id="where"><span>Where to Find Me</span></h1>
 
 A few of the pursuits mentioned above have led me to have some other homes on the internet.
 These are described in the sections below.
@@ -68,13 +79,13 @@ can listen to some of my favourite new and old stuff at:
 Just a quick plug for [F1Technical.net](http://www.f1technical.net/), where I like
 to be boring with all the other F1 geeks. I'm sure you can work out my user name!
 
-## Contact
+<h1 class="one" id="contact"><span>Contact</span></h1>
 
 If you would like to contact me, why not try my twitter account
 [@H0R5E](https://twitter.com/h0r5e). I am a terrible twitter ignorer, so maybe
 some chat will encourage me to engage with it some more!
 
-## Acknowledgements
+<h1 class="one" id="acknowledgements"><span>Acknowledgements</span></h1>
 
 Big love to Mum and Lucy for being so awesome!
 
