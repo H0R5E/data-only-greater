@@ -180,3 +180,41 @@
   }
 }
 
+.project-title {
+  color: #0EBFE9;
+  font-family: 'Audiowide', cursive;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.definition-group {
+    background: #eee;
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 0 1px 1px 0 white, 0 1px 1px 0
+}
+
+.no-border{border-top: none;}
+
+dl { border: 3px double #ccc; padding: 0.5em; }
+
+dt { text-align: center; font-weight: bold; color: #F52887;}
+
+dt:after { content: ":"; }
+
+dd { margin: 0; padding: 0 0 0.5em 0; text-align: center;}
+
+@media (min-width: 48em) and (min-height: 32em) {
+  dt {
+    float: left; clear: left; width: 6rem; text-align: right; 
+  }
+}
+
+@media (min-width: 48em) and (min-height: 32em) {
+  dd {
+    margin: 0 0 0 6.5rem; text-align: left;
+  }
+}
+
+
+
