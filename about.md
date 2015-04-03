@@ -87,6 +87,6 @@ some chat will encourage me to engage with it some more!
 
 <h1 class="one" id="acknowledgements"><span>Acknowledgements</span></h1>
 
-Big love to Mum and Lucy for being so awesome!
+Big love to Mum and [Lucy](http://cat-bounce.com/) for being so awesome!
 
 Thanks for reading!
