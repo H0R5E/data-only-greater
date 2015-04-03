@@ -12,7 +12,7 @@ title: Software
 {:toc}
 <hr>
 
-## Projects
+# Projects
 
 <h3 class="project-title">edengths</h3>
 
@@ -50,7 +50,7 @@ title: Software
   <dd><a href="https://bitbucket.org/topper/fifthwave">Bitbucket</a></dd>
 </dl>
 
-## Guides
+# Guides
 
 ### Wave Resource Modelling with DHI MIKE
 {:.no_toc}

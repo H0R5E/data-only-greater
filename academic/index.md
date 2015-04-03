@@ -15,7 +15,7 @@ title: Academic
 </ol>
 <hr>
 
-## Research Topics<a name="topics"></a>
+# Research Topics<a name="topics"></a>
 
 The following sections describe some of the research challenges I have undertaken in my career so far.
 
@@ -41,11 +41,11 @@ Creating solitary waves (or waves of translation) in physical and numerical expe
 
 The use of strategic research planning techniques can improve the effectiveness of funding for numerical model development by targeting the problems having the most impact on the solution.
 
-## Notes<a name="notes"></a>
+# Notes<a name="notes"></a>
 
 These are a collection of notes I made on academic papers whilst working as a post-doc in the University of Edinburgh between 2008 and 2013.
 
-### Verification and Validation
+## Verification and Validation
 
 * [Notes on Cheung et al. (2011)](VandV/Cheung2011)
 * [Notes on Oberkampf & Trucano (2002): Sections 1 and 2](VandV/Oberkampf2002_1)
@@ -55,12 +55,12 @@ These are a collection of notes I made on academic papers whilst working as a po
 * [Notes on Sankararaman & Mahadevan (2011)](VandV/Sankararaman2011)
 * [Notes on Stedinger et al. (2008)](VandV/Stedinger2008)
 
-### Wave Resource Modelling
+## Wave Resource Modelling
 
 * [Notes on Cavaleri (2009)](wave_resource/Cavaleri2009)
 * [Notes on Mackay et al. (2010) [Part 1]](wave_resource/Mackay2010Part1)
 
-## Publications<a name="publications"></a>
+# Publications<a name="publications"></a>
 
 Currently empty...
 
