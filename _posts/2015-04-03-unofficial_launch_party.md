@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Unofficial www.dataonlygreater.com Launch Party
+title:      Unofficial dataonlygreater.com Launch Party
 categories: [latest, administration]
 tags:       [dataonlygreater, web development, motivation]
 ---
