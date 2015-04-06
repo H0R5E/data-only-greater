@@ -247,7 +247,7 @@ h1.one {
     color: #F52887;
     text-shadow: 1px 1px 0px #555;
     font-family: 'Comfortaa', cursive;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 h1.one:before {
@@ -270,7 +270,7 @@ h1.one span {
 
 @media (min-width: 48em) {
     h1.one {
-          font-size: 2rem;
+          font-size: 1.75rem;
     }
 }
 

@@ -1,5 +1,6 @@
 /**
  * Design Shack Respnsive Menu
+ * Source: http://designshack.net/articles/css/code-a-responsive-navigation-menu/
  */
 
 
@@ -14,7 +15,7 @@
 }
 
 .navmenu nav {
-	width: 95%;
+	width: 99%;
 	margin: 10px auto;
 	overflow: hidden;
 	text-align:center;
@@ -35,12 +36,12 @@
     border-radius: 10px;
 	color: #fff;
 	display: inline-block;
-    margin: 6px 8px;
+	margin: 6px 0px;
 	text-decoration: none;
 	text-transform: uppercase;
 	vertical-align: middle; 
-	width: 60%;
-	font: 400 1rem 'Luckiest Guy', Helvetica, Verdana, Arial, sans-serif;
+	width: 90%;
+	font: 400 1.2rem 'Luckiest Guy', cursive;
 	padding: 12px 4px;
 	
 	/*TRANSISTIONS*/
@@ -59,7 +60,7 @@
 
 /*SMALL*/
 .navmenu nav small {
-	font: 100 0.8rem Helvetica, Verdana, Arial, sans-serif;
+	font: 100 0.9rem Helvetica, Verdana, Arial, sans-serif;
 	text-transform: none;
 	color: #aaa;
 }
@@ -88,19 +89,69 @@
 
 
 /* MEDIA QUERIES*/
+@media (min-width: 24em) {
+    .navmenu nav li a {
+	    width: 66%;
+    }
+}
 
-@media (min-width: 48em) {
+
+@media (min-width: 58em) {
+	.navmenu.academic nav li a {
+	    width: 32%;
+	    font: 400 0.7rem 'Luckiest Guy', cursive;
+	}
+	.navmenu.academic nav small {
+	    font: 100 0.65rem Helvetica, Verdana, Arial, sans-serif;
+    }
+}
+
+@media (min-width: 72em) {
+	.navmenu.academic nav li a {
+	    font: 400 1rem 'Luckiest Guy', cursive; 
+    }
+	.navmenu.academic nav small {
+	    font: 100 0.7rem Helvetica, Verdana, Arial, sans-serif;
+    }
+}
+
+@media (min-width: 80em) {
+	.navmenu.academic nav li a {
+		margin: 6px 2px;
+	    font: 400 1.25rem 'Luckiest Guy', cursive;
+	}
+	.navmenu.academic nav small {
+	    font: 100 0.8rem Helvetica, Verdana, Arial, sans-serif;
+    }
+}
+
+@media (min-width: 58em) {
 	.navmenu.software nav li a {
 	    width: 46%;
-	    font: 400 1.5rem 'Luckiest Guy', Helvetica, Verdana, Arial, sans-serif;
+	    margin: 6px 2px;
+	    font: 400 0.8rem 'Luckiest Guy', cursive;
 	}
+	.navmenu.software nav small {
+	    font: 100 0.7rem Helvetica, Verdana, Arial, sans-serif;
+    }
 }
 
-@media (min-width: 48em) {
-	.navmenu.academic nav li a {
-	    width: 31%;
-	    font: 400 1.5rem 'Luckiest Guy', Helvetica, Verdana, Arial, sans-serif;
-	    margin: 4px;
-	}
+@media (min-width: 68em) {
+	.navmenu.software nav li a {
+	    font: 400 1rem 'Luckiest Guy', cursive; 
+    }
+	.navmenu.software nav small {
+	    font: 100 0.8rem Helvetica, Verdana, Arial, sans-serif;
+    }
 }
+
+@media (min-width: 80em) {
+	.navmenu.software nav li a {
+	    font: 400 1.3rem 'Luckiest Guy', cursive;
+	}
+	.navmenu.software nav small {
+	    font: 100 0.9rem Helvetica, Verdana, Arial, sans-serif;
+    }
+}
+
 
