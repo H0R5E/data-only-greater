@@ -36,12 +36,14 @@ jekyll-archives:
     tag:          archive-tag
 
 # Custom vars
-version:          0.0.1
+version:          0.1.0
 github:
   repo:           https://github.com/H0R5E/data-only-greater
 twitter:
   username:       H0R5E
   userid:         142661495
-
-
+  
+# Include exclude files:
+include:          [.htaccess]
+exclude:          [COPYRIGHT.md, LICENSE_Poole.md, README.md]
 
