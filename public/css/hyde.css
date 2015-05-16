@@ -155,6 +155,30 @@ a.sidebar-nav-item:focus {
   padding-top:    0.25rem;
 }
 
+.blog-title {
+  color: #F52887;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2.5rem;
+  font-weight: normal;
+  text-shadow: 2px 2px 0px #555;
+}
+
+.blog-title {
+  text-align: center;
+}
+
+@media (min-width: 48em) and (min-height: 32em) {
+  .blog-title {
+    text-align: left;
+  }
+}
+
+.blog-menu {
+    padding-top: 0.75rem;
+    border-top: 1px dashed #999;
+    border-bottom: 1px dashed #999;
+}
+
 @media (min-width: 48em) and (min-height: 32em) {
   .content {
     max-width: 36rem;

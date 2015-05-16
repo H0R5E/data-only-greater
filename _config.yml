@@ -1,5 +1,5 @@
 # Dependencies
-markdown:         redcarpet
+markdown:         kramdown
 highlighter:      pygments
 gems:             [octopress-paginate, jekyll-archives, jekyll-last-modified-at, jekyll-sitemap]
 
@@ -22,7 +22,7 @@ author:
 
 pagination:
   limit:          false
-  per_page:       5
+  per_page:       3
   title_suffix:   " (page :num)"
 
 jekyll-archives:
@@ -37,12 +37,14 @@ jekyll-archives:
     tag:          archive-tag
 
 # Custom vars
-version:          0.0.1
+version:          0.1.0
 github:
   repo:           https://github.com/H0R5E/data-only-greater
 twitter:
   username:       H0R5E
   userid:         142661495
-
-
+  
+# Include exclude files:
+include:          [.htaccess]
+exclude:          [COPYRIGHT.md, LICENSE_Poole.md, README.md]
 

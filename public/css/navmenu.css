@@ -1,0 +1,157 @@
+/**
+ * Design Shack Respnsive Menu
+ * Source: http://designshack.net/articles/css/code-a-responsive-navigation-menu/
+ */
+
+
+
+.navmenu * {
+	padding: 0;
+	margin: 0;
+	
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.navmenu nav {
+	width: 99%;
+	margin: 10px auto;
+	overflow: hidden;
+	text-align:center;
+}
+
+.navmenu nav ul {
+	list-style: none;
+	overflow: hidden;
+}
+
+.navmenu nav li {
+	display:inline;
+}
+
+.navmenu nav li a {
+	background: #444;
+	border-right: 1px solid #fff;
+    border-radius: 10px;
+	color: #fff;
+	display: inline-block;
+	margin: 6px 0px;
+	text-decoration: none;
+	text-transform: uppercase;
+	vertical-align: middle; 
+	width: 90%;
+	font: 400 1.2rem 'Luckiest Guy', cursive;
+	padding: 12px 4px;
+	
+	/*TRANSISTIONS*/
+	-webkit-transition: background 0.5s ease;
+	   -moz-transition: background 0.5s ease;
+	     -o-transition: background 0.5s ease;
+	    -ms-transition: background 0.5s ease;
+	        transition: background 0.5s ease;
+}
+
+
+/*HOVER*/
+.navmenu nav li a:hover {
+	background: #222;
+}
+
+/*SMALL*/
+.navmenu nav small {
+	font: 100 0.9rem Helvetica, Verdana, Arial, sans-serif;
+	text-transform: none;
+	color: #aaa;
+}
+
+/*BORDER FIX*/
+.navmenu nav li:last-child a {
+	border: none;
+}
+
+/*BLUE MENU*/
+.navmenu nav .blue {
+	margin-top: 50px;
+}
+
+.navmenu .blue li a {
+	background: #0099CC;
+}
+
+.navmenu .blue small {
+	color: white;
+}
+
+.navmenu .blue li a:hover {
+	background: #444;
+}
+
+
+/* MEDIA QUERIES*/
+@media (min-width: 24em) {
+    .navmenu nav li a {
+	    width: 66%;
+    }
+}
+
+
+@media (min-width: 58em) {
+	.navmenu.academic nav li a {
+	    width: 32%;
+	    font: 400 0.7rem 'Luckiest Guy', cursive;
+	}
+	.navmenu.academic nav small {
+	    font: 100 0.65rem Helvetica, Verdana, Arial, sans-serif;
+    }
+}
+
+@media (min-width: 72em) {
+	.navmenu.academic nav li a {
+	    font: 400 1rem 'Luckiest Guy', cursive; 
+    }
+	.navmenu.academic nav small {
+	    font: 100 0.7rem Helvetica, Verdana, Arial, sans-serif;
+    }
+}
+
+@media (min-width: 80em) {
+	.navmenu.academic nav li a {
+		margin: 6px 2px;
+	    font: 400 1.25rem 'Luckiest Guy', cursive;
+	}
+	.navmenu.academic nav small {
+	    font: 100 0.8rem Helvetica, Verdana, Arial, sans-serif;
+    }
+}
+
+@media (min-width: 58em) {
+	.navmenu.software nav li a {
+	    width: 46%;
+	    margin: 6px 2px;
+	    font: 400 0.8rem 'Luckiest Guy', cursive;
+	}
+	.navmenu.software nav small {
+	    font: 100 0.7rem Helvetica, Verdana, Arial, sans-serif;
+    }
+}
+
+@media (min-width: 68em) {
+	.navmenu.software nav li a {
+	    font: 400 1rem 'Luckiest Guy', cursive; 
+    }
+	.navmenu.software nav small {
+	    font: 100 0.8rem Helvetica, Verdana, Arial, sans-serif;
+    }
+}
+
+@media (min-width: 80em) {
+	.navmenu.software nav li a {
+	    font: 400 1.3rem 'Luckiest Guy', cursive;
+	}
+	.navmenu.software nav small {
+	    font: 100 0.9rem Helvetica, Verdana, Arial, sans-serif;
+    }
+}
+
+

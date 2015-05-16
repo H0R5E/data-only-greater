@@ -44,14 +44,15 @@
 }
 
 .share-bar a {
-        font-weight: 700;
-        color: #87ceeb;
-        margin-left: 10px;
+    font-weight: 700;
+    color: #87ceeb;
+    margin-left: 10px;
+}
 
-        &:hover {
-            border-bottom: 1px dashed #fff;
-        }
-
+.share-bar a:hover {
+    border-bottom: 1px dashed #fff;
+    text-decoration: none;
+    color: #FF66CC;
 }
 
 .share-bar span {
@@ -68,41 +69,48 @@
 /* credits:www.freecssmenus.co.uk */
 
 .tag-menu{
-  margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .tag-menu ul{
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
 .tag-menu ul li{
-  display: inline;
-  padding-right: 5px;
+    display: inline;
+    padding-right: 5px;
 }
 
 .tag-menu ul li a{
-    background: #404040;
-    display: inline-block;
-    padding: 3px 0 6px;
-    margin-bottom: 5px;
     color: #87ceeb;
-    text-decoration: none;
-    border-radius: 5px;
-    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
-    border-bottom: 1px solid rgba(0,0,0,0.25);
-    position: relative;
-    cursor: pointer
 }
 
 .tag-menu ul li a:hover{
-  color: #fff;
+    color: #FF66CC;
 }
 
 .tag-menu ul li a.active {
-  color: #fff;
-  font-weight: bold;
+    color: #fff;
+    font-weight: bold;
+}
+
+.tag-menu ul li span{
+    display: inline-block;
+    position: relative;
+    background: #404040;
+    padding: 4px 0.5rem;
+    margin-bottom: 5px;
+    border-radius: 5px;
+
+}
+
+@media (min-width: 48em) {
+    .tag-menu {
+          text-align: left;
+    }
 }
 
 .tag-wrapper {
@@ -164,4 +172,107 @@
     padding: 0 0 0 65px;
     margin-bottom: 0.25rem;
 }
+
+.page-message {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: #717171;
+  background-color: #f9f9f9;
+}
+
+@media (min-width: 48em) and (min-height: 32em) {
+  .page-message {
+    text-align: left;
+  }
+}
+
+.project-title {
+  color: #0EBFE9;
+  font-family: 'Audiowide', cursive;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.project-def {
+    background: #eee;
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 0 1px 1px 0 white, 0 1px 1px 0
+}
+
+.project-def dl { 
+    border: 3px double #ccc;
+    padding: 0.5em;
+}
+
+.project-def dt {
+    text-align: center;
+    font-weight: bold;
+    color: #F52887;
+    margin-left: 2px;
+}
+
+.project-def dt:after {
+    content: ":";
+}
+
+.project-def dd {
+    margin: 2px;
+    padding: 0 0 0.5em 0;
+    text-align: center;
+}
+
+@media (min-width: 48em) {
+    .project-def dt {
+        float: left;
+        clear: left;
+        width: 6rem;
+        text-align: right; 
+    }
+}
+
+@media (min-width: 48em) {
+    .project-def dd {
+        margin: 0 0 0 6.5rem;
+        text-align: left;
+    }
+}
+
+h1.one {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-align: center;
+    color: #F52887;
+    text-shadow: 1px 1px 0px #555;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.3rem;
+}
+
+h1.one:before {
+    content: "";
+    display: block;
+    border-top: solid 1px #0099CC;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+}
+
+h1.one span {
+    background: #fff;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
+}
+
+@media (min-width: 48em) {
+    h1.one {
+          font-size: 1.75rem;
+    }
+}
+
+
 

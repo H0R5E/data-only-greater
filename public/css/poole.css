@@ -278,7 +278,6 @@ tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
 
-
 /*
  * Container
  *
@@ -328,13 +327,17 @@ tbody tr:nth-child(odd) th {
  * page is wrapped in `.page` and is only used on the page layout.
  */
 
-.page,
+
 .post {
   margin-bottom: 4em;
 }
 
+.page {
+  margin-bottom: 4em;
+  margin-top: 0.75em;
+}
+
 /* Blog post or page title */
-.page-title,
 .post-title,
 .post-title a {
   color: #303030;
@@ -342,6 +345,24 @@ tbody tr:nth-child(odd) th {
 .page-title,
 .post-title {
   margin-top: 0;
+}
+
+.page-title {
+  text-align: center;
+}
+
+@media (min-width: 48em) and (min-height: 32em) {
+  .page-title {
+    text-align: left;
+  }
+}
+
+.page-title {
+  color: #F52887;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2.5rem;
+  font-weight: normal;
+  text-shadow: 2px 2px 0px #555;
 }
 
 /* Meta data line below post title */

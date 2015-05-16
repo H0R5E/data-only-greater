@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Job in Error State moved before qdel was called
+</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript" src="sorttable.js"></script>
+
+</head>
+
+<body>
+  <div class="content"><div class="main">
+
+<h1>Job in Error State moved before qdel was called
+</h1>
+
+
+<div class="backptr">
+<a href="index.html">fifthwave project page</a>
+</div>
+
+
+
+<div class="description">
+<p>A failed job was moved back from the cluster before qdel was called or a
+resubmit was attempted.</p>
+</div>
+
+<h2>Details</h2>
+
+
+<table>
+  <tbody>
+    <tr>
+      <td class="attrname">Id:</td>
+      <td class="attrval"><span class="id">05a8f2bb1c825244dcb42cd02ab8221a48938530</span></td>
+    </tr>
+
+    <tr>
+      <td class="attrname">Type:</td>
+      <td class="attrval">bugfix</td>
+    </tr>
+
+    <tr>
+      <td class="attrname">Creation time:</td>
+      <td class="attrval">2010-11-16 14:17</td>
+    </tr>
+
+    <tr>
+      <td class="attrname">Creator:</td>
+      <td class="attrval"><span class="person">Mathew Topper &lt;mathew.topper@...&gt;</span></td>
+    </tr>
+
+
+    <tr>
+      <td class="attrname">Release:</td>
+      <td class="attrval">
+	<a href="release-0.2.html">0.2</a>
+        (released 2011-02-09)
+      </td>
+    </tr>
+
+    <tr>
+      <td class="attrname">Component:</td>
+      <td class="attrval"><a href="component-sshsge.py.html">sshsge.py</a></td>
+    </tr>
+
+    <tr>
+      <td class="attrname">Status:</td>
+      <td class="attrval">
+	closed
+	: fixed
+	<img class="inline-status-image" alt="fixed" title="fixed" src="green-check.png">
+      </td>
+    </tr>
+
+    <tr>
+      <td class="attrname">In progress:</td>
+      <td class="attrval">
+	2 weeks
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Issue log</h2>
+
+
+<table class="log">
+  <tbody>
+    <tr class="odd-row">
+    <td class="date">2011-02-09 11:44</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">closed with disposition fixed</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	Have completed a sucessful test so I assume it is working ok with 
+the new system now.
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="even-row">
+    <td class="date">2011-02-08 16:17</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">commented</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	Had an issue with hitting the recursion limit when waiting for the job to 
+start so have turned check_status into an infinite while loop with exits.
+There is still some recursion with jobs restarting but not infinite any
+more.
+
+Unfortunately the grid engine is balls, so I can't test how the code
+is handling completed jobs.
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="odd-row">
+    <td class="date">2011-02-07 15:40</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">commented</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	Have changed the control system now to look for actual output from qsub
+anf qacct rather than just a non responce from qsub. As long as the job
+was not deleted then qacct should record statistics for jobs that have
+left the queue. If qstat is not giving an answer and qacct is also not
+giving an answer then something has gone wrong and the job should be resubmitted.
+I've put some controls of the number of times a job should resubmit in this
+case, so it doesn't just keep flogging a dead horse.
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="even-row">
+    <td class="date">2011-01-31 16:19</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">changed status from paused to in_progress</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	OK, so the issue here is uncontrolled restarting of the queue which will
+cause all sorts of problems (i.e. completely lose the job). I think the
+best way around this is to keep trying to start a job until files are 
+generated. I don't know how this effects the restarting process.
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="odd-row">
+    <td class="date">2010-11-24 09:38</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">changed status from in_progress to paused</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	Just waiting for the issue to reoccur and hope that the logging picks it up!
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="even-row">
+    <td class="date">2010-11-24 09:37</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">changed status from closed to in_progress</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	Problem reoccurred of a job ending up in the error state but not being deleted and
+possibly resubmitted before being returned. Bringing this one back to life.
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="odd-row">
+    <td class="date">2010-11-23 12:08</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">closed with disposition fixed</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	In the last run a job went into error state and was resubmitted 
+successfully so I'm going to close this one.
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="even-row">
+    <td class="date">2010-11-23 10:43</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">changed status from in_progress to paused</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	I think the adjustments to sshsge.py have sorted it out, but as I can't force a job
+into the error state, I am going to stop this issue until another example can be found.
+One concern is that it may not report what has happened unless a better logging system
+is implemented.
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="odd-row">
+    <td class="date">2010-11-16 15:38</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">commented</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	Ok, so the problem is in SSHSGE.wait. There was the interval in between the check for the
+Eqw state and the /dev/null test. I'm not sure what that test looks like for an Eqw type job.
+I can't seem to make a job to go into this state, which is annoying so I've issued a command
+to check the reason for the issue if it does happen.
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="even-row">
+    <td class="date">2010-11-16 14:19</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">commented</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	I was wondering how to test for this, but I guess a script with an error state would be one
+way, although I don't know if it would create the behaviour seen by the job failing.
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="odd-row">
+    <td class="date">2010-11-16 14:18</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">changed status from unstarted to in_progress</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr class="even-row">
+    <td class="date">2010-11-16 14:17</td>
+    <td class="person">Mathew Topper &lt;mathew.topper@...&gt;</td>
+    <td class="message">created</td>
+    </tr>
+    <tr>
+      <td colspan="3" class="logcomment">
+	
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+</div>
+</div>
+  <div class="footer">
+    Generated by <a href="http://pypi.python.org/pypi/pyditz">pyditz</a> version 0.8
+  </div>
+</body>
