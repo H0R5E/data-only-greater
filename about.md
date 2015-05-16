@@ -1,6 +1,8 @@
 ---
 layout: pagex
 title: About
+description: A page all about Mathew Topper
+tags: [Mathew Topper, professional, software, music, F1]
 ---
 
 <p class="page-message">

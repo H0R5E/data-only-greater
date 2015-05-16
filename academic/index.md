@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Academic
+description: Academic interests, notes on papers and published works
+tags: [academic, research, notes, papers]
 ---
 
 <p class="page-message">

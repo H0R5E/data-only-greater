@@ -1,8 +1,9 @@
 ---
 layout:     post
 title:      Married to the Motherboard
+description: Have computers changed the lives of young people?
 categories: [latest, personal]
-tags:       [computers, internet, biographical]
+tags:       [computers, internet, youth, geeks, biographical]
 ---
 
 So here I am typing in openoffice about to publish the first story to my blog. It was a little hard to decide how to do this, however. Should I pre-prepare (a word I have made up and like) or should I write directly into some sort of web based form? I think after the heart crushing sickness of losing work typed into web based forms coupled with the usual terrible results produced by may lazy English have prompted me to use a word processor at first. Perhaps I can weed out the terrible mistakes before presenting to the world? That's an exercise for the reader.

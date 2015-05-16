@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Software
+description: Collection of open source software and guides on using other tools
+tags: [software, open source, guides]
 ---
 
 <p class="page-message">

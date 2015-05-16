@@ -1,6 +1,8 @@
 ---
 layout: simple
 title:  University of Edinburgh Latex Thesis Template
+description: Latex template corresponding to the University of Edinburgh thesis regulations
+tags: [Latex, template, thesis, University of Edinburgh]
 ---
 
 <p class="message">

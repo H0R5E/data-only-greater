@@ -1,12 +1,14 @@
 ---
 layout: simple
 title:  Wave Resource Estimation Using DHI MIKE - Retrieving Coastline Data
+description: Guide for retrieving coastline data for DHI MIKE21
+tags: [MIKE21, coastlines, data manipulation, research]
 ---
 
 <p class="message">
 This page is a guide for retrieving data and preparing
-it for use for the purposes discussed on the [Wave Resource
-Estimation Using DHI MIKE - Preparing a Coastline](../MIKE-data-preparation)
+it for use for the purposes discussed on the
+<a href="../MIKE-data-preparation">Wave Resource Estimation Using DHI MIKE - Preparing a Coastline</a>
 page.
 </p>
 

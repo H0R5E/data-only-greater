@@ -1,6 +1,8 @@
 ---
 layout: pagex
 title: Archive
+description: Archive of blog posts by year and tag
+tags: [archive, blog, year, tag]
 ---
 
 <p class="page-message">
