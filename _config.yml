@@ -11,6 +11,7 @@ relative_permalinks: false
 title:            Data only Greater
 tagline:          Mathew Topper's website
 description:      "Welcome to Mathew Topper's fabulous internet experience."
+tags:             [Software, Research, Life]
 url:              http://www.dataonlygreater.com
 baseurl:          ""
 
