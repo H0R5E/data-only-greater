@@ -10,6 +10,7 @@
   <meta name="author" content="{{ site.author.name }}" />
   {% if page.description %}<meta name="description" content="{{ page.description }}" />{% else %}<meta name="description" content="{{ page.title }}" />{% endif %}
   {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ',' }}" />{% else %}<meta name="keywords" content="{% for item in site.tags %}{{ item[0] | append: ',' }}{% endfor %}" />{% endif %}
+  <meta name="msvalidate.01" content="DB49DD9D72528737E026370FBC2801EE" />
 
   <title>{% if page.title == "Home" %}{{ site.title }} &middot; {{ site.tagline }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}</title>
 
