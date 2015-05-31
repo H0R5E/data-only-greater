@@ -30,7 +30,7 @@ tags: [software, open source, guides]
   <dt>Platform</dt>
   <dd>Latex</dd>
   <dt>Last Updated</dt>
-  <dd>03/05/2013</dd>
+  <dd>26/05/2015</dd>
   <dt>Status</dt>
   <dd>Operational but not under active development</dd>
   <dt>Source</dt>

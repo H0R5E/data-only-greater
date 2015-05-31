@@ -13,15 +13,16 @@ Edinburgh $\LaTeX$ thesis template, known as "edengths".
 <div class="isa_success">
      <i class="fa fa-check"></i>
      <p>
-     On <b>03/05/13</b> the way that the template reproduces hyperlink colours was improved.
+     On <b>26/05/15</b> an option to change the university name was added. 
+was improved.
      </p>
 </div>
 
 <div class="isa_success">
      <i class="fa fa-check"></i>
      <p>
-     On <b>19/04/13</b> the template has been updated to correctly format
-     <a href="http://en.wikibooks.org/wiki/LaTeX/Document_Structure#Sectioning_commands"><b>parts</b></a>.
+     On <b>02/04/15</b> the template was migrated to 
+     <a href="https://bitbucket.org/topper/edengths"><b>BitBucket</b></a>.
      </p>
 </div>
 
@@ -42,8 +43,8 @@ installation and usage instructions, below.
 <div class="isa_warning">
      <i class="fa fa-warning"></i>
      <p>
-     <b>19/04/13</b> The paths to the edengths template have changed due to 
-     account migration. The new paths are listed below.
+     <b>02/05/15</b> Access to the edengths template have changed due to 
+     account migration. New instructions are given below.
      </p>
 </div>
 
@@ -55,7 +56,7 @@ The template is being stored under Mercurial on my bitbucket repository at the p
 
 Please feel free to clone the repository and contribute as you wish.
 
-If you are using Windows, then I haved produced some "builds" of the
+If you are using Windows, then I have produced some "builds" of the
 files for download from the bitbucket site. For the standard version
 the direct link is:
 
@@ -76,7 +77,7 @@ package (don't worry if you don't know what a package is yet), which
 allows you to build a nomenclature as you are writing your thesis. The
 effect of including this on the template was deemed significant enough
 to give this version of the code its own home (branch). This is collected
-along with the default code if you clone the reposity.
+along with the default code if you clone the repository.
 
 The link for downloading the zipped folder containing this version is: 
 
@@ -299,7 +300,7 @@ Latex distribution.
 
 It will also ask for the path to other viewers. If you want a postscript
 viewer you will have to install **GhostView 4.9**. The path to the
-exucatable for ghostview is **C:\\Program Files\\gsview\\gsview32.exe**.
+executable for ghostview is **C:\\Program Files\\gsview\\gsview32.exe**.
 
 #### Open the template and choose a compilation route
 
