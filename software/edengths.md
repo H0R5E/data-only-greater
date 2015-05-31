@@ -129,10 +129,10 @@ Unfortunately, this template has not been ported to Lyx.
 
 ### Kile (Linux)
 
-Assuming that you are comfortable starting a Linux program (if not you
-can look [here](/display/iesscicomp/Starting+a+Linux+Program)), the you
-need to start Kile, either through the start menu or using a terminal.
-Kile looks like this:
+Assuming that you are comfortable starting a Linux program
+then you need to start Kile, either through the start menu or using a 
+[terminal](http://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-
+linux-terminal/). Kile looks like this:
 
 ![]({{ site.baseurl }}/assets/images/kile_front_boxes.png)
 
@@ -303,17 +303,15 @@ executable for ghostview is **C:\\Program Files\\gsview\\gsview32.exe**.
 
 #### Open the template and choose a compilation route
 
-Similar to the method used for
-[\#Kile](#EngineeringLatexThesisTemplate-Kile) there are a number of
-compilation routes that can be chosen. Start by opening the main
-**edengths.tex** file in the top directory of template structure. The
-compilation options are then available in the drop-down menu marked in
-red in the figure below:
-
+Similar to the method used for [Kile](#kile-linux) there are a number 
+of compilation routes that can be chosen. Start by opening the main 
+**edengths.tex** file in the top directory of template structure. The 
+compilation options are then available in the drop-down menu marked in red in 
+the figure below:
 ![]({{ site.baseurl }}/assets/images/TeXnicCenter_compile.png)
 
 These options are identical to the routes that can be used to compile
-the document using [\#Kile](#EngineeringLatexThesisTemplate-Kile), so I
+the document using [Kile](#kile-linux), so I
 won't describe their differences again. Once an appropriate route has
 been chosen the three buttons in the green box in the figure can be used
 to compile and view the output. The button on the far right of the three
@@ -350,9 +348,10 @@ required.
 ### Linux
 
 For Linux I have prepared a bash script that will make the necessary
-call. Once latex or pdf latex had been called once, [open a
-terminal](/display/iesscicomp/Starting+a+Linux+Program) and change the
-working directory to the template directory ie.
+call. Once latex or pdf latex had been called once, open a
+[terminal](http://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-
+linux-terminal/) and change the working directory to the template directory, 
+i.e:
 
     >> cd some/path/to/the/template/edengths
 
