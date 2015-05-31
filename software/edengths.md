@@ -13,8 +13,7 @@ Edinburgh $\LaTeX$ thesis template, known as "edengths".
 <div class="isa_success">
      <i class="fa fa-check"></i>
      <p>
-     On <b>26/05/15</b> an option to change the university name was added. 
-was improved.
+     On <b>26/05/15</b> an option to change the university name was added.
      </p>
 </div>
 
