@@ -25,7 +25,7 @@ perspective as we needed to present a piece software that he can't use, as yet.
 That piece of software is [DTOcean](http://www.dtocean.eu/) - my current charge 
 and will be for the next 15 months. I have a lot to thank DTOcean for as, along 
 with the [EU Marie Sk&#0322;odowska-Curie 
-Actions](http://ec.europa.eu/research/mariecurieactions/) programme, as it has 
+Actions](http://ec.europa.eu/research/mariecurieactions/) programme, it has 
 brought me to Bilbao and an exciting (and challenging) new life.
 
 I will say more about DTOcean at a later date, as we have just begun to 
@@ -55,7 +55,7 @@ locality about Vico Equense. This was truly one of the best experiences of my
 life, so if you ever happen to stay at the [Bed & Breakfast Maria 
 Grazia](http://www.bbmariagrazia.it) and Peppe offers you a ride, take it. The 
 B&amp;B is also a lovely building and he has some of the largest lemons I've 
-ever seen... Just remember to take a car, as its a bit isolated.
+ever seen... Just remember to take a car, as it's a bit isolated.
 
 ![Huge lemons]({{ site.baseurl }}/assets/images/napoli_2015/lemons.jpg)
 
