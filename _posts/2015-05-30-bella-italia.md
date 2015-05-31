@@ -20,11 +20,11 @@ person", "Why would I waste my time?". I couldn't have been more wrong.
 
 Fortunately for me, my close friend and colleague Vincenzo seemed less 
 enthusiastic to go than me. I am assuming that he was doing this for my benefit 
-as he is one of the worlds good people. It also made sense from a technical 
+as he is one of the world's good people. It also made sense from a technical 
 perspective as we needed to present a piece software that he can't use, as yet. 
-That piece of software is [DTOcean](http://www.dtocean.eu/) my current charge 
-and for the next 15 months. I have a lot to thank DTOcean for as, along with the
-[EU Marie Sk&#0322;odowska-Curie 
+That piece of software is [DTOcean](http://www.dtocean.eu/) - my current charge 
+and will be for the next 15 months. I have a lot to thank DTOcean for as, along 
+with the [EU Marie Sk&#0322;odowska-Curie 
 Actions](http://ec.europa.eu/research/mariecurieactions/) programme, as it has 
 brought me to Bilbao and an exciting (and challenging) new life.
 
