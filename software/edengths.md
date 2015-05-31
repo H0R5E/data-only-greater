@@ -42,7 +42,7 @@ installation and usage instructions, below.
 <div class="isa_warning">
      <i class="fa fa-warning"></i>
      <p>
-     <b>02/05/15</b> Access to the edengths template have changed due to 
+     <b>02/05/15</b> Access to the edengths template has changed due to 
      account migration. New instructions are given below.
      </p>
 </div>
