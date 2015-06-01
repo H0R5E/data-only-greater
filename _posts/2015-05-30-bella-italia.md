@@ -18,15 +18,16 @@ person I want to be. Yet still, when another opportunity to attend INORE came
 along, familiar sentiments returned: "I'm too old", "I'm not that kind of 
 person", "Why would I waste my time?". I couldn't have been more wrong.
 
-Fortunately for me, my close friend and colleague Vincenzo seemed less 
-enthusiastic to go than me. I am assuming that he was doing this for my benefit 
-as he is one of the world's good people. It also made sense from a technical 
-perspective as we needed to present a piece software that he can't use, as yet. 
-That piece of software is [DTOcean](http://www.dtocean.eu/) - my current charge 
-and will be for the next 15 months. I have a lot to thank DTOcean for as, along 
-with the [EU Marie Sk&#0322;odowska-Curie 
-Actions](http://ec.europa.eu/research/mariecurieactions/) programme, it has 
-brought me to Bilbao and an exciting (and challenging) new life.
+My closest colleague could have gone instead of me but, fortunately for me, 
+he seemed less enthusiastic to go than I did. Indeed, I know now that he was 
+saying this for my benefit as he is one of the world's super nice people. It 
+also made sense from a technical perspective as we needed to present a piece 
+software that he can't use, as yet. That piece of software is 
+[DTOcean](http://www.dtocean.eu/) - my current charge and will be for the next 
+15 months. I have a lot to thank DTOcean for as, along with the [EU Marie 
+Sk&#0322;odowska-Curie Actions](http://ec.europa.eu/research/mariecurieactions/) 
+programme, it has brought me to Bilbao and an exciting (and challenging) new 
+life.
 
 I will say more about DTOcean at a later date, as we have just begun to 
 publicise its existence and there is lots of interesting stuff to tell (maybe 
