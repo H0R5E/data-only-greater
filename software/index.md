@@ -36,7 +36,8 @@ tags: [software, open source, guides]
   <dt>Source</dt>
   <dd><a href="https://bitbucket.org/topper/edengths">Bitbucket</a></dd>
   <dt>Read More</dt>
-  <dd><a href="./edengths">University of Edinburgh Latex Thesis Template</a></dd>
+  <dd><a href="./edengths">Unofficial University of Edinburgh Latex Thesis 
+Template</a></dd>
 </dl>
 
 <h3 class="project-title">fifthwave</h3>

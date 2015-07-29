@@ -1,12 +1,12 @@
 ---
 layout: simple
-title:  University of Edinburgh Latex Thesis Template
+title:  Unofficial University of Edinburgh Latex Thesis Template
 description: Latex template corresponding to the University of Edinburgh thesis regulations
 tags: [Latex, template, thesis, University of Edinburgh]
 ---
 
 <p class="message">
-This page describes how to download and compile the University of
+This page describes how to download and compile the Unofficial University of
 Edinburgh $\LaTeX$ thesis template, known as "edengths".
 </p>
 
