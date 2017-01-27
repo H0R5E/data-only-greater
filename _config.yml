@@ -1,7 +1,7 @@
 # Dependencies
 markdown:         kramdown
 highlighter:      pygments
-gems:             [octopress-paginate, jekyll-archives, jekyll-last-modified-at, jekyll-sitemap]
+gems:             [octopress-paginate, jekyll-archives, jekyll-related-posts, jekyll-sitemap]
 
 # Permalinks
 permalink:        pretty
