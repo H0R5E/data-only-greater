@@ -9,7 +9,7 @@
       {% for tag in tags_list %}
         {% if tag[0] == "latest" %}
         {% else %}
-          {% capture cat_url %}/blog/{{ tag[0] }}/{% endcapture %}
+          {% capture cat_url %}/blog/{{ tag[0] }}/index.html{% endcapture %}
           <li >
             <a class="{% if page.url == cat_url %}active{% endif %}" href="/blog/{{ tag[0] | downcase }}"><span class="tag-wrapper">{{ tag[0] | capitalize }}</span></a>
           </li>
