@@ -1,11 +1,10 @@
 # Dependencies
 markdown:         kramdown
 highlighter:      pygments
-gems:             [octopress-paginate, jekyll-archives, jekyll-related-posts, jekyll-sitemap]
+gems:             [jekyll-archives, jekyll-paginate-v2, jekyll-sitemap]
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: false
 
 # Setup
 title:            Data only Greater
@@ -21,9 +20,13 @@ author:
   email:          damm_horse@yahoo.co.uk
 
 pagination:
-  limit:          false
-  per_page:       3
-  title_suffix:   " (page :num)"
+  enabled: true
+  per_page: 3
+  permalink: '/page/:num/'
+  title: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 
 jekyll-archives:
   enabled:

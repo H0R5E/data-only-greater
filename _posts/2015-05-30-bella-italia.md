@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Bella Italia, Viva INORE
-categories: [Latest, Personal]
+categories: [latest, personal]
 tags:       [Italy, Vico Equense, INORE, DTOcean]
 ---
 

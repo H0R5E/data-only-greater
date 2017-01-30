@@ -3,13 +3,10 @@ layout: blog
 title: Home
 description: Site navigation and all my latest blog posts
 tags: [blog, software, academic, dataonlygreater]
-paginate: true
-paginate:
-  collection:   posts
+pagination:
+  enabled:      true
   per_page:     3              # maximum number of items per page 
-  limit:        false          # Maximum number of pages to paginate (false for unlimited)
-  permalink:    page:num/      # pagination path (relative to template page)
-  title_suffix: " - page :num" # Append to template's page title
+  limit:        0              # Maximum number of pages to paginate
   category:     'latest'       # Paginate items in this category
 ---
 

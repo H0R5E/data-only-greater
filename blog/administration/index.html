@@ -1,13 +1,10 @@
 ---
 layout: blogcat
 title: Home
-paginate: true
-paginate:
-  collection:   posts
-  per_page:     3                # maximum number of items per page 
-  limit:        false            # Maximum number of pages to paginate (false for unlimited)
-  permalink:    page:num/        # pagination path (relative to template page)
-  title_suffix: " - page :num"   # Append to template's page title
+pagination:
+  enabled:      true
+  per_page:     3              # maximum number of items per page 
+  limit:        0              # Maximum number of pages to paginate (0 for unlimited)
   category:     'administration' # Paginate items in this category
 ---
 
