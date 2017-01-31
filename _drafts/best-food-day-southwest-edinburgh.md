@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      The Best Food Day in Southwest Edinburgh
-categories: [Latest, Personal]
-tags:       [Food, Edinburgh]
+categories: [latest, personal]
+tags:       [food, Edinburgh]
 ---
 
 So this is a quick post about eating in southwest Ediburgh, around the 

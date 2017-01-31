@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Everything Conda
-categories: [Latest]
+categories: [latest]
 tags:       []
 ---
 
