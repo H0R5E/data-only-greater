@@ -27,9 +27,9 @@ across these 5 modules can then be directly compared.
 ## Who Developed it?
 
 DTOcean was developed across 18 institutions across Europe (please see
-[the official DTOcean website](www.dtocean.eu) for further details). The bulk of
+[the official DTOcean website](http://www.dtocean.eu/) for further details). The bulk of
 the software development fell to about 8 of these, with [Tecnalia Research and
-Innovation](www.tecnalia.com), of the Basque Country, playing a key role. In late 2014, I started a
+Innovation](http://www.tecnalia.com/en/), of the Basque Country, playing a key role. In late 2014, I started a
 Marie Curie fellowship with the marine energy group of Tecnalia and I was 
 principally working on DTOcean until the end of my contract in December 2016.
 
