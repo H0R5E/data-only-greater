@@ -5,13 +5,15 @@ categories: [latest, professional]
 tags:       [DTOcean, open source, ocean energy]
 ---
 
+![DTOcean GUI]({{ site.baseurl }}/assets/images/dtocean/capex-pie.png)
+
 ## What is DTOcean?
 
-The official launch of the DTOcean software tool was published on the 9th of
+The official launch of the DTOcean software tool was announced on the 9th of
 January 2017. This was the final official output of a 3 year, 6 million Euro
 project to deliver a software tool to improve the decision making around designing
 arrays of ocean energy (wave and tidal) devices. Alongside the press release
-an installable graphical desktop tool and all its associated source code was
+an installable graphical desktop tool (as seen above) and all its associated source code was
 made available to download by the general public under various open source
 licenses.
 
@@ -25,11 +27,13 @@ across these 5 modules can then be directly compared.
 ## Who Developed it?
 
 DTOcean was developed across 18 institutions across Europe (please see
-[the official DTOcean website](www.dtocean.eu) for further details). In reality,
-the software development fell to about 8 of these, one of which was [Tecnalia Research and
-Innovation](www.tecnalia.com) in the Basque Country. In late 2014, I started a
+[the official DTOcean website](www.dtocean.eu) for further details). The bulk of
+the software development fell to about 8 of these, with [Tecnalia Research and
+Innovation](www.tecnalia.com), of the Basque Country, playing a key role. In late 2014, I started a
 Marie Curie fellowship with the marine energy group of Tecnalia and I was 
 principally working on DTOcean until the end of my contract in December 2016.
+
+![DTOcean Team]({{ site.baseurl }}/assets/images/dtocean/team-in-Antwerp.jpg)
 
 My role on the project was to coordinate the integration of the design modules
 and develop the framework for handling data between the modules, scheduling
@@ -38,20 +42,15 @@ I also defined the unified data model that is observed and populated by the user
 of the tool.
 
 I was not responsible for the development of the computational modules
-themselves or the database development (they were led by other partners),
+themselves or the supplementary database (they were led by other partners),
 although I did contribute to these projects and tried to coordinate their
 interactions with the other components of
 the tool. I was also not the sole contributor to the integration process:
 Vincenzo Nava, David Bould, Adam Collin, Rui Duarte and Francesco Ferri all
-contributed to giving the software as much functionality as possible by building
-on the underlying framework.
+contributed to giving the software as much functionality as possible by configuring
+and building upon the underlying framework.
 
 ## Building a Community
-
-My intention is to write a series of blog posts about DTOcean, including some
-more detail about its development, some more technical information about its
-structure and the underlying framework, but first I want to discuss the
-immediate future of the tool.
 
 Currently the installers, source code and supplementary data can be downloaded
 from [SETIS](https://setis.ec.europa.eu/dt-ocean), all of which corresponds to
@@ -71,6 +70,8 @@ or even to suggest future improvements to the software. If you are using
 DTOcean and want to provide some feedback I would encourage you to open an 
 issue.
 
+![DTOcean GUI]({{ site.baseurl }}/assets/images/dtocean/github.png)
+
 Although there is no formal, funded support for DTOcean at this point, 
 collecting the experiences of the users will be invaluable for assessing how
 much interest the tool has among the ocean energy community and how it could
@@ -88,7 +89,7 @@ issues raised by the user community.
 Although DTOcean has garnered significant interest from various actors such 
 as research institutions and device developers, neither the tool itself, or
 the industry it is designed for, is mature enough to appeal to the utilities that
-would pay for its exploitation.
+would pay for its full exploitation.
 
 Even though the software itself is free, the investment
 of time to develop and improve it is not. Ultimately, the success of
