@@ -1,9 +1,9 @@
-# DTOcean Public Development Management
+# DTOcean: Development Management
 
 ## Github Repository Structures
 
 In the interest of external engagement and maintaining a fairly simple
-management structure for handling updated through pull requests, a process
+management structure for handling updates through pull requests, a process
 similar to many mature python packages that are developed through Github, 
 such as [IPython][6] or Pandas, will be used.
 
@@ -43,9 +43,10 @@ upstream packages should be consulted to discuss the likely level of impact.
 
 The updating of a version number in a package should "automatically" trigger
 an update of the matching hierarchy version in upstream packages. Although this
-can not happen automatically for changes other than micro versions, the process
-should be instigated once the upstream package developer has been made aware of
-the change.
+can not really happen automatically for changes other than micro versions,
+the process should be instigated once the upstream package developer has been
+made aware of the change through the
+[DTOcean Mailing List](https://groups.google.com/d/forum/dtocean).
 
 ## Updating Process
 
@@ -62,6 +63,62 @@ submitting to the public server they must either be "fast-forward" merged or
 The same process should be followed for changes submitted to the release branch
 but those changes may or may not be incorporated into the master branch
 depending on its level of development.
+
+This process is detailed in the following subsections.
+
+### Creating a Fork and Cloning
+
+The developer should use a personal fork of the DTOcean repository, rather
+than working directly on the official repositories themselves. The process
+is started as follows:
+
+1. "Fork" the DTOcean repository into a personal repostory on Github. This
+   can be done using the "Fork" button in the top right of the Github page.
+2. "Clone" the personal fork onto your computer to produce a local working
+   copy.
+
+### Syncing the Fork
+
+It is desirable to keep the fork in sync with the official repository, both
+for submitting work and reusing the fork in the future (rather than deleting
+and cloning again).
+
+The syncing process is described in [Nicola Paolucci's blog
+post](http://blogs.atlassian.com/2013/07/git-upstreams-forks/). A summary of
+the steps are as follows:
+
+1. Add the DTOcean repository as the "upstream" remote.
+2. "Fetch" changed from upstream.
+3. Apply those changes to your local master branch.
+4. Push the updates to Github
+
+In code:
+
+```
+git remote add upstream https://github.com/DTOcean/dtocean-*.git
+git fetch upstream
+git checkout master
+git merge upstream/master
+git push origin
+```
+
+Steps 2, 3 & 4 can be repeated as required.
+
+### Creating a branch and working on it
+
+In your personal fork, create a new branch to create your new code and test it.
+**DO NOT WORK ON THE MASTER OR RELEASE BRANCHES**. If you submit a pull request
+on either of these branches your local fork will become irrecovably out of sync
+with the DTOcean organisation version.
+
+Do your work on the new branch in your personal fork. You can commit and push
+this branch without worry. When the code is ready and tested the branch can
+then be prepared for a pull request.
+
+### Rebase the branch
+
+Before submitting your branch as a pull request, it is useful to rebase
+the branch with the current upstream repository.
 
 Further reading about the mechanism for this "Trunk" style updating process can
 be found in the following references:
