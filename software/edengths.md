@@ -13,24 +13,24 @@ Edinburgh $\LaTeX$ thesis template, known as "edengths".
 <div class="isa_success">
      <i class="fa fa-check"></i>
      <p>
-     On <b>26/05/15</b> an option to change the university name was added.
+     On <b>27/08/17</b> A "lay summary" section was added to the precntnt.tex file.
      </p>
 </div>
 
 <div class="isa_success">
      <i class="fa fa-check"></i>
      <p>
-     On <b>02/04/15</b> the template was migrated to 
-     <a href="https://bitbucket.org/topper/edengths"><b>BitBucket</b></a>.
+     On <b>27/08/17</b> The template has been ported to 
+     <a href="https://github.com/H0R5E/edengths"><b>Github</b></a>.
      </p>
 </div>
 
 ## Introduction
 
 This page is for recording information about the usage of the latex
-thesis template that was authored by Mathew Topper over 2010 and 2011.
+thesis template that was authored by Mathew Topper since 2010.
 This template is appropriate for the current thesis regulations which
-**[can be found here](http://www.ed.ac.uk/schools-departments/academic-services/students/postgraduate-research/thesis-submission)**
+**[can be found here](http://www.ed.ac.uk/academic-services/students/thesis-submission)**
 and, yes, they do want a Sans font for the titles. Fortunately, the
 template has a number of built in options (which can use just serif
 fonts, for instance) so there is a level of customisation available.
@@ -42,24 +42,23 @@ installation and usage instructions, below.
 <div class="isa_warning">
      <i class="fa fa-warning"></i>
      <p>
-     <b>02/05/15</b> Access to the edengths template has changed due to 
-     account migration. New instructions are given below.
+     <b>27/08/17</b> Access to the edengths template is now available through
+     Github. See below for details.
      </p>
 </div>
 
 ### Standard Version
 
-The template is being stored under Mercurial on my bitbucket repository at the path:
+The template is now being stored on Github at the path:
 
-[https://bitbucket.org/topper/edengths](https://bitbucket.org/topper/edengths)
+[https://github.com/H0R5E/edengths](https://github.com/H0R5E/edengths)
 
 Please feel free to clone the repository and contribute as you wish.
 
-If you are using Windows, then I have produced some "builds" of the
-files for download from the bitbucket site. For the standard version
-the direct link is:
+Additionally, zipped "builds" of the template can be download directly from
+Github. For the standard version the direct link is:
 
-[Standard Version](https://bitbucket.org/topper/edengths/downloads/edengths.zip)
+[Standard Version](https://github.com/H0R5E/edengths/archive/master.zip)
 
 ### Nomenclature Version
 
@@ -80,9 +79,25 @@ along with the default code if you clone the repository.
 
 The link for downloading the zipped folder containing this version is: 
 
-[Nomenclature Version](https://bitbucket.org/topper/edengths/downloads/edengths_nomencl.zip)
+[Nomenclature Version](https://github.com/H0R5E/edengths/archive/nomencl.zip)
 
 ## Choosing an Editor and Compiling
+
+<div class="isa_warning">
+    <i class="fa fa-warning"></i>
+    <p>
+    <b>27/08/17</b> The content below was written in 2010 and so may
+    now be out of date.
+    </p>
+</div>
+
+<div class="isa_info">
+    <i class="fa fa-info-circle"></i>
+    <p>
+    <b>27/08/17</b> My current favourite Latex editor on Windows is
+    <a href="http://www.texstudio.org/"><b>TeXstudio</b></a>.
+    </p>
+</div>
 
 If you've never done latex before then it can be a bit daunting. Some
 people never really get it, but if you do then the strength of this
@@ -111,7 +126,6 @@ the Linux terminal.
    The terminal only approach still needs to be written.
    </p>
 </div>
-
 
 In addition, the LyX editor is a convenient alternative to working
 directly with latex source code.  LyX is a WYSIWYG-like front end to
