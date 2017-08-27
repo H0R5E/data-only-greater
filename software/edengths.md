@@ -13,14 +13,14 @@ Edinburgh $\LaTeX$ thesis template, known as "edengths".
 <div class="isa_success">
      <i class="fa fa-check"></i>
      <p>
-     On <b>27/08/17</b> A "lay summary" section was added to the precntnt.tex file.
+     On <b>27/08/17</b> a "lay summary" section was added to the precntnt.tex file.
      </p>
 </div>
 
 <div class="isa_success">
      <i class="fa fa-check"></i>
      <p>
-     On <b>27/08/17</b> The template has been ported to 
+     As of <b>27/08/17</b> the template has been ported to 
      <a href="https://github.com/H0R5E/edengths"><b>Github</b></a>.
      </p>
 </div>
@@ -42,8 +42,8 @@ installation and usage instructions, below.
 <div class="isa_warning">
      <i class="fa fa-warning"></i>
      <p>
-     <b>27/08/17</b> Access to the edengths template is now available through
-     Github. See below for details.
+     From <b>27/08/17</b> access to the edengths template is now available
+     through Github. See below for details.
      </p>
 </div>
 
@@ -53,9 +53,13 @@ The template is now being stored on Github at the path:
 
 [https://github.com/H0R5E/edengths](https://github.com/H0R5E/edengths)
 
-Please feel free to clone the repository and contribute as you wish.
+Please feel free to clone the repository and provide contributions via pull
+requests (PRs). Note, do not include any merge commits in your PR or work
+directly on the master or nomencl branches, as this
+project follows a
+[trunk based development model](https://barro.github.io/2016/02/a-succesful-git-branching-model-considered-harmful/).
 
-Additionally, zipped "builds" of the template can be download directly from
+Alternatively, zipped "builds" of the template can be download directly from
 Github. For the standard version the direct link is:
 
 [Standard Version](https://github.com/H0R5E/edengths/archive/master.zip)
@@ -86,15 +90,14 @@ The link for downloading the zipped folder containing this version is:
 <div class="isa_warning">
     <i class="fa fa-warning"></i>
     <p>
-    <b>27/08/17</b> The content below was written in 2010 and so may
-    now be out of date.
+    The content below was written in 2010 and so may now be out of date.
     </p>
 </div>
 
 <div class="isa_info">
     <i class="fa fa-info-circle"></i>
     <p>
-    <b>27/08/17</b> My current favourite Latex editor on Windows is
+    As of <b>27/08/17</b> my current favourite Latex editor for Windows is
     <a href="http://www.texstudio.org/"><b>TeXstudio</b></a>.
     </p>
 </div>
@@ -111,7 +114,7 @@ will describe various methods to *compile* the template.
 
 Choosing an editor is an important part of the process. A dedicated
 latex editor makes the whole process a lot easier by providing menus and
-shortcuts to commands that you will need to format and prepare the
+short-cuts to commands that you will need to format and prepare the
 document. In Linux, the best latex editor is Kile, which comes as part
 of the KDE desktop. For windows, there is a choice between TeXnicCenter
 and TexMaker (both available through Machination). Although an editor is
@@ -179,7 +182,7 @@ be used to produce a pdf of a latex document. One key choice is the
 format of images that are used. If jpg or pdf images are what you want
 to use the pdflatex is what you need, or if you wish to use eps files
 then standard latex is required. Both approaches have their
-advantages/dissadvantages and some graphics packages (such as pstricks)
+advantages/disadvantages and some graphics packages (such as pstricks)
 need to take the latex route. The template will compile via either
 route, but you should make a decision about which of these you are going
 to use as you can not have a mix of eps and jpg or pdf images.
@@ -251,7 +254,7 @@ run **twice** in order to finish the cross referencing.
 <div class="isa_warning">
    <i class="fa fa-warning"></i>
    <p>
-   Windows uses the MiKTeX Latex distribution as the backend to the
+   Windows uses the MiKTeX Latex distribution as the back-end to the
    editors. The default installation of MiKTeX does not work properly with
    TeXnicCenter, so the following changes must be made first.
    </p>
@@ -259,7 +262,7 @@ run **twice** in order to finish the cross referencing.
 
 #### Preparing the MiKTeX distribution
 
-TeXnicCenter uses MiKTeX as its Latex backend; it will call commands
+TeXnicCenter uses MiKTeX as its Latex back-end; it will call commands
 provided by MiKTeX to compile your documents. **It is not fully
 compatible with TeXnicCenter using its default settings.** MiKTeX has a
 clever package management system that will download missing Latex
