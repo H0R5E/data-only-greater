@@ -30,11 +30,11 @@ tags: [software, open source, guides]
   <dt>Platform</dt>
   <dd>Latex</dd>
   <dt>Last Updated</dt>
-  <dd>26/05/2015</dd>
+  <dd>28/08/2017</dd>
   <dt>Status</dt>
   <dd>Operational but not under active development</dd>
   <dt>Source</dt>
-  <dd><a href="https://bitbucket.org/topper/edengths">Bitbucket</a></dd>
+  <dd><a href="https://github.com/DTOcean">Github</a></dd>
   <dt>Read More</dt>
   <dd><a href="./edengths">Unofficial University of Edinburgh Latex Thesis 
 Template</a></dd>
