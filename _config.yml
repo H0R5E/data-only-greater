@@ -1,7 +1,13 @@
 # Dependencies
 markdown:         kramdown
 highlighter:      pygments
-gems:             [jekyll-archives, jekyll-paginate-v2, jekyll-sitemap]
+plugins:          [jekyll-archives, jekyll-paginate-v2, jekyll-sitemap]
+
+# SaSS
+sass:
+  load_paths:
+    - _sass
+    - node_modules
 
 # Permalinks
 permalink:        pretty
@@ -42,10 +48,10 @@ jekyll-archives:
 # Custom vars
 version:          0.1.0
 github:
-  repo:           https://github.com/H0R5E/data-only-greater
+repo:             https://github.com/H0R5E/data-only-greater
 twitter:
-  username:       H0R5E
-  userid:         142661495
+username:         H0R5E
+userid:           142661495
   
 # Include exclude files:
 include:          [.htaccess]

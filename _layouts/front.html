@@ -1,7 +1,8 @@
----
-layout: root
----
-
-<body class="front">
-  {{ content }}
-</body>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  {% include headbs.html %}
+  <body id="page-top">
+    {{ content }}
+    {% include footer.html %}
+  </body>
+</html>
