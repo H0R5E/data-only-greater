@@ -20,6 +20,42 @@ tags: [software, open source, guides]
 
 <h1 class="one" id="projects"><span>Projects</span></h1>
 
+<h3 class="project-title">DTOcean</h3>
+
+<dl class="project-def">
+  <dt>Purpose</dt>
+  <dd>
+  Design and optimisation tool for ocean energy array planning.
+  </dd>
+  <dt>Platform</dt>
+  <dd>Python</dd>
+  <dt>Last Updated</dt>
+  <dd>17/08/2018</dd>
+  <dt>Status</dt>
+  <dd>In active development</dd>
+  <dt>Source</dt>
+  <dd><a href="https://github.com/DTOcean">Github</a></dd>
+</dl>
+
+<h3 class="project-title">convergence</h3>
+
+<dl class="project-def">
+  <dt>Purpose</dt>
+  <dd>
+  Perform calculations associated with a grid convergence study.
+  </dd>
+  <dt>Platform</dt>
+  <dd>Python</dd>
+  <dt>Last Updated</dt>
+  <dd>17/08/2018</dd>
+  <dt>Status</dt>
+  <dd>Operational but not under active development</dd>
+  <dt>Source</dt>
+  <dd><a href="https://github.com/H0R5E/convergence">Github</a></dd>
+  <dt>Read More</dt>
+  <dd><a href="https://pypi.org/project/convergence/">Pypi</a></dd>
+</dl>
+
 <h3 class="project-title">edengths</h3>
 
 <dl class="project-def">
@@ -30,11 +66,11 @@ tags: [software, open source, guides]
   <dt>Platform</dt>
   <dd>Latex</dd>
   <dt>Last Updated</dt>
-  <dd>28/08/2017</dd>
+  <dd>21/08/2018</dd>
   <dt>Status</dt>
   <dd>Operational but not under active development</dd>
   <dt>Source</dt>
-  <dd><a href="https://github.com/DTOcean">Github</a></dd>
+  <dd><a href="https://github.com/H0R5E/edengths">Github</a></dd>
   <dt>Read More</dt>
   <dd><a href="./edengths">Unofficial University of Edinburgh Latex Thesis 
 Template</a></dd>

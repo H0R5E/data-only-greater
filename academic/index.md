@@ -66,7 +66,12 @@ These are a collection of notes I made on academic papers whilst working as a po
 
 <h1 class="one" id="pubs"><span>Publications</span></h1>
 
-Currently empty...
+For details of my publications please see:
+
+* [Researchgate](https://www.researchgate.net/profile/Mathew_Topper)
+* [Google Scholar](https://scholar.google.co.uk/citations?user=di-ePxIAAAAJ)
+* [ORCID](https://orcid.org/0000-0003-4732-4347)
+
 
 
 

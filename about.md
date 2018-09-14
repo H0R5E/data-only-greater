@@ -23,7 +23,7 @@ tags: [Mathew Topper, professional, software, music, F1]
 
 <h1 class="one" id="introduction"><span>Introduction</span></h1>
 
-I'm Mathew Bernard Robert Topper, an English guy currently living in Bilbao.
+I'm Mathew Bernard Robert Topper, an English guy currently living in Ireland.
 I have a PhD from from the [Engineering department](http://www.eng.ed.ac.uk/)
 of the [University of Edinburgh](http://www.ed.ac.uk/) based on the topic of
 [Marine Renewable Energy](http://en.wikipedia.org/wiki/Marine_energy#Renewable)
@@ -32,15 +32,13 @@ I continue to work both on this topic and within this field.
 
 In my spare time, I like to mess about with computers (obviously), but I also
 like sports such as cycling, snowboarding, and many more. I also enjoy normal
-pursuits like listening to music and watching films. I'm a particularly
-awful Formula One (F1) geek, to the point where I'm willing to get up very early to watch
-not even the race and own hats and little cars that mean nothing to anyone
-except other awful F1 geeks!
+pursuits like spending time with my family, listening to music and watching
+films.
 
 <h1 class="one" id="where"><span>Where to Find Me</span></h1>
 
-A few of the pursuits mentioned above have led me to have some other homes on the internet.
-These are described in the sections below.
+A few of the pursuits mentioned above have led me to have some other homes on 
+the internet. These are described in the sections below.
 
 ### Professional
 
@@ -55,18 +53,7 @@ I have profession profiles on the following services:
 I have some open source code projects (mainly in Python), that are described
 on the Software page, and most of these are hosted at
 
-* [Bitbucket.org](https://bitbucket.org/topper)
-
-I also am a keen user of the
-[Anaconda Scientific Python Distribution](https://store.continuum.io/cshop/anaconda/)
-and I package various python projects for Anaconda which can be found at
-
-* [Binstar.org](https://binstar.org/topper)
-
-Because I contribute bug reports to various python projects I also have a 
-[GitHub](https://github.com/H0R5E) account, but I do not tend to develop code over
-this platform as I think Mercurial is easier to use than Git (especially on
-Windows).
+* [GitHub](https://github.com/H0R5E)
 
 ### Music
 
@@ -75,11 +62,6 @@ can listen to some of my favourite new and old stuff at:
 
 * [Soundcloud.com](https://soundcloud.com/h0r5e/)
 * [Last.fm](http://www.last.fm/user/H0R5E)
-
-### Formula One
-
-Just a quick plug for [F1Technical.net](http://www.f1technical.net/), where I like
-to be boring with all the other F1 geeks. I'm sure you can work out my user name!
 
 <h1 class="one" id="contact"><span>Contact</span></h1>
 
@@ -92,3 +74,4 @@ some chat will encourage me to engage with it some more!
 Big love to Mum and [Lucy](http://cat-bounce.com/) for being so awesome!
 
 Thanks for reading!
+

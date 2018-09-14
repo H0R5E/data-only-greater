@@ -14,9 +14,8 @@ permalink:        pretty
 
 # Setup
 title:            Data only Greater
-tagline:          Mathew Topper's website
-description:      "Welcome to Mathew Topper's excellent internet adventure."
-tags:             [Software, Research, Life]
+description:      "Welcome to Mathew Topper's excellent <s>internet adventure</s> business venture."
+tags:             [software, research, business, life]
 url:              http://www.dataonlygreater.com
 baseurl:          ""
 
