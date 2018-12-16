@@ -54,5 +54,5 @@ userid:           142661495
   
 # Include exclude files:
 include:          [.htaccess]
-exclude:          [COPYRIGHT.md, LICENSE_Poole.md, README.md]
+exclude:          [COPYRIGHT.md, LICENSE_Poole.md, README.md, vendor]
 
