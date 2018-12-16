@@ -54,5 +54,17 @@ userid:           142661495
   
 # Include exclude files:
 include:          [.htaccess]
-exclude:          [COPYRIGHT.md, LICENSE_Poole.md, README.md, vendor]
+exclude:
+                  - Gemfile
+                  - Gemfile.lock
+                  - package.json
+                  - package-lock.json
+                  - node_modules
+                  - vendor/bundle/
+                  - vendor/cache/
+                  - vendor/gems/
+                  - vendor/ruby/
+                  - COPYRIGHT.md
+                  - LICENSE_Poole.md
+                  - README.md
 
