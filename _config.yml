@@ -13,7 +13,8 @@ sass:
 permalink:        pretty
 
 # Setup
-title:            Data only Greater
+title:            Data Only Greater
+tagline:          Scientific Computing for Offshore Engineering and Beyond
 description:      "Welcome to Mathew Topper's excellent <s>internet adventure</s> business venture."
 tags:             [software, research, business, life]
 url:              http://www.dataonlygreater.com

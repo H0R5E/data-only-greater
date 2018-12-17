@@ -1,6 +1,6 @@
 ---
 layout: front
-title: Data Only Greater
+title: Home
 description: Data Only Greater provides computational science services and specialises in marine renewable energy.
 tags: [computational science, software development, wave energy, tidal energy, DTOcean]
 ---
@@ -116,34 +116,3 @@ tags: [computational science, software development, wave energy, tidal energy, D
     </div>
   </div>
 </section>
-
-{% include footerbs.html %}
-
-<!-- Email Form -->
-<script>
-$(document).ready(function(){ 
-    $('#characterLeft').text('500 characters left');
-    $('#message').keyup(function () {
-    
-        var len = 0;
-        var max = 500;
-        
-        var message_text = $(this).val();
-        if ($.trim(message_text).length > 0) {
-            var len = message_text.length;
-        }
-
-        if (len >= max) {
-            $('#characterLeft').text('You have reached the limit');
-            $('#characterLeft').addClass('text-danger');
-        } 
-        else {
-            var ch = max - len;
-            $('#characterLeft').text(ch + ' characters left');
-            $('#characterLeft').removeClass('text-danger');       
-        }
-    });    
-});
-</script>
-
-

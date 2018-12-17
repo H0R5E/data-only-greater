@@ -1,0 +1,33 @@
+<!-- Email Form -->
+<script>
+$(document).ready(function(){ 
+    $('#characterLeft').text('500 characters left');
+    $('#message').keyup(function () {
+    
+        var len = 0;
+        var max = 500;
+        
+        var message_text = $(this).val();
+        if ($.trim(message_text).length > 0) {
+            var len = message_text.length;
+        }
+
+        if (len >= max) {
+            $('#characterLeft').text('You have reached the limit');
+            $('#characterLeft').addClass('text-danger');
+        } 
+        else {
+            var ch = max - len;
+            $('#characterLeft').text(ch + ' characters left');
+            $('#characterLeft').removeClass('text-danger');       
+        }
+    });    
+});
+</script>
+
+<!-- Bootstrap -->
+<script src="{{'/node_modules/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script>
+<script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
+<script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
+<script src="{{'/node_modules/jquery-easing/dist/jquery.easing.1.3.umd.min.js' | prepend: site.baseurl}}"></script>
+<script src="{{ site.baseurl }}/public/js/scrolling-nav.js"></script>

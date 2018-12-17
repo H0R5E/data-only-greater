@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-
-  {% include headbs.html %}
   
-  <body id="page-top">
+<head>
+{% include headshared.html %}
+{% include headbs.html %}
+</head>
   
-    {% include navbs.html %}
-  
-    {{ content }}
-    
-    {% include footer.html %}
-   
-  </body>
+<body id="page-top">
+{% include navbs.html %}
+{{ content }}
+{% include footerbs.html %}
+{% include postfooterbs.html %}
+{% include postfootershared.html %}
+</body>
 
 </html>
