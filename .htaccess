@@ -1,7 +1,4 @@
 ErrorDocument 404 /404.html
 ErrorDocument 403 /403.html
 
-RewriteCond %{HTTPS} !on [OR]
-RewriteCond %{HTTP_HOST} !^www\.
-RewriteRule (.*) https://www.dataonlygreater.com%{REQUEST_URI} [L,R=301]
 
