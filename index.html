@@ -106,7 +106,7 @@ tags: [computational science, software development, wave energy, tidal energy, D
 						<input type="text" class="form-control" id="subject" name="_subject" placeholder="Subject" required>
 					</div>
           <div class="form-group">
-            <textarea class="form-control" type="textarea" id="message" name="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+            <textarea class="form-control mb-2" type="textarea" id="message" name="message" placeholder="Message" maxlength="500" rows="7"></textarea>
             <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>                    
           </div>
           <button type="submit" id="submit" name="submit" value="Send" class="btn btn-primary pull-right">Submit Form</button>
@@ -122,20 +122,25 @@ tags: [computational science, software development, wave energy, tidal energy, D
 <!-- Email Form -->
 <script>
 $(document).ready(function(){ 
-    $('#characterLeft').text('140 characters left');
-    $('#message').keydown(function () {
-        var max = 140;
-        var len = $(this).val().length;
+    $('#characterLeft').text('500 characters left');
+    $('#message').keyup(function () {
+    
+        var len = 0;
+        var max = 500;
+        
+        var message_text = $(this).val();
+        if ($.trim(message_text).length > 0) {
+            var len = message_text.length;
+        }
+
         if (len >= max) {
             $('#characterLeft').text('You have reached the limit');
-            $('#characterLeft').addClass('red');
-            $('#btnSubmit').addClass('disabled');            
+            $('#characterLeft').addClass('text-danger');
         } 
         else {
             var ch = max - len;
             $('#characterLeft').text(ch + ' characters left');
-            $('#btnSubmit').removeClass('disabled');
-            $('#characterLeft').removeClass('red');            
+            $('#characterLeft').removeClass('text-danger');       
         }
     });    
 });
