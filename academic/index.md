@@ -66,6 +66,12 @@ These are a collection of notes I made on academic papers whilst working as a po
 
 <h1 class="one" id="pubs"><span>Publications</span></h1>
 
+Preprints:
+
+* [Reducing Variability in the Cost of Ocean Energy Arrays]({{ site.baseurl }}/assets/pdfs/topper_preprint_2018.pdf)
+
+(All rights reserved. No reuse allowed without permission.)
+
 For details of my publications please see:
 
 * [Researchgate](https://www.researchgate.net/profile/Mathew_Topper)
