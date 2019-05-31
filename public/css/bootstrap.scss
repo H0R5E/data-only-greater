@@ -43,9 +43,37 @@ section {
     }
 }
 
+.carousel-indicators {
+    bottom: 10px;
+}
+
+.carousel .carousel-indicators li {
+  background-color: #fff;
+  background-color: rgba(70,70,70,.25);
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.carousel .carousel-indicators .active {
+  background-color: #444;
+}
+
 .carousel-caption {
     position: relative;
     left: 0;
     top: 0;
 }
+
+.nav-tabs .nav-item .nav-link.active {
+  background-color: $gray-600;
+  color: $white;
+  font-weight: bold;
+  border: 1px solid $dark;
+}
+
+.nav-tabs .nav-item .nav-link {
+  color: $gray-700;
+}
+
 
