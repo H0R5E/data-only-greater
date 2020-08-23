@@ -50,7 +50,9 @@ work_data.spline_plot('gradient_spline.png')
 
 inflections = work_data._spline.roots()
 
-# You can now filter the inflections to make sure they run peak to trough Finally for each inflection move the work data and find the root, i.e there may be a crossing between the start of the data and the first inflection
+# You can now filter the inflections to make sure they run peak to trough 
+# Finally for each inflection move the work data and find the root, i.e there
+# may be a crossing between the start of the data and the first inflection
 fromindex = 0
 toindex = test.closest_x(inflections[0]) + 1
 
@@ -62,7 +64,8 @@ work_data.spline_plot('final_spline.png')
 
 print 'Zero crossing is at ', work_data._spline.roots()[0]
 
-# Note that the current smoothing factor is not easy to recover from the spline, but in fact it is given by
+# Note that the current smoothing factor is not easy to recover from the 
+# spline, but in fact it is given by
 test_data_spline_smoothing_factor = test_data._spline._data[6]
 {% endhighlight %}
 

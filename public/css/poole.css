@@ -154,7 +154,6 @@ pre {
 }
 code {
   padding: .25em .5em;
-  font-size: 85%;
   color: #bf616a;
   background-color: #f9f9f9;
   border-radius: 3px;
@@ -167,19 +166,24 @@ pre {
   font-size: .8rem;
   line-height: 1.4;
   white-space: pre;
-  white-space: pre-wrap;
+  overflow: auto;
   word-break: break-all;
   word-wrap: break-word;
   background-color: #f9f9f9;
 }
 pre code {
   padding: 0;
-  font-size: 100%;
+  font-size: 85%;
   color: inherit;
   background-color: transparent;
 }
 
 /* Pygments via Jekyll */
+figure.highlight {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .highlight {
   margin-bottom: 1rem;
   border-radius: 4px;
