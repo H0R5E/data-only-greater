@@ -4,11 +4,11 @@
   "description": "This is the repository for the Jekyll source of http://www.dataonlygreater.com, a website by Mathew Topper",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": ">=3.4.0",
+    "bootstrap": "^4.5.2",
+    "jquery": ">=3.5.1",
     "jquery-easing": "0.0.1",
-    "mathjax": "^2.7.5",
-    "popper.js": "^1.15.0"
+    "mathjax": "^3.0.5",
+    "popper.js": "^1.16.1"
   },
   "devDependencies": {},
   "scripts": {

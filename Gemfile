@@ -16,3 +16,5 @@ gem "jekyll-sitemap", "~> 1.2"
 
 gem "pygments.rb", "~> 1.2"
 
+
+gem "kramdown-parser-gfm", "~> 1.1"

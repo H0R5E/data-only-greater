@@ -13,38 +13,21 @@
 {% endif %}
 
 <!-- MathJax -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      "HTML-CSS": { linebreaks: { automatic: true } },
-      extensions: ["MatchWebFonts.js"],
-      tex2jax: {
-        inlineMath: [[ '$', '$' ]],
-        processEscapes: true
-        },
-      TeX: { extensions: ["color.js"] },
-      MatchWebFonts: {
-    matchFor: {
-      "HTML-CSS": true,
-      NativeMML: false,
-      SVG: false
-    },
-fontCheckDelay: 2000,
-fontCheckTimeout: 30 * 1000,
-        },
-      messageStyle: "none"
-    });
-    //
-    //  The document is hidden until MathJax is finished, then
-    //   this function runs, making it visible again.
-    //
-    MathJax.Hub.Queue(function () {
-      if (document.getElementById("hide_page")){
-        document.getElementById("hide_page").style.visibility = "";
-      }
-    });
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [[ '$', '$' ]],
+    packages:  {'[+]': ['color']}
+  },
+  loader: {
+    load: ['[tex]/color']
+  }
+};
 </script>
 
-<script src="{{'/node_modules/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML' | prepend: site.baseurl}}"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="{{'/node_modules/mathjax/es5/tex-chtml.js' | prepend: site.baseurl}}">
+</script>
 
  <!-- JQuery -->  
 <script src="{{'/node_modules/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script>
