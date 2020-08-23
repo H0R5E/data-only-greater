@@ -14,7 +14,8 @@ gem "jekyll-paginate-v2", "2.0"
 
 gem "jekyll-sitemap", "~> 1.2"
 
-gem "pygments.rb", "~> 1.2"
 
 
 gem "kramdown-parser-gfm", "~> 1.1"
+
+gem "rouge", "~> 3.22"
