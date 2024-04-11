@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
   import { currentPage, isMenuOpen } from "../assets/js/store";
 
-  export let href;
+  export let href: string;
 
   $: isCurrentPage = $currentPage.startsWith(href);
 

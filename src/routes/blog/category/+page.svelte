@@ -7,7 +7,7 @@
   <title>Blog | Categories</title>
 </svelte:head>
 
-<div class="compressed-content">
+<div>
   <h1 class="h2">All blog categories</h1>
 
   <ul>

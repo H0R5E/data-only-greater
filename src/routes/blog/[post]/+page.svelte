@@ -30,10 +30,9 @@
   <!-- <meta name="twitter:image" content="https://yourdomain.com/image_path" /> -->
 </svelte:head>
 
-<article class="post">
+<article>
   <!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
   <img
-    class="cover-image"
     src={coverImage}
     alt=""
     style="aspect-ratio: {coverWidth} / {coverHeight};"
@@ -42,7 +41,7 @@
 
   <h1>{title}</h1>
 
-  <div class="meta">
+  <div>
     <b>Published:</b>
     {date}
     <br />
@@ -53,9 +52,9 @@
   <svelte:component this={PostContent} />
 
   {#if categories}
-    <aside class="post-footer">
+    <aside>
       <h2>Posted in:</h2>
-      <ul class="post-footer__categories">
+      <ul>
         {#each categories as category}
           <li>
             <a href="/blog/category/{category}/">

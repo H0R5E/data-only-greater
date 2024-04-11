@@ -1,3 +1,3 @@
-<div class="callout">
+<div>
   <slot />
 </div>

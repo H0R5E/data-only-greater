@@ -1,8 +1,16 @@
-<script>
-  export let posts = [];
+<script lang="ts">
+  interface Post {
+    slug: string;
+    coverImage: string;
+    coverWidth: string;
+    coverHeight: string;
+    title: string;
+    excerpt: string;
+  }
+  export let posts: Post[] = [];
 </script>
 
-<ul class="posts-list">
+<ul>
   {#each posts as post}
     <li>
       <article>

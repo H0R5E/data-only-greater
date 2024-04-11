@@ -3,7 +3,7 @@
   import NavItems from "./NavItems.svelte";
 </script>
 
-<footer>
+<footer class="flex justify-between bg-orange-400">
   <nav>
     <ul>
       <li>

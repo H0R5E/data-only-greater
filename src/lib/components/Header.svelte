@@ -5,19 +5,23 @@
 
   const focusMain = () => {
     const main = document.querySelector("main");
+    if (!main) return;
     main.focus();
   };
 </script>
 
-<header>
+<header class="static flex flex-col bg-slate-800 text-center">
   <a
     on:click|preventDefault={focusMain}
-    class="skip-to-content-link"
+    class="absolute
+    left-0 top-0
+    h-12
+    text-white"
     href="#main">
     Skip to main content
   </a>
 
-  <a href="/" class="site-title">
+  <a href="/" class="text-2xl text-white">
     {siteTitle}
   </a>
 
