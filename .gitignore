@@ -48,4 +48,5 @@ vendor
 .sass-cache
 _site
 
-
+# Ignore SvelteKit
+.svelte-kit
