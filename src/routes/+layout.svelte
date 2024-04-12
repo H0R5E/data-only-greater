@@ -1,14 +1,21 @@
 <!-- This is the global layout file; it "wraps" every page on the site. (Or more accurately: is the parent component to every page component on the site.) -->
 <script lang="ts">
   import "../app.postcss";
+  import "@fortawesome/fontawesome-free/css/fontawesome.css";
+  import "@fortawesome/fontawesome-free/css/brands.css";
+  import "@fortawesome/fontawesome-free/css/solid.css";
+
   import Header from "$lib/components/Header.svelte";
   import Footer from "$lib/components/Footer.svelte";
-  import { currentPage, isMenuOpen } from "../lib/assets/js/store.js";
+  import { siteTitle, siteURL } from "$lib/config.js";
+  import { currentPage, isMenuOpen } from "$lib/assets/js/store.js";
+
   import { preloadCode } from "$app/navigation";
   import { page } from "$app/stores";
+
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
-  import { siteTitle, siteURL } from "$lib/config.js";
+
   export let data;
 
   const transitionIn = { delay: 150, duration: 150 };

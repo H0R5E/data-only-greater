@@ -12,8 +12,8 @@
     <span class="font-script pt-2 text-2xl font-normal">Data Only Greater</span>
   </div>
   <div class="grow" />
-  <div class="flex items-center gap-3 pb-1 pr-5">
+  <nav aria-label="Main navigation" class="flex items-center gap-3 pb-1 pr-5">
     <a href="/" class="text-xl">Home</a>
     <a href="/blog" class="text-xl">Blog</a>
-  </div>
+  </nav>
 </div>
