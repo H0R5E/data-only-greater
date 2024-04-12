@@ -5,6 +5,7 @@
   import Footer from "$lib/components/Footer.svelte";
   import { currentPage, isMenuOpen } from "../lib/assets/js/store.js";
   import { preloadCode } from "$app/navigation";
+  import { page } from "$app/stores";
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
   import { siteTitle, siteURL } from "$lib/config.js";
@@ -54,8 +55,10 @@
 	The below markup is used on every page in the site. The <slot> is where the page's
 	actual contents will show up.
 -->
-<div class="static flex flex-col items-center" class:open={$isMenuOpen}>
-  <Header />
+<div
+  class="static flex min-h-screen flex-col items-center"
+  class:open={$isMenuOpen}>
+  <Header sections={$page.data.sections} />
   {#key data.path}
     <main
       id="main"

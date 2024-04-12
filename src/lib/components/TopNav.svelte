@@ -13,7 +13,7 @@
   </div>
   <div class="grow" />
   <div class="flex items-center gap-3 pb-1 pr-5">
-    <span class="text-xl">Home</span>
-    <span class="text-xl">Blog</span>
+    <a href="/" class="text-xl">Home</a>
+    <a href="/blog" class="text-xl">Blog</a>
   </div>
 </div>
