@@ -13,4 +13,4 @@ export const siteLink =
 export const siteAuthor = "- find and change this text in src/lib/config.js";
 
 // Controls how many posts are shown per page on the main blog index pages
-export const postsPerPage = 10;
+export const postsPerPage = 2;
