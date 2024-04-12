@@ -7,17 +7,7 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      sans: [
-        "Atkinson Hyperlegible",
-        "sans-serif",
-        ...defaultTheme.fontFamily.sans,
-      ],
-      serif: [
-        "Atkinson Hyperlegible",
-        "serif",
-        ...defaultTheme.fontFamily.serif,
-      ],
-      mono: ["Fira Code", "font-mono", ...defaultTheme.fontFamily.mono],
+      script: ['"Sacramento"'],
     },
   },
   plugins: [],

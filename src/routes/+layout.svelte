@@ -4,7 +4,6 @@
   import Header from "$lib/components/Header.svelte";
   import Footer from "$lib/components/Footer.svelte";
   import { currentPage, isMenuOpen } from "../lib/assets/js/store.js";
-  import { navItems } from "$lib/config";
   import { preloadCode } from "$app/navigation";
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
@@ -27,24 +26,40 @@
    * Any route added in src/lib/config.js will be preloaded automatically. You can add your
    * own preloadData() calls here, too.
    **/
+  const routes: string[] = [];
   onMount(() => {
-    const navRoutes = navItems.map((item) => item.route);
-    for (const route of navRoutes) {
+    for (const route of routes) {
       preloadCode(route);
     }
   });
 </script>
 
+<svelte:head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin="anonymous" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+    rel="stylesheet" />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title={siteTitle}
+    href="http://{siteURL}/api/rss.xml" />
+</svelte:head>
+
 <!--
 	The below markup is used on every page in the site. The <slot> is where the page's
 	actual contents will show up.
 -->
-<div class="flex h-screen flex-col" class:open={$isMenuOpen}>
+<div class="static flex flex-col items-center" class:open={$isMenuOpen}>
   <Header />
   {#key data.path}
     <main
       id="main"
-      class="grow"
+      class="flex w-full grow flex-col gap-4"
       tabindex="-1"
       in:fade|global={transitionIn}
       out:fade|global={transitionOut}>

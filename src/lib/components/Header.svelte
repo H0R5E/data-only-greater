@@ -1,30 +1,14 @@
-<script>
-  import MainNav from "./MainNav.svelte";
-  import HamburgerMenuButton from "./HamburgerMenuButton.svelte";
-  import { siteTitle } from "$lib/config";
+<script lang="ts">
+  import TopNav from "./TopNav.svelte";
+  import PageNav from "./PageNav.svelte";
 
-  const focusMain = () => {
-    const main = document.querySelector("main");
-    if (!main) return;
-    main.focus();
-  };
+  let y = 0;
 </script>
 
-<header class="static flex flex-col bg-slate-800 text-center">
-  <a
-    on:click|preventDefault={focusMain}
-    class="absolute
-    left-0 top-0
-    h-12
-    text-white"
-    href="#main">
-    Skip to main content
-  </a>
+<svelte:window bind:scrollY={y} />
 
-  <a href="/" class="text-2xl text-white">
-    {siteTitle}
-  </a>
-
-  <HamburgerMenuButton />
-  <MainNav />
+<header
+  class="absolute sticky -top-[70px] flex w-full flex-col items-center gap-2 p-2 pb-4">
+  <TopNav />
+  <PageNav />
 </header>
