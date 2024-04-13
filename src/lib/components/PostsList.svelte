@@ -1,4 +1,6 @@
 <script lang="ts">
+  import * as Card from "$lib/components/ui/card/index.js";
+
   interface Post {
     slug: string;
     coverImage: string;
@@ -10,10 +12,14 @@
   export let posts: Post[] = [];
 </script>
 
-<ul>
+<div class="flex flex-col gap-2">
   {#each posts as post}
-    <li>
-      <article>
+    <Card.Root class="">
+      <Card.Header>
+        <Card.Title>{post.title}</Card.Title>
+        <Card.Description>{post.excerpt}</Card.Description>
+      </Card.Header>
+      <Card.Content>
         <a href="/blog/{post.slug}">
           <img
             src={post.coverImage}
@@ -21,13 +27,8 @@
             width={post.coverWidth}
             height={post.coverHeight}
             style="ratio: {post.coverWidth} / {post.coverHeight}" />
-          <h2>
-            {post.title}
-          </h2>
         </a>
-      </article>
-
-      <p>{post.excerpt}</p>
-    </li>
+      </Card.Content>
+    </Card.Root>
   {/each}
-</ul>
+</div>
