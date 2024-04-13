@@ -65,7 +65,7 @@
 <div
   class="static flex min-h-screen flex-col items-center"
   class:open={$isMenuOpen}>
-  <Header sections={$page.data.sections} />
+  <Header base={$page.data.path} sections={$page.data.sections} />
   {#key data.path}
     <main
       id="main"
