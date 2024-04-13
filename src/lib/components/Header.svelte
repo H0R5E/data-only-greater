@@ -1,13 +1,18 @@
 <script lang="ts">
   import TopNav from "./TopNav.svelte";
-  import PageNav from "./PageNav.svelte";
+  import SecondaryNav from "./SecondaryNav.svelte";
+
+  interface Link {
+    title: string;
+    href: string;
+  }
 
   export let base: string;
-  export let sections: string[];
+  export let links: Link[];
 </script>
 
 <header
   class="absolute sticky -top-[70px] flex w-full flex-col items-center gap-2 p-2 pb-4">
   <TopNav />
-  <PageNav {base} {sections} />
+  <SecondaryNav {base} {links} />
 </header>
