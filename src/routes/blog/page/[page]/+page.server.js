@@ -16,7 +16,28 @@ export const load = async ({ url, params, fetch }) => {
   const total = await totalPostsRes.json();
   const { posts } = await fetchPosts({ offset, page });
 
+  const pagesAvailable = Math.ceil(total / postsPerPage);
+
+  const links = [
+    {
+      title: "Newer",
+      href: `/blog/page/${page - 1}`,
+    },
+    {
+      title: "Latest",
+      href: "/blog",
+    },
+  ];
+
+  if (pagesAvailable > page) {
+    links.push({
+      title: "Older",
+      href: `/blog/page/${page + 1}`,
+    });
+  }
+
   return {
+    links,
     posts,
     page,
     totalPosts: total,

@@ -30,7 +30,7 @@
   <!-- <meta name="twitter:image" content="https://yourdomain.com/image_path" /> -->
 </svelte:head>
 
-<article>
+<article class="flex flex-col items-center">
   <!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
   <img
     src={coverImage}
@@ -39,7 +39,7 @@
     width={coverWidth}
     height={coverHeight} />
 
-  <h1>{title}</h1>
+  <h1 class="text-4xl">{title}</h1>
 
   <div>
     <b>Published:</b>

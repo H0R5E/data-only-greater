@@ -14,12 +14,28 @@
   import { page } from "$app/stores";
 
   import { onMount } from "svelte";
+  import { afterNavigate, beforeNavigate } from "$app/navigation";
   import { fade } from "svelte/transition";
 
   export let data;
 
   const transitionIn = { delay: 150, duration: 150 };
   const transitionOut = { duration: 100 };
+
+  let scroll_behaviour: string;
+
+  beforeNavigate(() => {
+    scroll_behaviour = getComputedStyle(
+      document.documentElement,
+    ).scrollBehavior;
+    document.documentElement.style.scrollBehavior = "auto";
+  });
+
+  afterNavigate(() => {
+    if (scroll_behaviour) {
+      document.documentElement.style.scrollBehavior = scroll_behaviour;
+    }
+  });
 
   /**
    * Updates the global store with the current path. (Used for highlighting

@@ -12,6 +12,6 @@ const links: Link[] = titles.map((x) => {
 
 export function load() {
   return {
-    links: links,
+    links,
   };
 }

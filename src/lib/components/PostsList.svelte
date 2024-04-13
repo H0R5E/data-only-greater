@@ -12,7 +12,7 @@
   export let posts: Post[] = [];
 </script>
 
-<div class="flex flex-col gap-2">
+<div class="flex max-w-[640px] flex-col gap-2">
   {#each posts as post}
     <Card.Root class="">
       <Card.Header>
@@ -21,12 +21,7 @@
       </Card.Header>
       <Card.Content>
         <a href="/blog/{post.slug}">
-          <img
-            src={post.coverImage}
-            alt=""
-            width={post.coverWidth}
-            height={post.coverHeight}
-            style="ratio: {post.coverWidth} / {post.coverHeight}" />
+          <img src={post.coverImage} alt="" />
         </a>
       </Card.Content>
     </Card.Root>

@@ -13,9 +13,9 @@
   <meta data-key="description" name="description" content={siteDescription} />
 </svelte:head>
 
-<div class="flex w-full flex-col items-center py-4 pb-32">
-  <span id={makeID("Blog")} class="scroll-mt-16 py-4 font-script text-4xl"
+<div class="flex w-full flex-col items-center p-4 pb-32">
+  <span id={makeID("Blog")} class="scroll-mt-16 pb-8 pt-4 font-script text-4xl"
     >Blog</span>
   <PostsList posts={data.posts} />
-  <Pagination currentPage={1} totalPosts={data.total} />
 </div>
+ks

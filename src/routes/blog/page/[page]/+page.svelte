@@ -1,7 +1,6 @@
 <!-- This file handles any /blog/page/x route for pagination -->
 <script>
   import PostsList from "$lib/components/PostsList.svelte";
-  import Pagination from "$lib/components/Pagination.svelte";
   import { postsPerPage, siteDescription } from "$lib/config";
 
   export let data;
@@ -17,17 +16,17 @@
 </svelte:head>
 
 <!-- TODO: this is duplicated across multiple `+page.svelte` files -->
-{#if posts.length}
-  <h1>Posts {lowerBound}–{upperBound} of {totalPosts}</h1>
-  <Pagination currentPage={page} {totalPosts} />
 
-  <PostsList {posts} />
+<div class="flex w-full flex-col items-center py-4 pb-32">
+  {#if posts.length}
+    <span class="scroll-mt-16 pb-8 pt-4 font-script text-4xl"
+      >Posts {lowerBound}–{upperBound} of {totalPosts}</span>
+    <PostsList {posts} />
+  {:else}
+    <h1>Oops!</h1>
 
-  <Pagination currentPage={page} {totalPosts} />
-{:else}
-  <h1>Oops!</h1>
+    <p>Sorry, no posts to show here.</p>
 
-  <p>Sorry, no posts to show here.</p>
-
-  <a href="/blog">Back to blog</a>
-{/if}
+    <a href="/blog">Back to blog</a>
+  {/if}
+</div>
