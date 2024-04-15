@@ -16,4 +16,3 @@
     >Blog</span>
   <PostsList posts={data.posts} />
 </div>
-ks

@@ -23,8 +23,11 @@
   const transitionOut = { duration: 100 };
 
   let scroll_behaviour: string;
+  $: base = $page.data.path;
 
-  beforeNavigate(() => {
+  beforeNavigate(({ to }) => {
+    if (to && to.url.pathname === base) return;
+
     scroll_behaviour = getComputedStyle(
       document.documentElement,
     ).scrollBehavior;
@@ -81,7 +84,7 @@
 <div
   class="static flex min-h-screen flex-col items-center"
   class:open={$isMenuOpen}>
-  <Header base={$page.data.path} links={$page.data.links} />
+  <Header {base} links={$page.data.links} />
   {#key data.path}
     <main
       id="main"
