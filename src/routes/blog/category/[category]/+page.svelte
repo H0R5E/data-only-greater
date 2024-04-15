@@ -1,33 +1,17 @@
 <!-- Renders any page at /blog/category/* -->
 <script>
   import PostsList from "$lib/components/PostsList.svelte";
-  import Pagination from "$lib/components/Pagination.svelte";
-  import { postsPerPage } from "$lib/config";
-
   export let data;
 
-  const { page, posts, category, total } = data;
-
-  $: lowerBound = page * postsPerPage - (postsPerPage - 1) || 1;
-  $: upperBound = Math.min(page * postsPerPage, total);
+  const { posts, category } = data;
 </script>
 
 <svelte:head>
   <title>Category: {category}</title>
 </svelte:head>
 
-<h1>Blog category: {category}</h1>
-
-{#if posts.length}
+<div class="flex w-full flex-col items-center p-4 pb-32">
+  <span class="scroll-mt-16 pb-8 pt-4 font-script text-4xl"
+    >Category: {category}</span>
   <PostsList {posts} />
-  <Pagination
-    currentPage={page}
-    totalPosts={total}
-    path="/blog/category/{category}/page" />
-{:else}
-  <p>
-    <strong>Ope!</strong> Sorry, couldn't find any posts in the category "{category}".
-  </p>
-
-  <p><a href="/blog">Back to blog</a></p>
-{/if}
+</div>
