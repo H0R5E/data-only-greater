@@ -1,8 +1,9 @@
 import adapter from "@sveltejs/adapter-static";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
-import { mdsvex } from "mdsvex";
+import { mdsvex, escapeSvelte } from "mdsvex";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
+import { getHighlighter } from "shiki";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -13,6 +14,29 @@ const config = {
     mdsvex({
       // The default mdsvex extension is .svx; this overrides that.
       extensions: [".md"],
+      highlight: {
+        highlighter: async (code, lang = "text") => {
+          const highlighter = await getHighlighter({
+            themes: ["github-dark"],
+            langs: ["css", "javascript", "svelte", "typescript"],
+          });
+          await highlighter.loadLanguage("javascript", "typescript");
+          const html = escapeSvelte(
+            highlighter.codeToHtml(code, {
+              lang,
+              theme: "github-dark",
+              transformers: [
+                {
+                  pre(node) {
+                    this.addClassToHast(node, "p-2 px-4 rounded");
+                  },
+                },
+              ],
+            }),
+          );
+          return `{@html \`${html}\` }`;
+        },
+      },
       layout: "src/lib/components/mdsvex/layouts/default.svelte",
 
       // Adds IDs to headings, and anchor links to those IDs. Note: must stay in this order to work.
