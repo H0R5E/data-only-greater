@@ -13,7 +13,7 @@ const config = {
     mdsvex({
       // The default mdsvex extension is .svx; this overrides that.
       extensions: [".md"],
-      layout: "src/lib/components/MDsveX.svelte",
+      layout: "src/lib/components/mdsvex/default.svelte",
 
       // Adds IDs to headings, and anchor links to those IDs. Note: must stay in this order to work.
       rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
