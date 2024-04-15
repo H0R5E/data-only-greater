@@ -4,7 +4,8 @@
   import h4 from "../elements/h4.svelte";
   import h5 from "../elements/h5.svelte";
   import h6 from "../elements/h6.svelte";
-  export { h2, h3, h4, h5, h6 };
+  import p from "../elements/p.svelte";
+  export { h2, h3, h4, h5, h6, p };
 </script>
 
 <slot />
