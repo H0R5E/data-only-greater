@@ -35,7 +35,8 @@
 <article class="flex max-w-[640px] flex-col gap-2 self-center pt-8">
   <!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
 
-  <h1 class="scroll-mt-16 self-center pb-2 font-script text-4xl">
+  <h1
+    class="scroll-mt-16 self-center pb-2 text-center font-script text-4xl leading-[45px]">
     {title}
   </h1>
 
@@ -61,7 +62,7 @@
   <svelte:component this={PostContent} />
 
   {#if categories}
-    <div class="mt-4 flex gap-1">
+    <div class="mt-4 flex flex-wrap gap-1">
       {#each categories as category}
         <a href="/blog/category/{category}/" class={badgeVariants()}
           >{category}</a>

@@ -18,7 +18,9 @@
     <Card.Root class="">
       <Card.Header>
         <Card.Title><a href="/blog/{post.slug}">{post.title}</a></Card.Title>
-        <Card.Description>{post.excerpt}</Card.Description>
+        {#if post.excerpt}
+          <Card.Description>{post.excerpt}</Card.Description>
+        {/if}
       </Card.Header>
       <Card.Content>
         <a href="/blog/{post.slug}">

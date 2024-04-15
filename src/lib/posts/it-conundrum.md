@@ -1,0 +1,18 @@
+---
+title: The I.T. Conundrum
+date: "2010-03-27"
+updated: "2010-03-27"
+categories: [IT, simulation, waves, currents]
+---
+
+Well it's a little to sad to make my first post without anything to show for it, but there you go. I'm afraid for the last two weeks I have been waiting on an upgrade of the computational fluid mechanics software I am using, starccm+, from version 4.02 to version 5.02. Unfortunately the simulation I wish to undertake requires I use this version as all attempts with the previous version have failed. CD-Adapco (who make starccm+) have had their tech support trying to aid me with this simulation for the last six months and the best advice they can offer at the moment is an upgrade with the possibility that it may produce better results than the current version we are using. They may be right, but unfortunately I am powerless to test this hypothesis.
+
+The problem I am having with getting the version updated stems from the primary use of the software within the engineering department, a desire to save funds, and an immature research group for undertaking this sort of application of CFD. To clarify the last point, this is no slight on the academic abilities of those within the research group, more that we lack any "research dedicated" facilities to do some of the tasks that we have chosen to undertake. Some of this is a lack of in-house bespoke software for wave and tidal problems (software that takes years to develop and test properly) and a lack of dedicated resources for external software and machines to run it on.
+
+These issues are particularly highlighted by the research problem I am investigating – the effect of current on wave energy devices. In order to numerically simulate this problem I need software, yet I have no in-house software available which is capable and reliable enough to do it. Thus we must use external software. Unfortunately external software is expensive so, in order to reduce costs, we have attempted to use software we already have licences for, such as the software used for teaching. We are fortunate to have 50+ licences for starccm+ which gives significant processing power on some of the 8 node boxes in our cluster. Still, the use of this software has revealed a number of issues.
+
+Firstly, the software, although superficially capable, has never been used for such problems as the ones we are using it for now. It has been used for some ship science calculations, but the outcomes of such simulations are somewhat different to wave energy devices (I believe) and the quality of waves are maybe not so important. Anyway, in general I have found the range of motion of a wave device somewhat challenging for the software so far, although I have some hopes that the new version will fair better. Other software on the market has been better applied to this type of problem, but it appears that financial constraints have hindered us from applying this software from the start.
+
+Another problem arrises from the software being used for teaching. This means the version on the majority of machines can only be changed once annually. This problem is made worse by the institute having no dedicated research machines for which we could run the latest version at all times. Thus, my research is at the mercy of the academic year, which is not an efficient approach. A more mature group would have dedicated computing facilities, but, as yet, we do not.
+
+So, annoyingly I have to just wait. I have been tidying up older pieces of work (some of which I shall speak about more in future) but now I have nothing left to get on with other than correcting my Ph.D. thesis. Oh well.
