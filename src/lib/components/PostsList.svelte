@@ -12,11 +12,11 @@
   export let posts: Post[] = [];
 </script>
 
-<div class="flex max-w-[640px] flex-col gap-2">
+<div class="flex max-w-[600px] flex-col gap-2">
   {#each posts as post}
     <Card.Root class="">
       <Card.Header>
-        <Card.Title>{post.title}</Card.Title>
+        <Card.Title><a href="/blog/{post.slug}">{post.title}</a></Card.Title>
         <Card.Description>{post.excerpt}</Card.Description>
       </Card.Header>
       <Card.Content>
