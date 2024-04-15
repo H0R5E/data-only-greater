@@ -1,5 +1,7 @@
 <!-- This file renders each individual blog post for reading. Be sure to update the svelte:head below -->
-<script>
+<script lang="ts">
+  import { badgeVariants } from "$lib/components/ui/badge";
+
   export let data;
 
   const {
@@ -55,17 +57,11 @@
   <svelte:component this={PostContent} />
 
   {#if categories}
-    <aside>
-      <h2>Posted in:</h2>
-      <ul>
-        {#each categories as category}
-          <li>
-            <a href="/blog/category/{category}/">
-              {category}
-            </a>
-          </li>
-        {/each}
-      </ul>
-    </aside>
+    <div class="mt-4 flex gap-1">
+      {#each categories as category}
+        <a href="/blog/category/{category}/" class={badgeVariants()}
+          >{category}</a>
+      {/each}
+    </div>
   {/if}
 </article>
