@@ -9,7 +9,7 @@
       class="h-12 w-12 overflow-hidden rounded-full border border-black bg-white">
       <img alt="The data only greater logo" src={logo} />
     </div>
-    <span class="font-script pt-2 text-2xl font-normal">Data Only Greater</span>
+    <span class="pt-2 font-script text-2xl font-normal">Data Only Greater</span>
   </div>
   <div class="grow" />
   <nav aria-label="Main navigation" class="flex items-center gap-3 pb-1 pr-5">
