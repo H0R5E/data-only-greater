@@ -1,12 +1,8 @@
 <!-- This page handles any error encountered by the site. -->
 <script>
-  import { page } from "$app/stores";
+  import nope from "$lib/assets/images/nope.png";
 </script>
 
-<h2>{$page.status}</h2>
-<p class="subhead">{$page.error.message}</p>
-
-<p><strong>Sorry!</strong> Maybe try one of these links?</p>
-<ul>
-  <li><a href="/">Home</a></li>
-</ul>
+<div class="flex max-w-[640px] grow self-center">
+  <img class="m-auto" alt="Oh no" src={nope} />
+</div>
