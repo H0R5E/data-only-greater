@@ -52,7 +52,11 @@
     </div>
   </div>
 
-  <img class="m-3 border border-black p-1" src={coverImage} alt="" />
+  {#if coverImage}
+    <img class="m-3 border border-black p-1" src={coverImage} alt="" />
+  {:else}
+    <div class="h-4" />
+  {/if}
 
   <svelte:component this={PostContent} />
 

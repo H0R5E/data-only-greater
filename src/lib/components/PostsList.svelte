@@ -8,11 +8,12 @@
     coverHeight: string;
     title: string;
     excerpt: string;
+    date: string;
   }
   export let posts: Post[] = [];
 </script>
 
-<div class="flex max-w-[600px] flex-col gap-2">
+<div class="flex max-w-[600px] flex-col gap-3">
   {#each posts as post}
     <Card.Root class="">
       <Card.Header>
@@ -21,9 +22,15 @@
       </Card.Header>
       <Card.Content>
         <a href="/blog/{post.slug}">
-          <img src={post.coverImage} alt="" />
+          <img class="rounded-lg" src={post.coverImage} alt="" />
         </a>
       </Card.Content>
+      <Card.Footer>
+        <div
+          class="flex gap-2 self-center rounded-full border px-4 py-1 text-xs text-muted-foreground">
+          Post date: {post.date}
+        </div>
+      </Card.Footer>
     </Card.Root>
   {/each}
 </div>

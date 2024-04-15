@@ -8,7 +8,7 @@
 
 <svelte:window bind:innerWidth />
 
-<div class="mb-4 w-full max-w-[640px] px-2">
+<div class="mb-4 mt-8 w-full max-w-[768px] px-2">
   <div
     class="flex items-center justify-between rounded-full border border-slate-600 bg-stone-200 px-8">
     <div class="flex gap-2 py-2">
