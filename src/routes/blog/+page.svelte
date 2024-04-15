@@ -1,9 +1,7 @@
 <script>
   import { siteDescription } from "$lib/config";
   import { makeID } from "$lib/assets/ts/utils";
-
   import PostsList from "$lib/components/PostsList.svelte";
-  import Pagination from "$lib/components/Pagination.svelte";
 
   export let data;
 </script>

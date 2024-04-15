@@ -32,10 +32,10 @@
   <!-- <meta name="twitter:image" content="https://yourdomain.com/image_path" /> -->
 </svelte:head>
 
-<article class="flex max-w-[640px] flex-col gap-2 self-center">
+<article class="flex max-w-[640px] flex-col gap-2 self-center pt-8">
   <!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
 
-  <h1 class="scroll-mt-16 self-center pb-2 pt-4 font-script text-4xl">
+  <h1 class="scroll-mt-16 self-center pb-2 font-script text-4xl">
     {title}
   </h1>
 
