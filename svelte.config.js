@@ -34,13 +34,13 @@ const config = {
               transformers: [
                 {
                   pre(node) {
-                    this.addClassToHast(node, "p-2 px-4 rounded");
+                    this.addClassToHast(node, "overflow-auto rounded p-2 px-4");
                   },
                 },
               ],
             }),
           );
-          return `{@html \`${html}\` }`;
+          return html;
         },
       },
       layout: "src/lib/components/mdsvex/layouts/default.svelte",

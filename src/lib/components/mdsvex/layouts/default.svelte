@@ -10,4 +10,8 @@
   export { a, blockquote, h2, h3, h4, h5, h6, p };
 </script>
 
+<div
+  id="hidden"
+  class="overflow-auto rounded p-2 px-4 w-fit"
+  style="display: none;" />
 <slot />
