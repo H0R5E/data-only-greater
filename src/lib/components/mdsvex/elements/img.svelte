@@ -4,4 +4,4 @@
   export let title;
 </script>
 
-<img class="mx-auto" {src} {alt} {title} />
+<img class="mx-auto rounded" {src} {alt} {title} />

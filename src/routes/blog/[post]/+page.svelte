@@ -32,7 +32,7 @@
   <!-- <meta name="twitter:image" content="https://yourdomain.com/image_path" /> -->
 </svelte:head>
 
-<article class="grid max-w-[640px] grid-cols-1 gap-2 self-center pt-8">
+<article class="grid max-w-[640px] grid-cols-1 gap-2 self-center px-2 pt-8">
   <!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
 
   <h1
@@ -54,7 +54,9 @@
   </div>
 
   {#if coverImage}
-    <img class="m-3 mx-auto border border-black p-1" src={coverImage} alt="" />
+    <div class="mx-auto my-2 w-full border border-black">
+      <img class="mx-auto p-1" src={coverImage} alt="" />
+    </div>
   {:else}
     <div class="h-4" />
   {/if}
