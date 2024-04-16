@@ -11,8 +11,9 @@
   <meta data-key="description" name="description" content={siteDescription} />
 </svelte:head>
 
-<div class="flex w-full flex-col items-center p-4 pb-32">
-  <span id={makeID("Blog")} class="scroll-mt-16 pb-8 pt-4 font-script text-4xl"
-    >Blog</span>
+<div class="flex w-full flex-col p-4 pb-32">
+  <span
+    id={makeID("Blog")}
+    class="mx-auto scroll-mt-16 pb-8 pt-4 font-script text-4xl">Blog</span>
   <PostsList posts={data.posts} />
 </div>

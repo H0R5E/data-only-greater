@@ -17,9 +17,9 @@
 
 <!-- TODO: this is duplicated across multiple `+page.svelte` files -->
 
-<div class="flex w-full flex-col items-center py-4 pb-32">
+<div class="flex w-full flex-col py-4 pb-32">
   {#if posts.length}
-    <span class="scroll-mt-16 pb-8 pt-4 font-script text-4xl"
+    <span class="mx-auto scroll-mt-16 pb-8 pt-4 font-script text-4xl"
       >Posts {lowerBound}–{upperBound} of {totalPosts}</span>
     <PostsList {posts} />
   {:else}
