@@ -1,6 +1,5 @@
 <script lang="ts">
   let innerWidth = 0;
-  let innerHeight = 0;
   const year = new Date().getFullYear();
 
   $: isxs = innerWidth <= 640;

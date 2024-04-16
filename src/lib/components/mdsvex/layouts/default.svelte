@@ -10,8 +10,17 @@
   export { a, blockquote, h2, h3, h4, h5, h6, p };
 </script>
 
-<div
-  id="hidden"
-  class="overflow-auto rounded p-2 px-4 w-fit"
-  style="display: none;" />
 <slot />
+
+<style>
+  :global(pre.shiki) {
+    overflow: auto;
+    margin-left: 0.375rem; /* 6px */
+    margin-right: 0.375rem; /* 6px */
+    padding: 4px;
+    padding-left: 8px;
+    border-radius: 0.25rem;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem;
+  }
+</style>

@@ -31,13 +31,6 @@ const config = {
             highlighter.codeToHtml(code, {
               lang,
               theme: "github-dark",
-              transformers: [
-                {
-                  pre(node) {
-                    this.addClassToHast(node, "overflow-auto rounded p-2 px-4");
-                  },
-                },
-              ],
             }),
           );
           return html;

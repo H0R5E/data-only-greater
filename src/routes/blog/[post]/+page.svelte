@@ -32,7 +32,7 @@
   <!-- <meta name="twitter:image" content="https://yourdomain.com/image_path" /> -->
 </svelte:head>
 
-<article class="flex max-w-[640px] flex-col gap-2 self-center pt-8">
+<article class="grid max-w-[640px] grid-cols-1 gap-2 self-center pt-8">
   <!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
 
   <h1
@@ -41,7 +41,7 @@
   </h1>
 
   <div
-    class="flex gap-2 self-center rounded-full border px-4 py-1 text-xs text-muted-foreground">
+    class="mx-auto flex justify-center gap-2 self-center rounded-full border px-4 py-1 text-xs text-muted-foreground">
     <div>
       <span class="font-semibold italic">Published:</span>
       {date}
@@ -62,7 +62,7 @@
   <svelte:component this={PostContent} />
 
   {#if categories}
-    <div class="mt-4 flex flex-wrap gap-1">
+    <div class="mt-4 flex flex-wrap gap-1 px-2">
       {#each categories as category}
         <a href="/blog/category/{category}/" class={badgeVariants()}
           >{category}</a>
