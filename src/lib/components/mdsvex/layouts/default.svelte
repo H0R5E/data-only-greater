@@ -8,7 +8,9 @@
   import h6 from "../elements/h6.svelte";
   import img from "../elements/img.svelte";
   import p from "../elements/p.svelte";
-  export { a, blockquote, h2, h3, h4, h5, h6, img, p };
+  import ul from "../elements/ul.svelte";
+  import ol from "../elements/ul.svelte";
+  export { a, blockquote, h2, h3, h4, h5, h6, img, ol, p, ul };
 </script>
 
 <slot />
