@@ -54,7 +54,7 @@
   </div>
 
   {#if coverImage}
-    <img class="m-3 border border-black p-1" src={coverImage} alt="" />
+    <img class="m-3 mx-auto border border-black p-1" src={coverImage} alt="" />
   {:else}
     <div class="h-4" />
   {/if}

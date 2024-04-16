@@ -6,8 +6,9 @@
   import h4 from "../elements/h4.svelte";
   import h5 from "../elements/h5.svelte";
   import h6 from "../elements/h6.svelte";
+  import img from "../elements/img.svelte";
   import p from "../elements/p.svelte";
-  export { a, blockquote, h2, h3, h4, h5, h6, p };
+  export { a, blockquote, h2, h3, h4, h5, h6, img, p };
 </script>
 
 <slot />
