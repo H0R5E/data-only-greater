@@ -10,9 +10,8 @@ categories: [DTOcean, open source, bugs, installation]
 
 ## Sporadic Installation Issues Reported
 
-Following the release of DTOcean (see [DTOcean: An
-Introduction](https://www.dataonlygreater.com/latest/professional/2017/01/30/dtocean-introduction/)
-a significant number of users reported issues with the installer crashing. This
+Following the release of DTOcean (see [[DTOcean&colon; An Introduction]]) a
+significant number of users reported issues with the installer crashing. This
 occurred after the main code installer had finished, when the hydrodynamic data
 installer fails to find the chosen installation directory.
 

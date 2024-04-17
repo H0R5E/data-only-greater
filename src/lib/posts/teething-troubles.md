@@ -13,8 +13,7 @@ dataonlygreater.com has some problems when it comes to ipads. I first noticed
 this on my Dad's ipad, but there is also a neat online tool called
 [Screenfly](http://quirktools.com/screenfly/) that will let you see your
 website using the resolution of many different devices. The results of looking
-at the [Academic](https://www.dataonlygreater.com/academic) page using ipad
-resolutions were like this:
+at the Academic page using ipad resolutions were like the cover image.
 
 Now [Hyde](http://hyde.getpoole.com/) is a fully resposive template for
 Jekyll, meaning that it should display well on all devices, by rearranging
@@ -112,8 +111,7 @@ in the button. So the new CSS looks like this:
 ```
 
 Thus we now have a functioning 3-column in page navigation menu for Hyde, and
-the [Software](https://www.dataonlygreater.com/software/) page has a 2-column
-menu. Nonetheless, these menu solutions need a great deal of tailoring
-depending on the contents and the environment they are deployed into, so,
-sadly, I don't think this will ever be a simple cut and paste solution for
-other Hyde bases projects.
+the Software page has a 2-column menu. Nonetheless, these menu solutions need a
+great deal of tailoring depending on the contents and the environment they are
+deployed into, so, sadly, I don't think this will ever be a simple cut and
+paste solution for other Hyde bases projects.

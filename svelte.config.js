@@ -2,8 +2,25 @@ import adapter from "@sveltejs/adapter-static";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 import { mdsvex, escapeSvelte } from "mdsvex";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeKatexSvelte from "rehype-katex-svelte";
 import rehypeSlug from "rehype-slug";
+import wikiLinkPlugin from "remark-wiki-link";
+import remarkMath from "remark-math";
 import { getHighlighter } from "shiki";
+
+const pageResolver = (name) => {
+  const fixed = name
+    .replace(/&(#(?:x[0-9a-f]+|\d+)|[a-z]+);?/gi, "")
+    .replace(/[^a-zA-Z0-9 ]/g, "")
+    .replace(/ /g, "-")
+    .toLowerCase();
+  return [fixed];
+};
+const hrefTemplate = (permalink) => `/blog/${permalink}`;
+const wikiLinkOptions = {
+  pageResolver,
+  hrefTemplate,
+};
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -18,12 +35,22 @@ const config = {
         highlighter: async (code, lang = "text") => {
           const highlighter = await getHighlighter({
             themes: ["github-dark"],
-            langs: ["css", "python", "javascript", "svelte", "typescript"],
+            langs: [
+              "css",
+              "bash",
+              "python",
+              "javascript",
+              "matlab",
+              "svelte",
+              "typescript",
+            ],
           });
           await highlighter.loadLanguage(
             "css",
+            "bash",
             "python",
             "javascript",
+            "matlab",
             "svelte",
             "typescript",
           );
@@ -39,7 +66,8 @@ const config = {
       layout: "src/lib/components/mdsvex/layouts/default.svelte",
 
       // Adds IDs to headings, and anchor links to those IDs. Note: must stay in this order to work.
-      rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+      rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings, rehypeKatexSvelte],
+      remarkPlugins: [remarkMath, [wikiLinkPlugin, wikiLinkOptions]],
     }),
     vitePreprocess(),
   ],
