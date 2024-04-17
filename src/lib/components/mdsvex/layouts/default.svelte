@@ -16,4 +16,14 @@
 <slot />
 
 <style>
+  :global(pre.shiki) {
+    overflow: auto;
+    margin-left: 0.25rem; /* 6px */
+    margin-right: 0.25rem; /* 6px */
+    padding: 4px;
+    padding-left: 8px;
+    border-radius: 0.25rem;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem;
+  }
 </style>
