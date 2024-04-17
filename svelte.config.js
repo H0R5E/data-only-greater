@@ -1,12 +1,18 @@
 import adapter from "@sveltejs/adapter-static";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+
 import { mdsvex, escapeSvelte } from "mdsvex";
+import { getHighlighter } from "shiki";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeKatexSvelte from "rehype-katex-svelte";
 import rehypeSlug from "rehype-slug";
 import wikiLinkPlugin from "remark-wiki-link";
 import remarkMath from "remark-math";
-import { getHighlighter } from "shiki";
+import remarkToc from "remark-toc";
+
+const tocOptions = {
+  skip: "references",
+};
 
 const pageResolver = (name) => {
   const fixed = name
@@ -67,7 +73,11 @@ const config = {
 
       // Adds IDs to headings, and anchor links to those IDs. Note: must stay in this order to work.
       rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings, rehypeKatexSvelte],
-      remarkPlugins: [remarkMath, [wikiLinkPlugin, wikiLinkOptions]],
+      remarkPlugins: [
+        remarkMath,
+        [remarkToc, tocOptions],
+        [wikiLinkPlugin, wikiLinkOptions],
+      ],
     }),
     vitePreprocess(),
   ],
@@ -75,16 +85,7 @@ const config = {
   kit: {
     adapter: adapter(),
     prerender: {
-      entries: [
-        "*",
-        "/api/posts/page/*",
-        "/blog/category/*/page/",
-        "/blog/category/*/page/*",
-        "/blog/category/page/",
-        "/blog/category/page/*",
-        "/blog/page/",
-        "/blog/page/*",
-      ],
+      handleMissingId: "warn",
     },
   },
 };

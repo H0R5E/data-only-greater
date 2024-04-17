@@ -3,14 +3,11 @@ title: Wave Resource Estimation Using DHI MIKE - Preparing a Coastline
 date: "2012-02-17"
 updated: "2012-02-17"
 excerpt: This is a guide to preparing coastline data for analysis using the SW module of DHI MIKE
+categories: [MIKE21, data, coastlines]
 ---
 
 <script lang="ts">
   import Callout from "$lib/components/Callout.svelte"
-  import MacroError from "$lib/components/MacroError.svelte"
-  import MacroInfo from "$lib/components/MacroInfo.svelte"
-  import MacroSuccess from "$lib/components/MacroSuccess.svelte"
-  import MacroWarning from "$lib/components/MacroWarning.svelte"
   
   import xyz from "$lib/assets/other/low_coast_40W4E40N60N.xyz?url"
 </script>
@@ -22,19 +19,14 @@ module of DHI MIKE.
 
 ## Contents
 
-<!-- {:.no_toc} -->
-
-<!-- 1. This will become a table of contents (this text will be scraped).
-   {:toc} -->
-
 ## Introduction
 
 This is a guide to preparing coastline data for analysis using the SW module of
 the DHI MIKE 21 suite, which is part of the DHI MIKE Zero group of
-applications. The guide assumes that [DHI
-MIKE](3D"http://www.mikebydhi.com/") is installed on a Windows operating system;
-note that a DHI licence is not required for the following
-work, but will be required to calculate the results of the simulation.
+applications. The guide assumes that [DHI MIKE](http://www.mikebydhi.com/) is
+installed on a Windows operating system; note that a DHI licence is not
+required for the following work, but will be required to calculate the results
+of the simulation.
 
 The major steps in a DHI MIKE SW simulation are as follows:
 
@@ -50,8 +42,6 @@ retrieval, etc) links to other wiki pages detailing these processes
 will be provided.
 
 ### References
-
-<!-- {:.no_toc} -->
 
 Some of the information written here can be found in the _"MIKE ZERO
 Step-by-step training guide"_, in fact many of the other training guides,
@@ -100,11 +90,11 @@ increases. Unfortunately, cartographic generalization is not perfect
 as this point, but some existing software (such as GRASS GIS) is
 capable of invoking a set of related methods.
 
-More information about coastline optimisation can be found in _Appendix
-B - Optimising Mesh Design in MIKE FM_ of [\[1\]][1]
-Before we can do anything with the coastline data, we must retrieve it
-and put it into a form that can be imported into MIKE. This process is
-described on the [Wave Resource Estimation Using DHI MIKE - Retrieving Coastline Data](../MIKE-retrieve-coastline-data) page.
+More information about coastline optimisation can be found in _Appendix B -
+Optimising Mesh Design in MIKE FM_ of [\[1\]][1] Before we can do anything with
+the coastline data, we must retrieve it and put it into a form that can be
+imported into MIKE. This process is described on the [[Wave Resource Estimation
+Using DHI MIKE - Retrieving Coastline Data]] page.
 
 ## Creating a Mesh Generator File
 
@@ -137,8 +127,6 @@ the figure above) should appear. From the **MIKE Zero** window, select
 **Mesh Generator**.
 
 ### Map Projections
-
-<!-- {:.no_toc} -->
 
 You'll be asked for a map projection. The coastline data can be
 converted to whatever projection you are working in, so you can simply

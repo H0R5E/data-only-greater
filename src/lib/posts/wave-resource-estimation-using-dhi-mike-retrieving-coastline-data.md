@@ -1,23 +1,30 @@
 ---
-layout: simple
 title: Wave Resource Estimation Using DHI MIKE - Retrieving Coastline Data
-description: Guide for retrieving coastline data for DHI MIKE21
-tags: [MIKE21, coastlines, data manipulation, research]
+date: "2012-02-17"
+updated: "2012-02-17"
+excerpt: Guide for retrieving coastline data for DHI MIKE21
+categories: [MIKE21, coastlines, data manipulation, research]
 ---
 
-<p class="message">
-This page is a guide for retrieving data and preparing
-it for use for the purposes discussed on the
-<a href="../MIKE-data-preparation">Wave Resource Estimation Using DHI MIKE - Preparing a Coastline</a>
-page.
-</p>
+<script lang="ts">
+  import Callout from "$lib/components/Callout.svelte"
+  import MacroError from "$lib/components/MacroError.svelte"
+  import MacroInfo from "$lib/components/MacroInfo.svelte"
+  import MacroSuccess from "$lib/components/MacroSuccess.svelte"
+  import MacroWarning from "$lib/components/MacroWarning.svelte"
+  
+  import xyz from "$lib/assets/other/low_coast_40W4E40N60N.xyz?url"
+</script>
+
+<Callout>
+
+This page is a guide for retrieving data and preparing it for use for the
+purposes discussed on the [[Wave Resource Estimation Using DHI MIKE - Preparing
+a Coastline]] page.
+
+</Callout>
 
 ## Contents
-
-<!-- {:.no_toc} -->
-
-<!-- 1. This will become a table of contents (this text will be scraped).
-{:toc} -->
 
 ## Introduction
 
@@ -48,16 +55,13 @@ Software](http://www.ngdc.noaa.gov/mgg/gdas/gx_announce.Html) page.
 Once the program has been installed, start the program called
 **Coastline Extractor** in the **GEODAS** menu.
 
-<div class="isa_warning">
-     <i class="fa fa-warning"></i>
-     <p>
-	If you get a warning saying "No GEODAS Initialization File found. GEODAS 
-	Software Suite Not Installed." then the problem is that the geodas\_.ini
-	file has been installed to C:\\GEODAS\\geodas\_.ini rather than the 
-	chosen installation directory. To fix this simply move the geodas\_.ini
-	file to the chosen installation directory.
-     </p>
-</div>
+<MacroWarning>
+If you get a warning saying "No GEODAS Initialization File found. GEODAS 
+Software Suite Not Installed." then the problem is that the geodas\_.ini
+file has been installed to C:\\GEODAS\\geodas\_.ini rather than the 
+chosen installation directory. To fix this simply move the geodas\_.ini
+file to the chosen installation directory.
+</MacroWarning>
 
 On first starting of the Coastline Extractor you may have to provide the
 location of the coastline and boundary data. To do this go the the
@@ -65,13 +69,10 @@ location of the coastline and boundary data. To do this go the the
 prompted to provide the location of the downloaded and unzipped data
 sets (I placed these into the GEODAS program directory).
 
-<div class="isa_info">
-   <i class="fa fa-info-circle"></i>
-   <p>
-	Each time the Coastline Extractor is started the coastline data set must
-	be explicitly chosen using the <b>Coastlines+</b> menu.
-   </p>
-</div>
+<MacroInfo>
+Each time the Coastline Extractor is started the coastline data set must
+be explicitly chosen using the <b>Coastlines+</b> menu.
+</MacroInfo>
 
 With the data sets selected a coastline can be plotted by selecting the
 **File** menu and choosing **Plot** or by clicking the finger button.
@@ -130,14 +131,11 @@ and remove extraneous NaNs. The scripts can be downloaded from:
 
 [http://www.ngdc.noaa.gov/mgg/coast/joincst.html](http://www.ngdc.noaa.gov/mgg/coast/joincst.html)
 
-<div class="isa_info">
-   <i class="fa fa-info-circle"></i>
-   <p>
-	These scripts are functional, but not perfect and I have already made a
-	number of changes to them. I am considering hosting updated version of 
-	them myself (watch this space).
-   </p>
-</div>
+<MacroInfo>
+These scripts are functional, but not perfect and I have already made a
+number of changes to them. I am considering hosting updated version of 
+them myself (watch this space).
+</MacroInfo>
 
 The downloaded script "joincst.m" is a bundle containing two functions
 "join_cst.m" and "fixcoast.m".
@@ -161,13 +159,10 @@ be less than the resolution of the data set. For the above command,
 "new_coast" is the joined coastline and "slen" is an array showing the
 number of points in each segment for the new joined coastline.
 
-<div class="isa_success">
-     <i class="fa fa-check"></i>
-     <p>
-	join\_cst.m will automatically call fixcoast.m so there is no need to
-	run both.
-   </p>
-</div>
+<MacroSuccess>
+join\_cst.m will automatically call fixcoast.m so there is no need to
+run both.
+</MacroSuccess>
 
 ## Exporting to DHI MIKE xyz format
 

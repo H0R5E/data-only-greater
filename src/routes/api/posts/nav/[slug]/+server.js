@@ -2,8 +2,6 @@ import fetchPosts from "$lib/assets/js/fetchPosts.js";
 import getPostIndex from "$lib/assets/js/getPostIndex.js";
 import { json } from "@sveltejs/kit";
 
-export const prerender = true;
-
 export const GET = async ({ params, url }) => {
   const postIndex = await getPostIndex(params);
   const totalRes = await fetch(`${url.origin}/api/posts/count`);

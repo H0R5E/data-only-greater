@@ -1,19 +1,21 @@
 ---
-layout: simple
 title: Wave Resource Estimation Using DHI MIKE - Starting a MIKE project
+date: "2012-01-17"
+updated: "2012-01-17"
+excerpt: A brief tutorial for starting a DHI MIKE project for the first time.
+categories: [MIKE21]
 ---
 
-<p class="message">
+<script lang="ts">
+  import Callout from "$lib/components/Callout.svelte"
+</script>
+
+<Callout>
 This page provides a brief tutorial for starting a DHI MIKE project
 for the first time.
-</p>
+</Callout>
 
 ## Contents
-
-<!-- {:.no_toc} -->
-
-<!-- 1. This will become a table of contents (this text will be scraped).
-{:toc} -->
 
 ## Mike ZERO
 

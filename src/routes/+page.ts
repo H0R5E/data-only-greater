@@ -5,7 +5,7 @@ interface Link {
   href: string;
 }
 
-const titles = ["About", "Skills", "Achievements", "Contact"];
+const titles = ["About", "Skills", "Achievements"];
 const links: Link[] = titles.map((x) => {
   return { title: x, href: makeAnchor(x) };
 });
