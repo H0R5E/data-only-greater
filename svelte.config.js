@@ -89,9 +89,7 @@ const config = {
       entries: [
         "/blog/",
         "/blog/page",
-        "/blog/page/[page]/",
         "/blog/category/",
-        "/blog/category/[category]/",
         "/api/posts.json/",
         "/api/posts/nav/[slug]",
         "/api/posts/count/",
