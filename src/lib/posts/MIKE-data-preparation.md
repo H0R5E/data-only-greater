@@ -1,15 +1,24 @@
 ---
 title: Wave Resource Estimation Using DHI MIKE - Preparing a Coastline
-date: "2015-04-03"
-updated: "2024-04-16"
+date: "2012-02-17"
+updated: "2012-02-17"
+excerpt: This is a guide to preparing coastline data for analysis using the SW module of DHI MIKE
 ---
 
-<script>
-  import xyz from "$lib/assets/other/low_coast_40W4E40N60N.xyz"?raw
+<script lang="ts">
+  import Callout from "$lib/components/Callout.svelte"
+  import MacroError from "$lib/components/MacroError.svelte"
+  import MacroInfo from "$lib/components/MacroInfo.svelte"
+  import MacroSuccess from "$lib/components/MacroSuccess.svelte"
+  import MacroWarning from "$lib/components/MacroWarning.svelte"
+  
+  import xyz from "$lib/assets/other/low_coast_40W4E40N60N.xyz?url"
 </script>
 
+<Callout>
 This is a guide to preparing coastline data for analysis using the SW
 module of DHI MIKE.
+</Callout>
 
 ## Contents
 

@@ -6,23 +6,29 @@ excerpt: Latex template corresponding to the University of Edinburgh thesis regu
 categories: [Latex, template, thesis, University of Edinburgh]
 ---
 
+<script lang="ts">
+  import Callout from "$lib/components/Callout.svelte"
+  import MacroError from "$lib/components/MacroError.svelte"
+  import MacroInfo from "$lib/components/MacroInfo.svelte"
+  import MacroSuccess from "$lib/components/MacroSuccess.svelte"
+  import MacroWarning from "$lib/components/MacroWarning.svelte"
+</script>
+
+<Callout>
+
 This page describes how to download and compile the Unofficial University of
 Edinburgh $\LaTeX$ thesis template, known as "edengths".
 
-<div class="isa_success">
-     <i class="fa fa-check"></i>
-     <p>
-     On <b>27/08/17</b> a "lay summary" section was added to the precntnt.tex file.
-     </p>
-</div>
+</Callout>
 
-<div class="isa_success">
-     <i class="fa fa-check"></i>
-     <p>
-     As of <b>27/08/17</b> the template has been ported to 
-     <a href="https://github.com/H0R5E/edengths"><b>Github</b></a>.
-     </p>
-</div>
+<MacroSuccess>
+On <b>27/08/17</b> a "lay summary" section was added to the precntnt.tex file.
+</MacroSuccess>
+
+<MacroSuccess>
+As of <b>27/08/17</b> the template has been ported to 
+<a href="https://github.com/H0R5E/edengths"><b>Github</b></a>.
+</MacroSuccess>
 
 ## Introduction
 
@@ -38,13 +44,10 @@ installation and usage instructions, below.
 
 ## Installation
 
-<div class="isa_warning">
-     <i class="fa fa-warning"></i>
-     <p>
-     From <b>27/08/17</b> access to the edengths template is now available
-     through Github. See below for details.
-     </p>
-</div>
+<MacroWarning>
+From <b>27/08/17</b> access to the edengths template is now available
+through Github. See below for details.
+</MacroWarning>
 
 ### Standard Version
 
@@ -65,13 +68,10 @@ Github. For the standard version the direct link is:
 
 ### Nomenclature Version
 
-<div class="isa_success">
-     <i class="fa fa-check"></i>
-     <p>
-     There are some additional compilation stages required with this template
-     which are detailed below the normal compilation.
-     </p>
-</div>
+<MacroSuccess>
+There are some additional compilation stages required with this template
+which are detailed below the normal compilation.
+</MacroSuccess>
 
 There is a version of edengths which is set up to use the nomencl
 package (don't worry if you don't know what a package is yet), which
@@ -86,20 +86,14 @@ The link for downloading the zipped folder containing this version is:
 
 ## Choosing an Editor and Compiling
 
-<div class="isa_warning">
-    <i class="fa fa-warning"></i>
-    <p>
-    The content below was written in 2010 and so may now be out of date.
-    </p>
-</div>
+<MacroWarning>
+The content below was written in 2010 and so may now be out of date.
+</MacroWarning>
 
-<div class="isa_info">
-    <i class="fa fa-info-circle"></i>
-    <p>
-    As of <b>27/08/17</b> my current favourite Latex editor for Windows is
-    <a href="http://www.texstudio.org/"><b>TeXstudio</b></a>.
-    </p>
-</div>
+<MacroInfo>
+As of <b>27/08/17</b> my current favourite Latex editor for Windows is
+<a href="http://www.texstudio.org/"><b>TeXstudio</b></a>.
+</MacroInfo>
 
 If you've never done latex before then it can be a bit daunting. Some
 people never really get it, but if you do then the strength of this
@@ -122,12 +116,9 @@ one to do it in Linux. So, after describing how to compile the document
 in Kile, and TeXnicCenter, I will describe how it can be done just with
 the Linux terminal.
 
-<div class="isa_error">
-   <i class="fa fa-times-circle"></i>
-   <p>
-   The terminal only approach still needs to be written.
-   </p>
-</div>
+<MacroError>
+The terminal only approach still needs to be written.
+</MacroError>
 
 In addition, the LyX editor is a convenient alternative to working
 directly with latex source code.  LyX is a WYSIWYG-like front end to
@@ -135,13 +126,10 @@ LaTeX that may be of interest to users who are more comfortable with
 Word.  It is available in Linux but not on Windows Machination.
 Unfortunately, this template has not been ported to Lyx.
 
-<div class="isa_info">
-   <i class="fa fa-info-circle"></i>
-   <p>
-   If someone would like to port the template to Lyx, the author would be
-   most grateful.
-   </p>
-</div>
+<MacroInfo>
+If someone would like to port the template to Lyx, the author would be
+most grateful.
+</MacroInfo>
 
 ### Kile (Linux)
 
@@ -240,24 +228,18 @@ as seen in the figure below:
 After the compilation was successful, Latex or Pdflatex will need to be
 run **twice** in order to finish the cross referencing.
 
-<div class="isa_info">
-   <i class="fa fa-info-circle"></i>
-   <p>
-   Its probably of interest to write something about the referencing
-   capabilities of latex and about Jabref.
-   </p>
-</div>
+<MacroInfo>
+Its probably of interest to write something about the referencing
+capabilities of latex and about Jabref.
+</MacroInfo>
 
 ### TeXnicCenter (Windows)
 
-<div class="isa_warning">
-   <i class="fa fa-warning"></i>
-   <p>
-   Windows uses the MiKTeX Latex distribution as the back-end to the
-   editors. The default installation of MiKTeX does not work properly with
-   TeXnicCenter, so the following changes must be made first.
-   </p>
-</div>
+<MacroWarning>
+Windows uses the MiKTeX Latex distribution as the back-end to the
+editors. The default installation of MiKTeX does not work properly with
+TeXnicCenter, so the following changes must be made first.
+</MacroWarning>
 
 #### Preparing the MiKTeX distribution
 
@@ -280,38 +262,32 @@ Finally, you will get a screen like this:
 
 ![](/images/edengths/MiKTex_Settings2.png)
 
-<div class="isa_success">
-   <i class="fa fa-check"></i>
-   <p>
-  To fix the problem go to the <b>General</b> tab and change the value in the 
-  drop down box for <b>Package installation</b> from <b>Ask me first</b> to 
-  <b>Yes</b>. 
-   </p>
-</div>
+<MacroSuccess>
+To fix the problem go to the <b>General</b> tab and change the value in the 
+drop down box for <b>Package installation</b> from <b>Ask me first</b> to 
+<b>Yes</b>. 
+</MacroSuccess>
 
 Now when TeXnicCenter is run MiKTeX will automatically download missing
 packages and you should see this happen in the output window.
 
-<div class="isa_info">
-   <i class="fa fa-info-circle"></i>
-   <p>
-  The above fix was suggested by
-  <a href="http://miktex.org/2.9/issues">http://miktex.org/2.9/issues</a>.
-   </p>
-</div>
+<MacroInfo>
+The above fix was suggested by
+<a href="http://miktex.org/2.9/issues">http://miktex.org/2.9/issues</a>.
+</MacroInfo>
 
 #### Setting up TeXnicCenter
 
 When TeXnicCenter is first starting it needs to know the location of the
 Latex distribution.
 
-<div class="isa_success">
-   <i class="fa fa-check"></i>
-   <p>
-    Once the setup wizard has started then choose the path to the latex
-    executables as **C:\\texmf\\miktex\\bin**.
-   </p>
-</div>
+<MacroSuccess>
+Once the setup wizard has started then choose the path to the latex
+executables as
+
+`C:\\texmf\\miktex\\bin`.
+
+</MacroSuccess>
 
 It will also ask for the path to other viewers. If you want a postscript
 viewer you will have to install **GhostView 4.9**. The path to the
