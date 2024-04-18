@@ -55,20 +55,19 @@
     </div>
     <div class="flex grow flex-col gap-2 text-justify">
       <p>
-        Hi, my name is Mathew Topper and I consult as <span class="italic"
-          >Data Only Greater</span
-        >. I have a mathematics degree from the University of Southampton and a
-        PhD from the University of Edinburgh. I have worked for universities,
-        consultancies, not-for-profits and, most recently, for myself. My roles
-        typically involve research and development, particularly for ocean
-        energy, and software development.
+        Hi, my name is Mathew Topper and <span class="italic"
+          >Data Only Greater</span> is my consultancy business. I have a degree in
+        mathematics from the University of Southampton and a PhD from the University
+        of Edinburgh. I have worked for universities, consultancies, not-for-profits
+        and, most recently, for myself. My roles typically involve research and development,
+        particularly for ocean energy, and software development.
       </p>
       <p>
         I have significant experience in technology transfer, turning complex
         ideas into concrete products. I have developed products for desktop and
         web, from design to deployment. I have helped my teams adopt modern
-        technologies, allowing them to more efficiently develop new and existing
-        products.
+        technologies, allowing them to develop new and existing products more
+        efficiently.
       </p>
     </div>
   </div>
