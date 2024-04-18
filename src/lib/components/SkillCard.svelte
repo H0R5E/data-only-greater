@@ -5,7 +5,7 @@
   export let title: string;
 
   let innerWidth = 0;
-  $: islg = innerWidth <= 1024;
+  $: islg = innerWidth <= 768;
 </script>
 
 <svelte:window bind:innerWidth />
@@ -14,10 +14,10 @@
   <div class="h-full p-1">
     <Card.Root class="h-full">
       <Card.Content class="flex flex-col gap-8 overflow-hidden p-6">
-        <span class="self-center text-center text-2xl font-semibold md:text-4xl"
+        <span class="self-center text-center text-2xl font-semibold sm:text-4xl"
           >{title}</span>
         <div class="flex justify-between gap-8 overflow-hidden">
-          <div class="md:text-justify">
+          <div class="sm:text-justify">
             <slot name="text" />
           </div>
           {#if !islg}

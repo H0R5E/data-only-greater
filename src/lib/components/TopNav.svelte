@@ -18,7 +18,7 @@
     <span class="pt-2 font-script text-2xl font-normal">Data Only Greater</span>
   </button>
   <div class="grow" />
-  <nav aria-label="Main navigation" class="flex items-center gap-2 pb-1 pr-5">
+  <nav aria-label="Main navigation" class="flex items-center gap-3 pb-1 pr-5">
     {#if !isxs}
       <a href="/" class="text-xl">Home</a>
     {/if}

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { type CarouselAPI } from "$lib/components/ui/carousel/context.js";
 
+  import * as Card from "$lib/components/ui/card/index.js";
   import * as Carousel from "$lib/components/ui/carousel/index.js";
   import SkillCard from "$lib/components/SkillCard.svelte";
   import FrontSection from "$lib/components/FrontSection.svelte";
@@ -75,7 +76,7 @@
 <FrontSection title="Skills">
   <div class="flex justify-center">
     <Carousel.Root
-      class="w-full max-w-[280px] md:max-w-[500px] lg:max-w-[640px]">
+      class="w-full max-w-[280px] sm:max-w-[500px] md:max-w-[640px]">
       <Carousel.Content>
         <SkillCard title="Research">
           <p slot="text">
@@ -161,14 +162,44 @@
   </div>
 </FrontSection>
 <FrontSection title="Achievements">
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel
-    sodales eros, et pellentesque diam. Pellentesque habitant morbi tristique
-    senectus et netus et malesuada fames ac turpis egestas. Suspendisse
-    vulputate lacinia venenatis. Sed non orci metus. Vivamus luctus mauris ut
-    auctor euismod. Curabitur consequat justo sed neque ornare, quis elementum
-    magna scelerisque. In bibendum risus nisi, non maximus magna gravida non.
-    Nullam et facilisis metus. Praesent a facilisis nunc, sit amet fringilla
-    metus. Donec dolor lectus, mattis eget eros et, eleifend condimentum neque.
-  </p>
+  <div class="flex justify-center">
+    <Carousel.Root
+      class="w-full max-w-[280px] sm:max-w-[500px] md:max-w-[640px]">
+      <Carousel.Content>
+        <Carousel.Item>
+          <div class="h-full p-1">
+            <Card.Root class="h-full">
+              <Card.Content class="flex gap-4 overflow-hidden p-6">
+                <div class="flex-col">
+                  <div
+                    class="static mt-2 h-[200px] w-[200px] self-center overflow-clip rounded-lg border border-black">
+                    <div
+                      class="relative -left-[50px] -top-[0px] inline-block w-[400px]">
+                      <img
+                        width="288"
+                        height="400"
+                        alt="Mathew Topper's face"
+                        src={money} />
+                    </div>
+                  </div>
+                  <div
+                    class="self-center text-center text-2xl font-semibold sm:text-4xl">
+                    Farts
+                  </div>
+                  {#if ismd}
+                    <div>Some text</div>
+                  {/if}
+                </div>
+                {#if !ismd}
+                  <div>Some text</div>
+                {/if}
+              </Card.Content>
+            </Card.Root>
+          </div>
+        </Carousel.Item>
+      </Carousel.Content>
+      <Carousel.Previous class={isxs ? "-left-9" : undefined} />
+      <Carousel.Next class={isxs ? "-right-9" : undefined} />
+    </Carousel.Root>
+  </div>
 </FrontSection>
