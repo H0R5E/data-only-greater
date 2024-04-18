@@ -14,7 +14,7 @@
 </script>
 
 <header
-  class="absolute sticky -top-[70px] flex w-full flex-col items-center gap-2 p-2 pb-4">
+  class="absolute sticky -top-[70px] z-10 flex w-full flex-col items-center gap-2 p-2 pb-4">
   <TopNav />
   <SecondaryNav {base} {links} />
 </header>

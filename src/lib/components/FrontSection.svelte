@@ -7,7 +7,7 @@
   <span id={makeID(title)} class="scroll-mt-16 py-4 font-script text-4xl"
     >{title}</span>
   <div class="flex w-full justify-center bg-stone-200 py-4">
-    <div class="flex max-w-[768px] flex-col gap-2 px-4 pb-4">
+    <div class="flex w-full flex-col gap-2 px-4 pb-4">
       <slot />
     </div>
   </div>
