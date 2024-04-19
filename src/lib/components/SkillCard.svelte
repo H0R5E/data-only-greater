@@ -17,7 +17,7 @@
         <span class="self-center text-center text-2xl font-semibold sm:text-4xl"
           >{title}</span>
         <div class="flex justify-between gap-8 overflow-hidden">
-          <div class="sm:text-justify">
+          <div class="sm:text-justify lg:text-lg">
             <slot name="text" />
           </div>
           {#if !islg}

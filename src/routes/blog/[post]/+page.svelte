@@ -32,7 +32,8 @@
   <!-- <meta name="twitter:image" content="https://yourdomain.com/image_path" /> -->
 </svelte:head>
 
-<article class="grid max-w-[640px] grid-cols-1 gap-3 self-center px-3 pt-8">
+<article
+  class="grid min-w-[300px] max-w-[640px] grid-cols-1 gap-3 self-center px-3 pt-8">
   <!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
 
   <h1

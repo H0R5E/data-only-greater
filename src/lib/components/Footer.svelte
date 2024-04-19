@@ -3,11 +3,12 @@
   const year = new Date().getFullYear();
 
   $: isxs = innerWidth <= 640;
+  $: is2xs = innerWidth <= 370;
 </script>
 
 <svelte:window bind:innerWidth />
 
-<div class="mb-4 mt-8 w-full max-w-[736px] px-2">
+<div class="mb-4 mt-8 w-full min-w-[320px] max-w-[736px] px-2">
   <div
     class="flex items-center justify-between rounded-full border border-slate-600 bg-stone-200 px-6">
     <div class="flex py-2">
@@ -51,7 +52,7 @@
         <span>Mathew Topper</span>
       </div>
     {:else}
-      <span class="flex-shrink-0">&copy; {year}</span>
+      <span class="flex-shrink-0">&copy;{is2xs ? "" : ` ${year}`}</span>
     {/if}
   </div>
 </div>
