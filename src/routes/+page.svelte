@@ -20,6 +20,10 @@
   import forecoast from "$lib/assets/images/forecoast.png?url";
   import dog from "$lib/assets/images/dog.png";
 
+  import type { PageData } from "./$types.js";
+  import ContactForm from "./contact-form.svelte";
+  export let data: PageData;
+
   let api: CarouselAPI;
   let count = 0;
   let current = 0;
@@ -41,7 +45,6 @@
 
   let innerWidth = 0;
   $: isxs = innerWidth <= 640;
-  $: ismd = innerWidth <= 768;
 </script>
 
 <svelte:head>
@@ -308,4 +311,7 @@
         class={touchDevice ? "hidden" : isxs ? "-right-9" : undefined} />
     </Carousel.Root>
   </div>
+</FrontSection>
+<FrontSection title="Contact">
+  <ContactForm data={data.form} />
 </FrontSection>
