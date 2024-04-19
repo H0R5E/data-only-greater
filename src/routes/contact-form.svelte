@@ -33,14 +33,12 @@
         form,
       });
     }
-    const res = await fetch("https://formspree.io/dataonlygreater@gmail.com", {
+    const res = await fetch("https://formspree.io/f/mzbnyrew", {
       method: "POST",
       body: JSON.stringify(form),
     });
 
-    const json = await res.json();
-    const result = JSON.stringify(json);
-    console.log(result);
+    console.log(res);
 
     return {
       form,
