@@ -41,7 +41,6 @@
     return "ontouchstart" in window || navigator.maxTouchPoints > 0;
   }
   const touchDevice = isTouchDevice();
-  $: console.log(touchDevice);
 
   let innerWidth = 0;
   $: isxs = innerWidth <= 640;

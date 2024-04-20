@@ -16,10 +16,7 @@
         <div class="flex w-full flex-col gap-4 md:flex-row">
           <div
             class="
-              h-full
               w-full
-              content-center
-              self-center
               rounded
               bg-blue-50/60
               p-4
@@ -27,6 +24,7 @@
               text-4xl
               font-bold
               backdrop-blur
+              md:h-full
               {titleMinWidth ? `min-w-[${titleMinWidth}]` : ''}">
             {title}
           </div>

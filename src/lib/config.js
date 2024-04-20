@@ -5,12 +5,11 @@
  * PLEASE BE SURE TO UPDATE THEM ALL! Thank you!
  **/
 
-export const siteTitle = "My Awesome Blog";
-export const siteDescription = "Built with the SvelteKit Static Blog Starter";
-export const siteURL = "example.com";
-export const siteLink =
-  "https://github.com/josh-collinsworth/sveltekit-blog-starter";
-export const siteAuthor = "- find and change this text in src/lib/config.js";
+export const siteTitle = "Mathew Topper's Data Only Greater";
+export const siteDescription = "Mathew Topper's business portal and blog.";
+export const siteURL = "dataonlygreater.com";
+export const siteLink = "https://github.com/H0R5E/data-only-greater";
+export const siteAuthor = "Mathew Topper";
 
 // Controls how many posts are shown per page on the main blog index pages
 export const postsPerPage = 4;

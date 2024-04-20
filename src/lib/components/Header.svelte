@@ -9,8 +9,6 @@
 
   export let base: string;
   export let links: Link[];
-
-  console.log(base);
 </script>
 
 <header

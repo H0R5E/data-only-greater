@@ -6,7 +6,6 @@ export const load = async ({ data, params }) => {
     href: string;
   }
   let links: Link[] = [];
-  console.log(data.nav);
 
   if (data.nav.previous) {
     links.push({

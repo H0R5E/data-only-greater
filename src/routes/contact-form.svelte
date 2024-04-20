@@ -38,8 +38,6 @@
       body: JSON.stringify(form),
     });
 
-    console.log(res);
-
     return {
       form,
     };
