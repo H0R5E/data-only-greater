@@ -5,6 +5,7 @@
   import "@fortawesome/fontawesome-free/css/brands.css";
   import "@fortawesome/fontawesome-free/css/solid.css";
 
+  import { Toaster } from "$lib/components/ui/sonner";
   import Header from "$lib/components/Header.svelte";
   import Footer from "$lib/components/Footer.svelte";
   import { siteTitle, siteURL } from "$lib/config.js";
@@ -81,6 +82,8 @@
     title={siteTitle}
     href="http://{siteURL}/api/rss.xml" />
 </svelte:head>
+
+<Toaster />
 
 <!--
 	The below markup is used on every page in the site. The <slot> is where the page's

@@ -12,6 +12,7 @@
     type Infer,
     superForm,
   } from "sveltekit-superforms";
+  import { toast } from "svelte-sonner";
   import { zod } from "sveltekit-superforms/adapters";
   import { fail } from "@sveltejs/kit";
   import { superValidate } from "sveltekit-superforms";
@@ -39,8 +40,12 @@
     try {
       const res = await axios.post("https://formspree.io/f/mzbnyrew", form);
       console.log(res);
+      toast.success("Message sent!");
     } catch (err) {
       console.log(err);
+      toast.error("Error!", {
+        description: axios.isAxiosError(err) ? err.message : undefined,
+      });
     }
 
     return {
