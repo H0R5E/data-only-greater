@@ -93,8 +93,8 @@ capable of invoking a set of related methods.
 More information about coastline optimisation can be found in _Appendix B -
 Optimising Mesh Design in MIKE FM_ of [\[1\]][1] Before we can do anything with
 the coastline data, we must retrieve it and put it into a form that can be
-imported into MIKE. This process is described on the [[Wave Resource Estimation
-Using DHI MIKE - Retrieving Coastline Data]] page.
+imported into MIKE. This process is described on the
+[[Wave Resource Estimation Using DHI MIKE - Retrieving Coastline Data]] page.
 
 ## Creating a Mesh Generator File
 

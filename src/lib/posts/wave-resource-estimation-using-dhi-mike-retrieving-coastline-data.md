@@ -19,8 +19,8 @@ categories: [MIKE21, coastlines, data manipulation, research]
 <Callout>
 
 This page is a guide for retrieving data and preparing it for use for the
-purposes discussed on the [[Wave Resource Estimation Using DHI MIKE - Preparing
-a Coastline]] page.
+purposes discussed on the
+[[Wave Resource Estimation Using DHI MIKE - Preparing a Coastline]] page.
 
 </Callout>
 

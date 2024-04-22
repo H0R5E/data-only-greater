@@ -19,7 +19,7 @@ nomenclature versions of the template.
 To provide a more friendly environment for collaborative development of
 edengths I have moved the code from Bitbucket to Github. The repository can now
 be found [here](https://github.com/H0R5E/edengths). Contributors should follow
-similar rules to those laid out for [[DTOcean Development&colon; Change
-Management]]. The main difference with edengths is that two branches are
-supported - the master branch which contains the standard template and the
-nomencl branch which contains the version including a nomenclature.
+similar rules to those laid out for [[DTOcean Development&colon; Change Management]].
+The main difference with edengths is that two branches are supported - the
+master branch which contains the standard template and the nomencl branch which
+contains the version including a nomenclature.
