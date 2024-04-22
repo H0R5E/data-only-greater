@@ -1,50 +1,20 @@
-# SvelteKit static blog starter
+# Data Only Greater Website
 
-This starter contains everything you need to get up and running with
-[SvelteKit](https://kit.svelte.dev/) as a static site generator for your
-Markdown (and Svelte)-powered blog.
-[Check out the demo here](https://sveltekit-static-starter.netlify.app/), or
-view the
-[GitHub repo here](https://github.com/josh-collinsworth/sveltekit-blog-starter).
+This is the SvelteKit source code for
+[dataonlygreater.com](https://www.dataonlygreater.com/). It was developed from
+Josh Collinsworth's excellent [SvelteKit static blog
+starter](https://github.com/josh-collinsworth/sveltekit-blog-starter) and uses
+the [shadcn-svelte](https://www.shadcn-svelte.com/) UI library for some of the
+components.
 
-## Features
-
-- 🎉 **Fully up-to-date with SvelteKit 2!**
-- ⚡️ **Super fast static site generation with hydration**. Every route is
-  compiled down to static HTML and routed with (optional) JavaScript, thanks to
-  the SvelteKit static adapter (pre-installed)
-- 📦 **Zero-config preloading** for automatic, fast background preloading of all
-  top-level pages
-- ✍️ **Markdown support** with a pre-configured blog
-  - 📑 **Pagination** included (_can customize posts per page_)
-  - ✅ **Category pages** included
-  - 💬 **Posts JSON API**
-- 📝 **mdsvex** pre-installed--use Svelte components inside Markdown!
-  - 🔗 **Rehype** plugins are included to generate unique heading IDs, for
-    direct linking
-- 📱 **Responsive and accessible defaults**; includes a "skip to content" link
-  and accessible mobile nav menu
-- 🔄 **Page transitions** (_fancy!_)
-- 🔎 **Basic SEO** for blog posts (_strongly recommend checking that out for
-  yourself, though_)
-- 📰 **RSS feed** set up and ready to go (_though it could also likely benefit
-  from some optimization_); just update `src/lib/config.js`
-- 💈 **Basic CSS ready to use, customize, or remove!** Want to use Sass or
-  Tailwind instead? Just install them!
-  ([Directions for Tailwind can be found here](https://tailwindcss.com/docs/guides/sveltekit).)
-  Prefer to write your own? Delete `static/css` and add your own links in
-  `+layout.svelte`.
-- ℹ️ **Fonts included**. (No more built-in Google tracking.)
-
-## Quick Start
+## Development
 
 Clone or download
-[this repo](https://github.com/josh-collinsworth/sveltekit-blog-starter), then
+[this repo](https://github.com/H0R5E/data-only-greater), then
 install the dependencies and run the dev server:
 
 ```
-npx degit https://github.com/josh-collinsworth/sveltekit-blog-starter my-sveltekit-blog
-cd my-sveltekit-blog
+cd data-only-greater
 npm install
 npm run dev -- --open
 ```
@@ -53,17 +23,15 @@ That should get a dev server up and running (assuming you have npm and Node
 installed already). Any saved changes to components and styles should
 auto-refresh blazingly fast.
 
-Now all you need to do is:
+## Building
 
-- Update the `src/lib/config.js` file
-- Drop your Markdown posts into `src/lib/posts`
-- Optionally, customize the styles in `static/css`
+The build command (from package.json) is simply:
 
-GLHF! Details below. 👇
+```
+npm run build
+```
 
-(_Feel free to
-[open an issue](https://github.com/josh-collinsworth/sveltekit-blog-starter/issues/new)
-if you come across one._)
+Use `npm run preview` _after_ a build to preview the built site locally.
 
 ## Customization
 
@@ -120,60 +88,6 @@ Update the `config` details in `src/lib/config.js` to get your site's unique
 info correct. (You could also pull this info in other places, or add to it, to
 keep things consistent, but that's up to you.)
 
-## CSS
-
-**By default, all CSS in this starter is global vanilla CSS.** It's located in
-`static/css` (linked from `+layout.svelte`).
-
-I didn't use component `<style>` blocks because, while component-based scoped
-CSS is very nice, it can also be hard to track down and update. Since this is a
-starter, I felt it was best to keep all the styles together in one place, and
-let you, the author, decide whether you want to keep them as they are, move to
-scoped CSS instead, or use a mixture.
-
-(_Note: previous versions of this starter came with Sass pre-installed. I've
-removed it now because it seems like vanilla CSS is almost entirely as powerful
-as Sass now anyway, and because it's probably easier for people who want it to
-opt in than for those who don't to opt out_.)
-
-## Site navigation menus
-
-To add or remove pages from the site's navigation menu (in both the header and
-footer), edit the `navItems` array in `src/lib/config.js`. Items there will be
-automatically added to the main menu in the header and footer, and the mobile
-nav menu. They'll also have proper classes and ARIA attributes to show when
-they're the current page.
-
-## Colors
-
-This starter has a default color palette (Credit to
-[coolors.co](https://coolors.co/palettes/trending)) but you can easily override
-those in the CSS. The color variable values can be found in
-`static/css/vars.css`.
-
-## Fonts
-
-Previously, fonts were loaded from Google Fonts, but now they're hosted locally,
-for moderately better performance and a 100% reduction in tracking.
-
-The fonts in question are
-[Atkinson Hyperlegible](https://brailleinstitute.org/freefont) by the Braille
-Institute, and [Fira Code](https://github.com/tonsky/FiraCode) by Nikita
-Prokopov. The fonts are open-source; please consider supporting the authors.
-
-The font files themselves are hosted in `static/fonts`. They are linked from the
-`fonts.css` file, and set in `typography.css`.
-
-## Components
-
-This starter includes only a handful of structural components, for the header,
-footer, site nav, posts lists (since lists of posts are repeated in several
-locations), and pagination (plus a couple that are actually just SVG icons).
-
-You're welcome and encouraged to create your own (using them in Markdown is
-fun!); I just didn't want to push authors too far in any component direction
-right off the bat.
-
 ## Static files
 
 Things that should just live in the site root of the finished site (like a
@@ -183,48 +97,3 @@ If you link to them, use the root path (e.g., `/images/my.png`, not
 
 (Placeholder images credit [Unsplash](https://unsplash.com); photographer names
 are in the file names.)
-
-## Building, deploying and hosting
-
-The build command (from package.json) is simply:
-
-```
-npm run build
-```
-
-You can use that as your build command if your repo is connected to a host like
-Netlify or Vercel, which automatically deploys.
-
-Or, if you prefer, you can run `npm run build` locally to generate the static
-files. That will result in a `build` folder you can upload anywhere a static
-site can be hosted.
-
-Use `npm run preview` _after_ a build to preview the built site locally.
-
-## Adding Tailwind
-
-[The directions for adding Tailwind can be found in the Tailwind docs, here](https://tailwindcss.com/docs/guides/sveltekit).
-
-The only thing worth noting is: this starter's existing CSS files won't be in
-the Tailwind path after following those steps. You can either just delete them
-and start from scratch; or, you can copy the CSS into your Tailwind `app.css`
-file. (Or, move the CSS files into `src/lib`, and import each one individually.)
-
-It's up to you. Just note that Tailwind automatically applies some defaults, so
-even if you _do_ choose to keep this starter's default styling, your site might
-not look the same after installing Tailwind. (Headings, for example, just look
-like plain text when using Tailwind, unless classes are applied.)
-
-## Further documentation
-
-I assume at least a little bit of knowledge of SvelteKit and/or similar static
-site generators here, but be sure to read
-[the SvelteKit docs](https://kit.svelte.dev/docs) for more info.
-
-## Contributing
-
-I've tried my best to make sure this starter is up to date with the latest
-SvelteKit, but I'm sure improvements can be made. Feel free to
-[visit the repo](https://github.com/josh-collinsworth/sveltekit-blog-starter)
-and submit a pull request, or
-[contact me directly](https://joshcollinsworth.com/contact).
