@@ -16,6 +16,8 @@
   import { fail } from "@sveltejs/kit";
   import { superValidate } from "sveltekit-superforms";
 
+  import axios from "axios";
+
   export let data: SuperValidated<Infer<ContactFormSchema>>;
 
   const form = superForm(data, {
@@ -33,10 +35,13 @@
         form,
       });
     }
-    const res = await fetch("https://formspree.io/f/mzbnyrew", {
-      method: "POST",
-      body: JSON.stringify(form),
-    });
+
+    try {
+      const res = await axios.post("https://formspree.io/f/mzbnyrew", form);
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
 
     return {
       form,
