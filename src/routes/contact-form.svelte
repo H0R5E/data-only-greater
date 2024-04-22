@@ -38,7 +38,16 @@
     }
 
     try {
-      const res = await axios.post("https://formspree.io/f/mzbnyrew", form);
+      const res = await axios.post(
+        "https://formspree.io/f/mzbnyrew",
+        form.data,
+        {
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        },
+      );
       console.log(res);
       toast.success("Message sent!");
     } catch (err) {
