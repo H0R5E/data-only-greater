@@ -50,3 +50,8 @@ _site
 
 # Ignore SvelteKit
 .svelte-kit
+/build
+vite.config.*.timestamp-*
+
+# Ignore ssh
+.ssh
