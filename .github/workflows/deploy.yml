@@ -3,7 +3,7 @@ name: Deploy to NFSN
 on:
   push:
     branches:
-      - next
+      - main
 
 jobs:
   main:
