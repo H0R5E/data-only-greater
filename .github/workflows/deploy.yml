@@ -1,0 +1,27 @@
+name: Deploy to NFSN
+
+on:
+  push:
+    branches:
+      - next
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: |
+          npm run build
+          rm -r build/api/posts build/api/posts.json
+      - name: rsync deployments
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -rptcivh --delete-after --stats
+          path: build/
+          remote_path: /home/public/
+          remote_host: ${{ secrets.DEPLOY_HOST }}
+          remote_user: ${{ secrets.DEPLOY_USER }}
+          remote_key: ${{ secrets.DEPLOY_KEY }}
