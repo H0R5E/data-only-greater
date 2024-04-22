@@ -16,9 +16,10 @@ const tocOptions = {
 
 const pageResolver = (name) => {
   const fixed = name
-    .replace(/&(#(?:x[0-9a-f]+|\d+)|[a-z]+);?/gi, "")
-    .replace(/[^a-zA-Z0-9 ]/g, "")
-    .replace(/ /g, "-")
+    .replace(/&(#(?:x[0-9a-f]+|\d+)|[a-z]+);?/gi, "") // Remove HTML character entities
+    .replace(/[^a-zA-Z0-9 ]/g, "") // Remove non alpha numeric character
+    .replace(/ +(?= )/g, "") // Remove multiple spaces
+    .replace(/ /g, "-") // Replace single space with dash
     .toLowerCase();
   return [fixed];
 };
