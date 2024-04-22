@@ -22,7 +22,7 @@
           </div>
           {#if !islg}
             <div
-              class="static mt-2 h-[200px] w-[200px] overflow-clip rounded-lg border border-black">
+              class="static mt-2 h-[200px] w-[200px] shrink-0 overflow-clip rounded-lg border border-black">
               <slot name="img" />
             </div>
           {/if}
