@@ -9,6 +9,7 @@
     "dev": "vite dev",
     "format": "prettier --write .",
     "lint": "prettier --check . && eslint .",
+    "postbuild": "npx svelte-sitemap --domain https://dataonlygreater.com",
     "preview": "vite preview"
   },
   "devDependencies": {
@@ -42,13 +43,14 @@
     "svelte": "^4.2.7",
     "svelte-check": "^3.6.9",
     "svelte-preprocess": "^5.0.3",
+    "svelte-sitemap": "^2.6.0",
+    "svelte-sonner": "^0.3.22",
     "sveltekit-superforms": "^2.12.5",
     "tailwind-merge": "^2.2.2",
     "tailwind-variants": "^0.2.1",
     "tailwindcss": "^3.4.3",
     "vite": "^5.0.12",
     "vite-plugin-tailwind-purgecss": "^0.3.0",
-    "zod": "^3.22.5",
-    "svelte-sonner": "^0.3.22"
+    "zod": "^3.22.5"
   }
 }
