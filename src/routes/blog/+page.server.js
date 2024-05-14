@@ -1,7 +1,5 @@
 import { postsPerPage } from "$lib/config";
 
-export const trailingSlash = "always";
-
 export const load = async ({ url, fetch }) => {
   const postRes = await fetch(`${url.origin}/api/posts.json`);
   const posts = await postRes.json();
