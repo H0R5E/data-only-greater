@@ -1,5 +1,7 @@
 import { postsPerPage } from "$lib/config";
 
+export const trailingSlash = "always";
+
 export const load = async ({ url, fetch }) => {
   const postRes = await fetch(`${url.origin}/api/posts.json`);
   const posts = await postRes.json();
@@ -12,14 +14,14 @@ export const load = async ({ url, fetch }) => {
   const links = [
     {
       title: "Latest",
-      href: "blog",
+      href: "",
     },
   ];
 
   if (pagesAvailable > 1) {
     links.push({
       title: "Older",
-      href: "/blog/page/2",
+      href: "page/2",
     });
   }
 

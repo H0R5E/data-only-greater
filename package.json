@@ -1,6 +1,6 @@
 {
-  "name": "sveltekit-blog-starter",
-  "version": "2.0.2",
+  "name": "data-only-greater",
+  "version": "2.0.1",
   "type": "module",
   "scripts": {
     "build": "vite build",
