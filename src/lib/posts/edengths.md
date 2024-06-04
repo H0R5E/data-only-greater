@@ -32,15 +32,14 @@ As of <b>27/08/17</b> the template has been ported to
 
 ## Introduction
 
-This page is for recording information about the usage of the latex
-thesis template that was authored by Mathew Topper since 2010.
-This template is appropriate for the current thesis regulations which
-**[can be found here](http://www.ed.ac.uk/academic-services/students/thesis-submission)**
-and, yes, they do want a Sans font for the titles. Fortunately, the
-template has a number of built in options (which can use just serif
-fonts, for instance) so there is a level of customisation available.
-These options will be explained in greater detail, along with
-installation and usage instructions, below.
+This page is for recording information about the usage of the latex thesis
+template that was authored by Mathew Topper since 2010. This template is
+appropriate for the current thesis regulations which **[can be found
+here](http://www.ed.ac.uk/academic-services/students/thesis-submission)** and,
+yes, they do want a Sans font for the titles. Fortunately, the template has a
+number of built in options (which can use just serif fonts, for instance) so
+there is a level of customisation available. These options will be explained in
+greater detail, along with installation and usage instructions, below.
 
 ## Installation
 
@@ -57,9 +56,9 @@ The template is now being stored on Github at the path:
 
 Please feel free to clone the repository and provide contributions via pull
 requests (PRs). Note, do not include any merge commits in your PR or work
-directly on the master or nomencl branches, as this
-project follows a
-[trunk based development model](https://barro.github.io/2016/02/a-succesful-git-branching-model-considered-harmful/).
+directly on the master or nomencl branches, as this project follows a [trunk
+based development
+model](https://barro.github.io/2016/02/a-succesful-git-branching-model-considered-harmful/).
 
 Alternatively, zipped "builds" of the template can be download directly from
 Github. For the standard version the direct link is:
@@ -133,10 +132,10 @@ most grateful.
 
 ### Kile (Linux)
 
-Assuming that you are comfortable starting a Linux program
-then you need to start Kile, either through the start menu or using a
-[terminal](http://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-
-linux-terminal/). Kile looks like this:
+Assuming that you are comfortable starting a Linux program then you need to
+start Kile, either through the start menu or using a
+[terminal](http://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
+Kile looks like this:
 
 ![](/images/edengths/kile_front_boxes.png)
 
@@ -339,11 +338,10 @@ required.
 
 ### Linux
 
-For Linux I have prepared a bash script that will make the necessary
-call. Once latex or pdf latex had been called once, open a
-[terminal](http://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-
-linux-terminal/) and change the working directory to the template directory,
-i.e:
+For Linux I have prepared a bash script that will make the necessary call. Once
+latex or pdf latex had been called once, open a
+[terminal](http://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/)
+and change the working directory to the template directory, i.e:
 
 ```bash
 >> cd some/path/to/the/template/edengths
