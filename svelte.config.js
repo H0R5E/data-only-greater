@@ -23,7 +23,7 @@ const pageResolver = (name) => {
     .toLowerCase();
   return [fixed];
 };
-const hrefTemplate = (permalink) => `/blog/${permalink}`;
+const hrefTemplate = (permalink) => `/blog/post/${permalink}`;
 const wikiLinkOptions = {
   pageResolver,
   hrefTemplate,
@@ -88,14 +88,15 @@ const config = {
     prerender: {
       handleMissingId: "warn",
       entries: [
-        "/blog/",
-        "/blog/page",
-        "/blog/category/",
         "/api/posts.json/",
         "/api/posts/nav/[slug]",
         "/api/posts/count/",
         "/api/posts/page/[page]/",
         "/api/rss.xml/",
+        "/blog/",
+        "/blog/category/",
+        "/blog/page",
+        "/blog/post",
       ],
     },
   },

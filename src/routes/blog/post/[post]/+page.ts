@@ -10,7 +10,7 @@ export const load = async ({ data, params }) => {
   if (data.nav.previous) {
     links.push({
       title: "Previous",
-      href: `/blog/${data.nav.previous}`,
+      href: `/blog/post/${data.nav.previous}`,
     });
   }
 
@@ -22,12 +22,12 @@ export const load = async ({ data, params }) => {
   if (data.nav.next) {
     links.push({
       title: "Next",
-      href: `/blog/${data.nav.next}`,
+      href: `/blog/post/${data.nav.next}`,
     });
   }
 
   try {
-    const post = await import(`../../../lib/posts/${params.post}.md`);
+    const post = await import(`../../../../lib/posts/${params.post}.md`);
     return {
       PostContent: post.default,
       meta: { ...post.metadata, slug: params.post },

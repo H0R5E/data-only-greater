@@ -19,14 +19,15 @@
       <Card.Root
         class="mx-2 min-w-[300px] max-w-[600px] flex-1 border border-black bg-stone-200">
         <Card.Header>
-          <Card.Title><a href="/blog/{post.slug}">{post.title}</a></Card.Title>
+          <Card.Title
+            ><a href="/blog/post/{post.slug}">{post.title}</a></Card.Title>
           {#if post.excerpt}
             <Card.Description class="text-black"
               >{post.excerpt}</Card.Description>
           {/if}
         </Card.Header>
         <Card.Content>
-          <a href="/blog/{post.slug}">
+          <a href="/blog/post/{post.slug}">
             <img
               class="mx-auto rounded border border-stone-500"
               src={post.coverImage}

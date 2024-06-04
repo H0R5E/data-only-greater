@@ -7,7 +7,7 @@
 
 export const siteTitle = "Data Only Greater - Mathew Topper's Website";
 export const siteDescription = "Mathew Topper's business portal and blog.";
-export const siteURL = "dataonlygreater.com";
+export const siteURL = "www.dataonlygreater.com";
 export const siteLink = "https://github.com/H0R5E/data-only-greater";
 export const siteAuthor = "Mathew Topper";
 
