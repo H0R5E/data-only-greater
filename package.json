@@ -9,7 +9,7 @@
     "dev": "vite dev",
     "format": "prettier --write .",
     "lint": "prettier --check . && eslint .",
-    "postbuild": "npx svelte-sitemap --domain https://dataonlygreater.com",
+    "postbuild": "npx svelte-sitemap --domain https://www.dataonlygreater.com",
     "preview": "vite preview"
   },
   "devDependencies": {
