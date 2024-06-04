@@ -53,7 +53,7 @@ this starter. These demo posts can be updated or removed, but it may be best to
 use one as a starting point, just for the frontmatter properties.
 
 If you want to use other frontmatter properties in the template (or just modify
-the layout), make changes in `src/routes/blog/[post]/+page.svelte`.
+the layout), make changes in `src/routes/blog/post/[post]/+page.svelte`.
 
 ⚠️ **Note: posts should have a `date` and an `excerpt` defined in the
 frontmatter.** They're sorted by `date`, and use `excerpt` in page meta tags
