@@ -17,8 +17,6 @@
   import { fail } from "@sveltejs/kit";
   import { superValidate } from "sveltekit-superforms";
 
-  import axios from "axios";
-
   export let data: SuperValidated<Infer<ContactFormSchema>>;
 
   const form = superForm(data, {
@@ -38,22 +36,29 @@
     }
 
     try {
-      const res = await axios.post(
-        "https://formspree.io/f/mzbnyrew",
-        form.data,
-        {
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
+      const res = await fetch("https://formspree.io/f/mzbnyrew", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-      );
+        body: new URLSearchParams({ ...form.data }),
+      });
+
       console.log(res);
-      toast.success("Message sent!");
+
+      if (res.ok) {
+        toast.success("Message sent!");
+      } else {
+        const message = await res.text();
+        toast.error("Failed!", {
+          description: message,
+        });
+      }
     } catch (err) {
       console.log(err);
       toast.error("Error!", {
-        description: axios.isAxiosError(err) ? err.message : undefined,
+        description: err instanceof Error ? err.message : undefined,
       });
     }
 
