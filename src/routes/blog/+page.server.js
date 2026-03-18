@@ -11,8 +11,8 @@ export const load = async ({ url, fetch }) => {
 
   const links = [
     {
-      title: "Latest",
-      href: "",
+      title: "Categories",
+      href: "/blog/category/",
     },
   ];
 

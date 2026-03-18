@@ -1,5 +1,6 @@
 <script lang="ts">
   import { spaceToUnderscore } from "$lib/assets/ts/utils";
+  import { badgeVariants } from "$lib/components/ui/badge";
 
   let { data } = $props();
   const { uniqueCategories } = data;
@@ -9,17 +10,15 @@
   <title>Blog | Categories</title>
 </svelte:head>
 
-<div>
-  <h1 class="h2">All blog categories</h1>
-
-  <ul>
+<div class="flex w-full flex-col items-center p-4 pb-32">
+  <span class="font-script scroll-mt-16 pt-4 pb-8 text-4xl"
+    >All Blog Categories</span>
+  <div
+    class="mt-4 mb-2 flex max-w-160 min-w-75 flex-wrap items-center justify-center gap-1 px-1">
     {#each uniqueCategories as category}
-      <li>
-        <a href="/blog/category/{spaceToUnderscore(category.title)}">
-          {category.title}
-        </a>
-        ({category.count})
-      </li>
+      <a
+        href="/blog/category/{spaceToUnderscore(category.title)}/"
+        class={badgeVariants()}>{category.title}</a>
     {/each}
-  </ul>
+  </div>
 </div>

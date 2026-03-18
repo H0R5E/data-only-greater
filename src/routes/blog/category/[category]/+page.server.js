@@ -17,8 +17,8 @@ export const load = async ({ params }) => {
 
   const links = [
     {
-      title: "All",
-      href: "/blog",
+      title: "Categories",
+      href: "/blog/category/",
     },
   ];
 
