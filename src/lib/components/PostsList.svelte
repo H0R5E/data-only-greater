@@ -10,7 +10,11 @@
     excerpt: string;
     date: string;
   }
-  export let posts: Post[] = [];
+  interface Props {
+    posts?: Post[];
+  }
+
+  let { posts = [] }: Props = $props();
 </script>
 
 <div class="flex w-full flex-col gap-3">

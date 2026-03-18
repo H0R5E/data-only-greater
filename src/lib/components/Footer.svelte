@@ -1,9 +1,9 @@
 <script lang="ts">
-  let innerWidth = 0;
+  let innerWidth = $state(0);
   const year = new Date().getFullYear();
 
-  $: isxs = innerWidth <= 640;
-  $: is2xs = innerWidth <= 370;
+  let isxs = $derived(innerWidth <= 640);
+  let is2xs = $derived(innerWidth <= 370);
 </script>
 
 <svelte:window bind:innerWidth />

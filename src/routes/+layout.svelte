@@ -1,6 +1,6 @@
 <!-- This is the global layout file; it "wraps" every page on the site. (Or more accurately: is the parent component to every page component on the site.) -->
 <script lang="ts">
-  import "../app.postcss";
+  import "../app.css";
   import "@fortawesome/fontawesome-free/css/fontawesome.css";
   import "@fortawesome/fontawesome-free/css/brands.css";
   import "@fortawesome/fontawesome-free/css/solid.css";
@@ -18,13 +18,13 @@
   import { afterNavigate, beforeNavigate } from "$app/navigation";
   import { fade } from "svelte/transition";
 
-  export let data;
+  let { data, children } = $props();
 
   const transitionIn = { delay: 150, duration: 150 };
   const transitionOut = { duration: 100 };
 
   let scroll_behaviour: string;
-  $: base = $page.data.path;
+  let base = $derived($page.data.path);
 
   beforeNavigate(({ to }) => {
     if (to && to.url.pathname === base) return;
@@ -45,7 +45,9 @@
    * Updates the global store with the current path. (Used for highlighting
    * the current page in the nav, but could be useful for other purposes.)
    **/
-  $: currentPage.set(data.path);
+  $effect(() => {
+    currentPage.set(data.path);
+  });
 
   /**
    * This pre-fetches all top-level routes on the site in the background for faster loading.
@@ -63,14 +65,6 @@
 </script>
 
 <svelte:head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin="anonymous" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
-    rel="stylesheet" />
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
@@ -100,7 +94,7 @@
       tabindex="-1"
       in:fade|global={transitionIn}
       out:fade|global={transitionOut}>
-      <slot />
+      {@render children?.()}
     </main>
   {/key}
   <Footer />

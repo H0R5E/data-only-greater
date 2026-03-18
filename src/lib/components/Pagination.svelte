@@ -1,12 +1,16 @@
 <script lang="ts">
   import { postsPerPage } from "$lib/config";
 
-  export let currentPage: number;
-  export let totalPosts: number;
-  export let path = "/blog/page";
+  interface Props {
+    currentPage: number;
+    totalPosts: number;
+    path?: string;
+  }
 
-  let pagesAvailable: number;
-  $: pagesAvailable = Math.ceil(totalPosts / postsPerPage);
+  let { currentPage, totalPosts, path = "/blog/page" }: Props = $props();
+
+  let pagesAvailable: number = $derived(Math.ceil(totalPosts / postsPerPage));
+  
 
   const isCurrentPage = (page: number) => page == currentPage;
 </script>

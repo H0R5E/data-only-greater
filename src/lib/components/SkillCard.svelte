@@ -2,10 +2,16 @@
   import * as Card from "$lib/components/ui/card/index.js";
   import * as Carousel from "$lib/components/ui/carousel/index.js";
 
-  export let title: string;
+  interface Props {
+    title: string;
+    text?: import('svelte').Snippet;
+    img?: import('svelte').Snippet;
+  }
 
-  let innerWidth = 0;
-  $: islg = innerWidth <= 768;
+  let { title, text, img }: Props = $props();
+
+  let innerWidth = $state(0);
+  let islg = $derived(innerWidth <= 768);
 </script>
 
 <svelte:window bind:innerWidth />
@@ -18,12 +24,12 @@
           >{title}</span>
         <div class="flex justify-between gap-8 overflow-hidden">
           <div class="sm:text-justify lg:text-lg">
-            <slot name="text" />
+            {@render text?.()}
           </div>
           {#if !islg}
             <div
               class="static mt-2 h-[200px] w-[200px] shrink-0 overflow-clip rounded-lg border border-black">
-              <slot name="img" />
+              {@render img?.()}
             </div>
           {/if}
         </div>

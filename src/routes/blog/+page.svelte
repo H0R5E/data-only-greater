@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
   import { siteDescription } from "$lib/config";
   import { makeID } from "$lib/assets/ts/utils";
   import PostsList from "$lib/components/PostsList.svelte";
 
-  export let data;
+  let { data } = $props();
 </script>
 
 <svelte:head>

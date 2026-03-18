@@ -7,8 +7,12 @@
     href: string;
   }
 
-  export let base: string;
-  export let links: Link[];
+  interface Props {
+    base: string;
+    links: Link[];
+  }
+
+  let { base, links }: Props = $props();
 </script>
 
 <header

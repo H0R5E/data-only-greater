@@ -1,4 +1,12 @@
-<script context="module">
+<script lang="ts">
+  interface Props {
+    children?: import('svelte').Snippet;
+  }
+
+  let { children }: Props = $props();
+</script>
+
+<script module>
   import a from "../elements/a.svelte";
   import blockquote from "../elements/blockquote.svelte";
   import h2 from "../elements/h2.svelte";
@@ -13,7 +21,7 @@
   export { a, blockquote, h2, h3, h4, h5, h6, img, ol, p, ul };
 </script>
 
-<slot />
+{@render children?.()}
 
 <style>
   :global(pre.shiki) {

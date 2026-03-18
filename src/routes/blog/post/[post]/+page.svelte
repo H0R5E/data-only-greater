@@ -2,7 +2,7 @@
 <script lang="ts">
   import { badgeVariants } from "$lib/components/ui/badge";
 
-  export let data;
+  let { data } = $props();
 
   const {
     title,
@@ -59,10 +59,10 @@
       <img class="mx-auto p-1" src={coverImage} alt="" />
     </div>
   {:else}
-    <div class="h-4" />
+    <div class="h-4"></div>
   {/if}
 
-  <svelte:component this={PostContent} />
+  <PostContent />
 
   {#if categories}
     <div class="mb-2 mt-4 flex flex-wrap gap-1 px-1">

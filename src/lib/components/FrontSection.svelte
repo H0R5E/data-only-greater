@@ -1,6 +1,11 @@
 <script lang="ts">
   import { makeID } from "$lib/assets/ts/utils";
-  export let title: string;
+  interface Props {
+    title: string;
+    children?: import('svelte').Snippet;
+  }
+
+  let { title, children }: Props = $props();
 </script>
 
 <div
@@ -9,7 +14,7 @@
   <span class="font-script text-4xl">{title}</span>
   <div class="my-8 flex w-full items-center justify-center bg-stone-200 py-16">
     <div class="flex w-full flex-col gap-2 px-4 pb-4">
-      <slot />
+      {@render children?.()}
     </div>
   </div>
 </div>

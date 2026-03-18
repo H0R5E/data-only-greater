@@ -2,9 +2,19 @@
   import * as Card from "$lib/components/ui/card/index.js";
   import * as Carousel from "$lib/components/ui/carousel/index.js";
 
-  export let title: string;
-  export let backgrounds: string[];
-  export let titleMinWidth: string | null = null;
+  interface Props {
+    title: string;
+    backgrounds: string[];
+    titleMinWidth?: string | null;
+    children?: import('svelte').Snippet;
+  }
+
+  let {
+    title,
+    backgrounds,
+    titleMinWidth = null,
+    children
+  }: Props = $props();
 </script>
 
 <Carousel.Item>
@@ -42,7 +52,7 @@
               backdrop-blur
               sm:text-justify
               lg:text-lg">
-            <slot />
+            {@render children?.()}
           </div>
         </div>
       </Card.Content>

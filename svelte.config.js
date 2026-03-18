@@ -2,13 +2,32 @@ import adapter from "@sveltejs/adapter-static";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 
 import { mdsvex, escapeSvelte } from "mdsvex";
-import { getHighlighter } from "shiki";
+import { createHighlighter } from "shiki";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeKatexSvelte from "rehype-katex-svelte";
 import rehypeSlug from "rehype-slug";
 import wikiLinkPlugin from "remark-wiki-link";
 import remarkMath from "remark-math";
 import remarkToc from "remark-toc";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const theme = "github-dark";
+const highlighter = await createHighlighter({
+  themes: [theme],
+  langs: [
+    "css",
+    "bash",
+    "python",
+    "javascript",
+    "matlab",
+    "svelte",
+    "typescript",
+  ],
+});
 
 const tocOptions = {
   skip: "references",
@@ -29,6 +48,11 @@ const wikiLinkOptions = {
   hrefTemplate,
 };
 
+const path_to_layout = join(
+  __dirname,
+  "./src/lib/components/mdsvex/layouts/default.svelte",
+);
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   // Ensures both .svelte and .md files are treated as components (can be imported and used anywhere, or used as pages)
@@ -40,37 +64,13 @@ const config = {
       extensions: [".md"],
       highlight: {
         highlighter: async (code, lang = "text") => {
-          const highlighter = await getHighlighter({
-            themes: ["github-dark"],
-            langs: [
-              "css",
-              "bash",
-              "python",
-              "javascript",
-              "matlab",
-              "svelte",
-              "typescript",
-            ],
-          });
-          await highlighter.loadLanguage(
-            "css",
-            "bash",
-            "python",
-            "javascript",
-            "matlab",
-            "svelte",
-            "typescript",
-          );
           const html = escapeSvelte(
-            highlighter.codeToHtml(code, {
-              lang,
-              theme: "github-dark",
-            }),
+            highlighter.codeToHtml(code, { lang, theme }),
           );
-          return html;
+          return `{@html \`${html}\` }`;
         },
       },
-      layout: "src/lib/components/mdsvex/layouts/default.svelte",
+      layout: path_to_layout,
 
       // Adds IDs to headings, and anchor links to those IDs. Note: must stay in this order to work.
       rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings, rehypeKatexSvelte],

@@ -1,7 +1,5 @@
-<script>
-  export let src;
-  export let alt;
-  export let title;
+<script lang="ts">
+  let { src, alt, title } = $props();
 </script>
 
 <img class="mx-auto rounded" {src} {alt} {title} />

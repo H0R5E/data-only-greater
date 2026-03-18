@@ -1,9 +1,8 @@
 <script lang="ts">
-  import { type CarouselAPI } from "$lib/components/ui/carousel/context.js";
-
   import { browser } from "$app/environment";
 
   import * as Carousel from "$lib/components/ui/carousel/index.js";
+  import { type CarouselAPI } from "$lib/components/ui/carousel/context.js";
   import FrontSection from "$lib/components/FrontSection.svelte";
   import SkillCard from "$lib/components/SkillCard.svelte";
   import AchievementCard from "$lib/components/AchievementCard.svelte";
@@ -22,19 +21,25 @@
 
   import type { PageData } from "./$types.js";
   import ContactForm from "./contact-form.svelte";
-  export let data: PageData;
-
-  let api: CarouselAPI;
-  let count = 0;
-  let current = 0;
-
-  $: if (api) {
-    count = api.scrollSnapList().length;
-    current = api.selectedScrollSnap() + 1;
-    api.on("select", () => {
-      current = api.selectedScrollSnap() + 1;
-    });
+  interface Props {
+    data: PageData;
   }
+
+  let { data }: Props = $props();
+
+  let api = $state<CarouselAPI>();
+
+  const count = $derived(api ? api.scrollSnapList().length : 0);
+  let current = $state(0);
+
+  $effect(() => {
+    if (api) {
+      current = api.selectedScrollSnap() + 1;
+      api.on("select", () => {
+        current = api!.selectedScrollSnap() + 1;
+      });
+    }
+  });
 
   function isTouchDevice(): boolean {
     if (!browser) return false;
@@ -42,8 +47,8 @@
   }
   const touchDevice = isTouchDevice();
 
-  let innerWidth = 0;
-  $: isxs = innerWidth <= 640;
+  let innerWidth = $state(0);
+  let isxs = $derived(innerWidth <= 640);
 </script>
 
 <svelte:head>
@@ -95,80 +100,93 @@
   <div class="flex justify-center">
     <Carousel.Root
       class="w-full {touchDevice
-        ? 'min-w-[300px] max-w-[320px] sm:max-w-[580px] md:max-w-[720px] lg:max-w-[800px]'
-        : 'min-w-[200px] max-w-[min(300px,calc(100%-60px))] sm:max-w-[500px] md:max-w-[640px] lg:max-w-[800px]'}"
+        ? 'max-w-[320px] min-w-[300px] sm:max-w-[580px] md:max-w-[720px] lg:max-w-[800px]'
+        : 'max-w-[min(300px,calc(100%-60px))] min-w-[200px] sm:max-w-[500px] md:max-w-[640px] lg:max-w-[800px]'}"
       opts={{
         watchDrag: touchDevice,
       }}>
       <Carousel.Content>
         <SkillCard title="Research">
-          <p slot="text">
-            I have conducted research on a wide selection of topics including
-            tidal energy converter hydrodynamics, numerical wave tanks, wave
-            energy resource modelling, offshore mission planning, levelised cost
-            of energy assessment, submarine cables, verification and validation
-            and software needs assessment. This research has resulted in over
-            150 citations to my published outputs.
-          </p>
-          <div
-            class="relative -left-[175px] -top-[50px] inline-block h-[373px] w-[652px]"
-            slot="img">
-            <img
-              width="652"
-              height="373"
-              alt="LCOE joint probability chart"
-              src={lcoe} />
-          </div>
+          {#snippet text()}
+            <p>
+              I have conducted research on a wide selection of topics including
+              tidal energy converter hydrodynamics, numerical wave tanks, wave
+              energy resource modelling, offshore mission planning, levelised
+              cost of energy assessment, submarine cables, verification and
+              validation and software needs assessment. This research has
+              resulted in over 150 citations to my published outputs.
+            </p>
+          {/snippet}
+          {#snippet img()}
+            <div
+              class="relative -top-[50px] -left-[175px] inline-block h-[373px] w-[652px]">
+              <img
+                width="652"
+                height="373"
+                alt="LCOE joint probability chart"
+                src={lcoe} />
+            </div>
+          {/snippet}
         </SkillCard>
         <SkillCard title="Software">
-          <p slot="text">
-            I am proficient in multiple programming languages, including Python,
-            MATLAB, Typescript and Fortran. I have experience of building
-            applications in the cloud, using contemporary techniques such as
-            serverless and infrastructure as code. I have contributed to
-            multiple open source projects and also maintain many. I am
-            continuously adopting new techniques and technology in order to
-            produce maintainable, error free code.
-          </p>
-          <div
-            class="relative -top-[-25px] left-[25px] inline-block w-[400px]"
-            slot="img">
-            <img
-              width="1107"
-              height="722"
-              alt="DTOcean interface"
-              src={dtocean} />
-          </div>
+          {#snippet text()}
+            <p>
+              I am proficient in multiple programming languages, including
+              Python, MATLAB, Typescript and Fortran. I have experience of
+              building applications in the cloud, using contemporary techniques
+              such as serverless and infrastructure as code. I have contributed
+              to multiple open source projects and also maintain many. I am
+              continuously adopting new techniques and technology in order to
+              produce maintainable, error free code.
+            </p>
+          {/snippet}
+          {#snippet img()}
+            <div
+              class="relative -top-[-25px] left-[25px] inline-block w-[400px]">
+              <img
+                width="1107"
+                height="722"
+                alt="DTOcean interface"
+                src={dtocean} />
+            </div>
+          {/snippet}
         </SkillCard>
         <SkillCard title="Communications">
-          <p slot="text">
-            Beyond my written publications, I am also a skilled public speaker
-            and content creator. I have presented my work at multiple academic
-            and industrial conferences. I have recorded (and edited) popular
-            instructional videos which are published on the Data Only Greater
-            YouTube channel. I also have experience of teaching at undergraduate
-            level.
-          </p>
-          <div
-            class="relative -left-[140px] -top-[25px] inline-block w-[500px]"
-            slot="img">
-            <img width="500" height="282" alt="A test card" src={pattern} />
-          </div>
+          {#snippet text()}
+            <p>
+              Beyond my written publications, I am also a skilled public speaker
+              and content creator. I have presented my work at multiple academic
+              and industrial conferences. I have recorded (and edited) popular
+              instructional videos which are published on the Data Only Greater
+              YouTube channel. I also have experience of teaching at
+              undergraduate level.
+            </p>
+          {/snippet}
+          {#snippet img()}
+            <div
+              class="relative -top-[25px] -left-[140px] inline-block w-[500px]">
+              <img width="500" height="282" alt="A test card" src={pattern} />
+            </div>
+          {/snippet}
         </SkillCard>
         <SkillCard title="Business Development">
-          <p slot="text">
-            My experience on the cutting edge of research software development,
-            combined with my ability to grasp complex subjects quickly, has
-            given me the skills to develop ambitious, yet achievable, project
-            proposals. Building a strong team is also vital to success and I
-            have nurtured a wide network of contacts across academia and
-            industry, particularly in the field of ocean renewable energy.
-          </p>
-          <div
-            class="relative -left-[50px] -top-[0px] inline-block w-[400px]"
-            slot="img">
-            <img width="288" height="400" alt="Funding" src={money} />
-          </div>
+          {#snippet text()}
+            <p>
+              My experience on the cutting edge of research software
+              development, combined with my ability to grasp complex subjects
+              quickly, has given me the skills to develop ambitious, yet
+              achievable, project proposals. Building a strong team is also
+              vital to success and I have nurtured a wide network of contacts
+              across academia and industry, particularly in the field of ocean
+              renewable energy.
+            </p>
+          {/snippet}
+          {#snippet img()}
+            <div
+              class="relative -top-[0px] -left-[50px] inline-block w-[400px]">
+              <img width="288" height="400" alt="Funding" src={money} />
+            </div>
+          {/snippet}
         </SkillCard>
       </Carousel.Content>
       <Carousel.Previous
@@ -182,8 +200,8 @@
   <div class="flex justify-center">
     <Carousel.Root
       class="w-full {touchDevice
-        ? 'min-w-[300px] max-w-[320px] sm:max-w-[580px] md:max-w-[720px] lg:max-w-[800px]'
-        : 'min-w-[200px] max-w-[min(300px,calc(100%-60px))] sm:max-w-[500px] md:max-w-[640px] lg:max-w-[800px]'}"
+        ? 'max-w-[320px] min-w-[300px] sm:max-w-[580px] md:max-w-[720px] lg:max-w-[800px]'
+        : 'max-w-[min(300px,calc(100%-60px))] min-w-[200px] sm:max-w-[500px] md:max-w-[640px] lg:max-w-[800px]'}"
       opts={{
         watchDrag: touchDevice,
       }}>
@@ -195,10 +213,10 @@
             "linear-gradient(#a5f3fc, #38bdf8)",
           ]}>
           <p class="">
-            <i>BlueBox</i> was a 2 year, sustainable energy authority of Ireland
-            funded, R&amp;D project, with the goal of developing an IoT system for
-            renewably powered offshore sensing platforms. The internet and Iridium
-            satellite network are used to allow communication from any location.
+            <i>BlueBox</i> was a 2 year, sustainable energy authority of Ireland funded,
+            R&amp;D project, with the goal of developing an IoT system for renewably
+            powered offshore sensing platforms. The internet and Iridium satellite
+            network are used to allow communication from any location.
           </p>
           <div>
             <p class="">
@@ -280,10 +298,10 @@
           titleMinWidth="200px">
           <p>
             <i>Data Only Greater</i> (/ˈdeɪtə ˈəʊnli ˈɡreɪtə/) started as the name
-            of my blog after it came to me in a dream. I always thought it would
-            make a snazzy business name and, after moving to Ireland in 2017, and
-            accepting an offer to subcontract for Sandia National Labs, I registered
-            Data Only Greater as my trading name.
+            of my blog after it came to me in a dream. I always thought it would make
+            a snazzy business name and, after moving to Ireland in 2017, and accepting
+            an offer to subcontract for Sandia National Labs, I registered Data Only
+            Greater as my trading name.
           </p>
           <p>
             I've been in business for over five years now and had the
@@ -299,8 +317,8 @@
             This website has also been created from scratch by me, using the
             <Link href="https://kit.svelte.dev/">SvelteKit</Link> javascript framework.
             If you would like me to make you a website or help you achieve your goals,
-            then I'm always looking for new opportunities to expand my business.
-            Get in touch using the form below!
+            then I'm always looking for new opportunities to expand my business. Get
+            in touch using the form below!
           </p>
         </AchievementCard>
       </Carousel.Content>

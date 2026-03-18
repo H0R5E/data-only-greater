@@ -1,10 +1,15 @@
 <script lang="ts">
-  export let href: string;
-  let data: HTMLAnchorElement;
-  $: getDownload = () => {
+  interface Props {
+    href: string;
+    children?: import('svelte').Snippet;
+  }
+
+  let { href, children }: Props = $props();
+  let data: HTMLAnchorElement = $state();
+  let getDownload = $derived(() => {
     if (!href.startsWith("data:application/octet-stream")) return;
     return data?.innerText;
-  };
+  });
 </script>
 
 <a
@@ -12,5 +17,5 @@
   {href}
   bind:this={data}
   download={getDownload()}>
-  <slot />
+  {@render children?.()}
 </a>

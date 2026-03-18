@@ -1,7 +1,12 @@
 <script lang="ts">
   import GithubSlugger from "github-slugger";
+  interface Props {
+    children?: import('svelte').Snippet;
+  }
 
-  let data: HTMLHeadElement;
+  let { children }: Props = $props();
+
+  let data: HTMLHeadElement = $state();
   const slugger = new GithubSlugger();
 </script>
 
@@ -9,5 +14,5 @@
   id={slugger.slug(data?.innerText)}
   bind:this={data}
   class="text-lg font-semibold">
-  <slot />
+  {@render children?.()}
 </h5>

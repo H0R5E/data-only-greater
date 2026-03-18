@@ -1,7 +1,7 @@
 <!-- Renders any page at /blog/category/* -->
-<script>
+<script lang="ts">
   import PostsList from "$lib/components/PostsList.svelte";
-  export let data;
+  let { data } = $props();
 
   const { posts, category } = data;
 </script>
