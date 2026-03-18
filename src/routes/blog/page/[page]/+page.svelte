@@ -1,7 +1,7 @@
 <!-- This file handles any /blog/page/x route for pagination -->
 <script lang="ts">
   import PostsList from "$lib/components/PostsList.svelte";
-  import { postsPerPage, siteDescription } from "$lib/config";
+  import { postsPerPage, siteDescription, siteTitle } from "$lib/config";
 
   let { data } = $props();
   const { page, totalPosts, posts } = data;
@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-  <title>Blog - page {page}</title>
+  <title>Blog: Page {page} - {siteTitle}</title>
   <meta data-key="description" name="description" content={siteDescription} />
 </svelte:head>
 
@@ -19,7 +19,7 @@
 
 <div class="flex w-full flex-col py-4 pb-32">
   {#if posts.length}
-    <span class="mx-auto scroll-mt-16 pb-8 pt-4 font-script text-4xl"
+    <span class="font-script mx-auto scroll-mt-16 pt-4 pb-8 text-4xl"
       >Posts {lowerBound}–{upperBound} of {totalPosts}</span>
     <PostsList {posts} />
   {:else}

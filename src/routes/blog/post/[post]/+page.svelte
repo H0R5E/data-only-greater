@@ -2,6 +2,7 @@
 <script lang="ts">
   import { spaceToUnderscore } from "$lib/assets/ts/utils";
   import { badgeVariants } from "$lib/components/ui/badge";
+  import { siteTitle } from "$lib/config";
 
   let { data } = $props();
 
@@ -20,7 +21,7 @@
 
 <svelte:head>
   <!-- Be sure to add your image files and un-comment the lines below -->
-  <title>{title}</title>
+  <title>{title} - {siteTitle}</title>
   <meta data-key="description" name="description" content={excerpt} />
   <meta property="og:type" content="article" />
   <meta property="og:title" content={title} />

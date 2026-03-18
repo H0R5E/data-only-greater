@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { siteTitle } from "$lib/config";
   import { spaceToUnderscore } from "$lib/assets/ts/utils";
   import { badgeVariants } from "$lib/components/ui/badge";
 
@@ -7,7 +8,7 @@
 </script>
 
 <svelte:head>
-  <title>Blog | Categories</title>
+  <title>Blog: Categories - {siteTitle}</title>
 </svelte:head>
 
 <div class="flex w-full flex-col items-center p-4 pb-32">

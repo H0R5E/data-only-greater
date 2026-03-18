@@ -2,7 +2,7 @@
 <script lang="ts">
   import { underscoreToSpace } from "$lib/assets/ts/utils";
   import PostsList from "$lib/components/PostsList.svelte";
-  import { postsPerPage, siteDescription } from "$lib/config";
+  import { postsPerPage, siteTitle } from "$lib/config";
 
   let { data } = $props();
   const { category, page, totalPosts, posts } = data;
@@ -14,7 +14,8 @@
 
 <svelte:head>
   <title
-    >Category: {underscoreToSpace(category)} (posts {lowerBound}–{upperBound} of {totalPosts})</title>
+    >Category: {underscoreToSpace(category)} (posts {lowerBound}–{upperBound} of {totalPosts})
+    - {siteTitle}</title>
 </svelte:head>
 
 <!-- TODO: this is duplicated across multiple `+page.svelte` files -->

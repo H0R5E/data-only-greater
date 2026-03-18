@@ -1,5 +1,6 @@
 <!-- Renders any page at /blog/category/* -->
 <script lang="ts">
+  import { siteTitle } from "$lib/config";
   import { underscoreToSpace } from "$lib/assets/ts/utils";
   import PostsList from "$lib/components/PostsList.svelte";
   let { data } = $props();
@@ -8,7 +9,7 @@
 </script>
 
 <svelte:head>
-  <title>Category: {category}</title>
+  <title>Category: {category} - {siteTitle}</title>
 </svelte:head>
 
 <div class="flex w-full flex-col items-center p-4 pb-32">
