@@ -9,17 +9,17 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           cache: "npm"
       - run: npm install
       - run: |
           npm run build
           rm -r build/api/posts build/api/posts.json
       - name: rsync deployments
-        uses: burnett01/rsync-deployments@7.0.1
+        uses: burnett01/rsync-deployments@v8
         with:
           switches: -rptcivh --delete-after --stats
           path: build/
