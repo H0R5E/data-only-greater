@@ -21,7 +21,7 @@
   {#each posts as post}
     <div class="flex justify-center">
       <Card.Root
-        class="mx-2 min-w-[300px] max-w-[600px] flex-1 border border-black bg-stone-200">
+        class="mx-2 max-w-150 min-w-75 flex-1 border border-black bg-stone-200">
         <Card.Header>
           <Card.Title
             ><a href="/blog/post/{post.slug}">{post.title}</a></Card.Title>
@@ -30,17 +30,19 @@
               >{post.excerpt}</Card.Description>
           {/if}
         </Card.Header>
-        <Card.Content>
-          <a href="/blog/post/{post.slug}">
-            <img
-              class="mx-auto rounded border border-stone-500"
-              src={post.coverImage}
-              alt="" />
-          </a>
-        </Card.Content>
+        {#if post.coverImage}
+          <Card.Content>
+            <a href="/blog/post/{post.slug}">
+              <img
+                class="mx-auto rounded border border-stone-500"
+                src={post.coverImage}
+                alt="" />
+            </a>
+          </Card.Content>
+        {/if}
         <Card.Footer>
           <div
-            class="flex gap-2 self-center rounded-full border border-stone-500 bg-white px-4 py-1 text-xs text-muted-foreground">
+            class="text-muted-foreground flex gap-2 self-center rounded-full border border-stone-500 bg-white px-4 py-1 text-xs">
             Post date: {post.date}
           </div>
         </Card.Footer>

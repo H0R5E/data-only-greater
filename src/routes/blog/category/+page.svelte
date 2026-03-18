@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { spaceToUnderscore } from "$lib/assets/ts/utils";
+
   let { data } = $props();
   const { uniqueCategories } = data;
 </script>
@@ -13,7 +15,7 @@
   <ul>
     {#each uniqueCategories as category}
       <li>
-        <a href="/blog/category/{category.title}">
+        <a href="/blog/category/{spaceToUnderscore(category.title)}">
           {category.title}
         </a>
         ({category.count})

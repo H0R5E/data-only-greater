@@ -1,5 +1,6 @@
 <!-- This file renders each individual blog post for reading. Be sure to update the svelte:head below -->
 <script lang="ts">
+  import { spaceToUnderscore } from "$lib/assets/ts/utils";
   import { badgeVariants } from "$lib/components/ui/badge";
 
   let { data } = $props();
@@ -33,16 +34,16 @@
 </svelte:head>
 
 <article
-  class="grid min-w-[300px] max-w-[640px] grid-cols-1 gap-3 self-center px-3 pt-8">
+  class="grid max-w-160 min-w-75 grid-cols-1 gap-3 self-center px-3 pt-8">
   <!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
 
   <h1
-    class="scroll-mt-16 self-center pb-2 text-center font-script text-4xl leading-[45px]">
+    class="font-script scroll-mt-16 self-center pb-2 text-center text-4xl leading-11.25">
     {title}
   </h1>
 
   <div
-    class="mx-auto flex justify-center gap-2 self-center rounded-full border px-4 py-1 text-xs text-muted-foreground">
+    class="text-muted-foreground mx-auto flex justify-center gap-2 self-center rounded-full border px-4 py-1 text-xs">
     <div>
       <span class="font-semibold italic">Published:</span>
       {date}
@@ -65,10 +66,11 @@
   <PostContent />
 
   {#if categories}
-    <div class="mb-2 mt-4 flex flex-wrap gap-1 px-1">
+    <div class="mt-4 mb-2 flex flex-wrap gap-1 px-1">
       {#each categories as category}
-        <a href="/blog/category/{category}/" class={badgeVariants()}
-          >{category}</a>
+        <a
+          href="/blog/category/{spaceToUnderscore(category)}/"
+          class={badgeVariants()}>{category}</a>
       {/each}
     </div>
   {/if}

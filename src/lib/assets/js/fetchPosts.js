@@ -1,4 +1,5 @@
 import { postsPerPage } from "$lib/config";
+import { underscoreToSpace } from "$lib/assets/ts/utils.js";
 
 const fetchPosts = async ({
   offset = 0,
@@ -19,7 +20,7 @@ const fetchPosts = async ({
 
   if (category) {
     sortedPosts = sortedPosts.filter((post) =>
-      post.categories.includes(category),
+      post.categories.includes(underscoreToSpace(category)),
     );
   }
 
