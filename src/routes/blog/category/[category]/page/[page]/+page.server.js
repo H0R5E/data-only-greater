@@ -4,7 +4,7 @@ import { redirect } from "@sveltejs/kit";
 import { underscoreToSpace } from "$lib/assets/ts/utils.js";
 
 export const load = async ({ url, params, fetch }) => {
-  const category = underscoreToSpace(params.category);
+  const category = params.category;
   const page = parseInt(params.page) || 1;
 
   // Keeps from duplicating the blog index route as page 1
@@ -14,7 +14,10 @@ export const load = async ({ url, params, fetch }) => {
 
   let offset = page * postsPerPage - postsPerPage;
 
-  const totalPostsRes = await fetchPosts({ category: category, limit: -1 });
+  const totalPostsRes = await fetchPosts({
+    category: underscoreToSpace(category),
+    limit: -1,
+  });
   const total = totalPostsRes.posts.length;
   const { posts } = await fetchPosts({ offset, page, category });
 

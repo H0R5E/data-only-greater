@@ -1,5 +1,6 @@
 <!-- This file handles any /blog/page/x route for pagination -->
 <script lang="ts">
+  import { underscoreToSpace } from "$lib/assets/ts/utils";
   import PostsList from "$lib/components/PostsList.svelte";
   import { postsPerPage, siteDescription } from "$lib/config";
 
@@ -13,7 +14,7 @@
 
 <svelte:head>
   <title
-    >Category: {category} (posts {lowerBound}–{upperBound} of {totalPosts})</title>
+    >Category: {underscoreToSpace(category)} (posts {lowerBound}–{upperBound} of {totalPosts})</title>
 </svelte:head>
 
 <!-- TODO: this is duplicated across multiple `+page.svelte` files -->
@@ -21,7 +22,8 @@
 <div class="flex w-full flex-col py-4 pb-32">
   {#if posts.length}
     <span class="font-script mx-auto scroll-mt-16 pt-4 pb-8 text-4xl"
-      >Category: {category} (posts {lowerBound}–{upperBound} of {totalPosts})</span>
+      >Category: {underscoreToSpace(category)} (posts {lowerBound}–{upperBound} of
+      {totalPosts})</span>
     <PostsList {posts} />
   {:else}
     <h1>Oops!</h1>

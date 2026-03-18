@@ -95,6 +95,7 @@ const config = {
         "/api/rss.xml/",
         "/blog/",
         "/blog/category/",
+        "/blog/category/[category]/page",
         "/blog/page",
         "/blog/post",
       ],

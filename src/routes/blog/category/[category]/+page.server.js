@@ -3,11 +3,14 @@ import fetchPosts from "$lib/assets/js/fetchPosts";
 import { underscoreToSpace } from "$lib/assets/ts/utils.js";
 
 export const load = async ({ params }) => {
-  const category = underscoreToSpace(params.category);
+  const category = params.category;
   const page = params.page || 1;
   const options = { category, limit: -1 };
   const { posts: allPosts } = await fetchPosts(options);
-  const { posts } = await fetchPosts({ category, limit: postsPerPage });
+  const { posts } = await fetchPosts({
+    category: underscoreToSpace(category),
+    limit: postsPerPage,
+  });
 
   const total = allPosts.length;
   const pagesAvailable = Math.ceil(total / postsPerPage);
