@@ -14,8 +14,7 @@
 
 <svelte:head>
   <title
-    >Category: {underscoreToSpace(category)} (posts {lowerBound}–{upperBound} of {totalPosts})
-    - {siteTitle}</title>
+    >Category: {underscoreToSpace(category)} (Page {page}) - {siteTitle}</title>
 </svelte:head>
 
 <!-- TODO: this is duplicated across multiple `+page.svelte` files -->
