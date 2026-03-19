@@ -19,7 +19,8 @@
 
 <div class="flex w-full flex-col py-4 pb-32">
   {#if posts.length}
-    <span class="font-script mx-auto scroll-mt-16 pt-4 pb-8 text-4xl"
+    <span
+      class="font-script scroll-mt-16 self-center pb-2 text-center text-4xl leading-11.25"
       >Posts {lowerBound}–{upperBound} of {totalPosts}</span>
     <PostsList {posts} />
   {:else}

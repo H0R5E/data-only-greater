@@ -9,7 +9,7 @@ export const load = async ({ data, params }) => {
 
   if (data.nav.previous) {
     links.push({
-      title: "Previous",
+      title: "Next",
       href: `/blog/post/${data.nav.previous}`,
     });
   }
@@ -21,7 +21,7 @@ export const load = async ({ data, params }) => {
 
   if (data.nav.next) {
     links.push({
-      title: "Next",
+      title: "Previous",
       href: `/blog/post/${data.nav.next}`,
     });
   }

@@ -67,7 +67,7 @@
   <PostContent />
 
   {#if categories}
-    <div class="mt-4 mb-2 flex flex-wrap gap-1 px-1">
+    <div class="mt-4 mb-2 flex flex-wrap justify-center gap-1 px-1">
       {#each categories as category}
         <a
           href="/blog/category/{spaceToUnderscore(category)}/"

@@ -12,7 +12,8 @@
 </svelte:head>
 
 <div class="flex w-full flex-col items-center p-4 pb-32">
-  <span class="font-script scroll-mt-16 pt-4 pb-8 text-4xl"
+  <span
+    class="font-script scroll-mt-16 self-center pb-2 text-center text-4xl leading-11.25"
     >All Blog Categories</span>
   <div
     class="mt-4 mb-2 flex max-w-160 min-w-75 flex-wrap items-center justify-center gap-1 px-1">

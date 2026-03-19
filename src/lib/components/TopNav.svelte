@@ -9,16 +9,18 @@
 <svelte:window bind:innerWidth />
 
 <div
-  class="flex w-full max-w-[640px] justify-between rounded-full border border-slate-600 bg-stone-200 p-1">
-  <button class="flex items-center gap-2" onclick={() => goto("/")}>
+  class="flex w-full max-w-160 min-w-85 justify-between rounded-full border border-slate-600 bg-stone-200 p-1">
+  <button
+    class="flex cursor-pointer items-center gap-2"
+    onclick={() => goto("/")}>
     <div
       class="h-12 w-12 overflow-hidden rounded-full border border-black bg-white">
       <img alt="The data only greater logo" src={logo} />
     </div>
-    <span class="pt-2 font-script text-2xl font-normal">Data Only Greater</span>
+    <span class="font-script pt-2 text-2xl font-normal">Data Only Greater</span>
   </button>
   <div class="grow"></div>
-  <nav aria-label="Main navigation" class="flex items-center gap-3 pb-1 pr-5">
+  <nav aria-label="Main navigation" class="flex items-center gap-3 pr-5 pb-1">
     {#if !isxs}
       <a href="/" class="text-xl">Home</a>
     {/if}

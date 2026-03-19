@@ -14,6 +14,7 @@
 <div class="flex w-full flex-col p-4">
   <span
     id={makeID("Blog")}
-    class="font-script mx-auto scroll-mt-16 pt-4 pb-8 text-4xl">Blog</span>
+    class="font-script scroll-mt-16 self-center pb-2 text-center text-4xl leading-11.25"
+    >Blog</span>
   <PostsList posts={data.posts} />
 </div>
