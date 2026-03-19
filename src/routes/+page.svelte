@@ -27,16 +27,30 @@
 
   let { data }: Props = $props();
 
-  let api = $state<CarouselAPI>();
+  let api_skills = $state<CarouselAPI>();
+  let api_achievements = $state<CarouselAPI>();
 
-  const count = $derived(api ? api.scrollSnapList().length : 0);
-  let current = $state(0);
+  const count_skills = $derived(
+    api_skills ? api_skills.scrollSnapList().length : 0,
+  );
+  const count_achievements = $derived(
+    api_achievements ? api_achievements.scrollSnapList().length : 0,
+  );
+
+  let current_skill = $state(0);
+  let current_achievement = $state(0);
 
   $effect(() => {
-    if (api) {
-      current = api.selectedScrollSnap() + 1;
-      api.on("select", () => {
-        current = api!.selectedScrollSnap() + 1;
+    if (api_skills) {
+      current_skill = api_skills.selectedScrollSnap() + 1;
+      api_skills.on("select", () => {
+        current_skill = api_skills!.selectedScrollSnap() + 1;
+      });
+    }
+    if (api_achievements) {
+      current_achievement = api_achievements.selectedScrollSnap() + 1;
+      api_achievements.on("select", () => {
+        current_achievement = api_achievements!.selectedScrollSnap() + 1;
       });
     }
   });
@@ -61,15 +75,15 @@
   <div
     class="
       flex
-      max-w-[768px]
+      max-w-3xl
       flex-col
       gap-4
       self-center
       md:flex-row-reverse
       md:gap-8
-      lg:max-w-[900px]">
+      lg:max-w-225">
     <div class="flex shrink-0 justify-center md:items-center">
-      <div class="w-[250px] overflow-clip rounded-full border border-black">
+      <div class="w-62.5 overflow-clip rounded-full border border-black">
         <img
           width="250"
           height="250"
@@ -100,11 +114,12 @@
   <div class="flex justify-center">
     <Carousel.Root
       class="w-full {touchDevice
-        ? 'max-w-[320px] min-w-[300px] sm:max-w-[580px] md:max-w-[720px] lg:max-w-[800px]'
-        : 'max-w-[min(300px,calc(100%-60px))] min-w-[200px] sm:max-w-[500px] md:max-w-[640px] lg:max-w-[800px]'}"
+        ? 'max-w-[320px] min-w-75 sm:max-w-145 md:max-w-180 lg:max-w-200'
+        : 'max-w-[min(300px,calc(100%-60px))] min-w-50 sm:max-w-125 md:max-w-160 lg:max-w-200'}"
       opts={{
         watchDrag: touchDevice,
-      }}>
+      }}
+      setApi={(emblaApi) => (api_skills = emblaApi)}>
       <Carousel.Content>
         <SkillCard title="Research">
           {#snippet text()}
@@ -119,7 +134,7 @@
           {/snippet}
           {#snippet img()}
             <div
-              class="relative -top-[50px] -left-[175px] inline-block h-[373px] w-[652px]">
+              class="relative -top-12.5 -left-43.75 inline-block h-93.25 w-163">
               <img
                 width="652"
                 height="373"
@@ -141,8 +156,7 @@
             </p>
           {/snippet}
           {#snippet img()}
-            <div
-              class="relative -top-[-25px] left-[25px] inline-block w-[400px]">
+            <div class="relative -top-[-25px] left-6.25 inline-block w-100">
               <img
                 width="1107"
                 height="722"
@@ -163,8 +177,7 @@
             </p>
           {/snippet}
           {#snippet img()}
-            <div
-              class="relative -top-[25px] -left-[140px] inline-block w-[500px]">
+            <div class="relative -top-6.25 -left-35 inline-block w-125">
               <img width="500" height="282" alt="A test card" src={pattern} />
             </div>
           {/snippet}
@@ -182,8 +195,7 @@
             </p>
           {/snippet}
           {#snippet img()}
-            <div
-              class="relative -top-[0px] -left-[50px] inline-block w-[400px]">
+            <div class="relative top-0 -left-12.5 inline-block w-100">
               <img width="288" height="400" alt="Funding" src={money} />
             </div>
           {/snippet}
@@ -193,6 +205,9 @@
         class={touchDevice ? "hidden" : isxs ? "-left-9" : undefined} />
       <Carousel.Next
         class={touchDevice ? "hidden" : isxs ? "-right-9" : undefined} />
+      <div class="text-muted-foreground py-2 text-center text-sm">
+        Slide {current_skill} of {count_skills}
+      </div>
     </Carousel.Root>
   </div>
 </FrontSection>
@@ -200,11 +215,12 @@
   <div class="flex justify-center">
     <Carousel.Root
       class="w-full {touchDevice
-        ? 'max-w-[320px] min-w-[300px] sm:max-w-[580px] md:max-w-[720px] lg:max-w-[800px]'
-        : 'max-w-[min(300px,calc(100%-60px))] min-w-[200px] sm:max-w-[500px] md:max-w-[640px] lg:max-w-[800px]'}"
+        ? 'max-w-[320px] min-w-75 sm:max-w-145 md:max-w-180 lg:max-w-200'
+        : 'max-w-[min(300px,calc(100%-60px))] min-w-50 sm:max-w-125 md:max-w-160 lg:max-w-200'}"
       opts={{
         watchDrag: touchDevice,
-      }}>
+      }}
+      setApi={(emblaApi) => (api_achievements = emblaApi)}>
       <Carousel.Content>
         <AchievementCard
           title="BlueBox"
@@ -326,6 +342,9 @@
         class={touchDevice ? "hidden" : isxs ? "-left-9" : undefined} />
       <Carousel.Next
         class={touchDevice ? "hidden" : isxs ? "-right-9" : undefined} />
+      <div class="text-muted-foreground py-2 text-center text-sm">
+        Slide {current_achievement} of {count_achievements}
+      </div>
     </Carousel.Root>
   </div>
 </FrontSection>
