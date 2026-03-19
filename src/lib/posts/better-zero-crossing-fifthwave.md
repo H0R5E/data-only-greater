@@ -1,7 +1,6 @@
 ---
 title: Better zero crossing estimation for fifthwave
 date: "2011-07-06"
-updated: "2011-07-06"
 coverImage: "/images/spline1_500x375.png"
 coverWidth: 500px
 coverHeight: 375px

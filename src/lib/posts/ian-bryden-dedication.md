@@ -1,7 +1,6 @@
 ---
 title: Dedication to the late Professor Ian Bryden
 date: "2019-06-04"
-updated: "2019-06-04"
 categories: [Ian Bryden, DTOcean, article, RSER]
 ---
 

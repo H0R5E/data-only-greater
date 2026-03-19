@@ -1,7 +1,6 @@
 ---
 title: "DTOcean: An Introduction"
 date: "2017-01-30"
-updated: "2017-01-30"
 coverImage: "/images/dtocean/capex-pie.png"
 coverWidth: 500px
 coverHeight: 375px

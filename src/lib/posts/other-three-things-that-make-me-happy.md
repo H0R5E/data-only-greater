@@ -1,7 +1,6 @@
 ---
 title: The other three things that make me happy
 date: "2009-07-27"
-updated: "2009-07-27"
 categories: [biographical, happiness]
 ---
 

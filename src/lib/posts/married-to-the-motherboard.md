@@ -1,7 +1,6 @@
 ---
 title: Married to the Motherboard
 date: "2008-08-18"
-updated: "2008-08-18"
 excerpt: Have computers changed the lives of young people?
 categories: [computers, internet, youth, geeks, biographical]
 ---

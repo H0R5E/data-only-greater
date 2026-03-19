@@ -1,7 +1,6 @@
 ---
 title: "DTOcean Development: Organising the Packages"
 date: "2017-02-23"
-updated: "2017-02-23"
 coverImage: "/images/dtocean/package_graph.png"
 coverWidth: 864px
 coverHeight: 465px

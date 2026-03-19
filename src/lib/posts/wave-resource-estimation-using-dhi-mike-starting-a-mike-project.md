@@ -1,7 +1,6 @@
 ---
 title: Wave Resource Estimation Using DHI MIKE - Starting a MIKE project
 date: "2012-01-17"
-updated: "2012-01-17"
 excerpt: A brief tutorial for starting a DHI MIKE project for the first time.
 categories: [MIKE21]
 ---

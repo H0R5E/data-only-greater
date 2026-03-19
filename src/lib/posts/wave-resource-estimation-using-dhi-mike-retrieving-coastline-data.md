@@ -1,7 +1,6 @@
 ---
 title: Wave Resource Estimation Using DHI MIKE - Retrieving Coastline Data
 date: "2012-02-17"
-updated: "2012-02-17"
 excerpt: Guide for retrieving coastline data for DHI MIKE21
 categories: [MIKE21, coastlines, data manipulation, research]
 ---

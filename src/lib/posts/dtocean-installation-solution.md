@@ -1,7 +1,6 @@
 ---
 title: DTOcean Installation Solution
 date: "2017-02-15"
-updated: "2017-02-15"
 coverImage: "/images/dtocean/directory-not-found.png"
 coverWidth: 335px
 coverHeight: 273px

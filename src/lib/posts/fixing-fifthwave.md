@@ -1,7 +1,6 @@
 ---
 title: Fixing Fifthwave
 date: "2011-01-21"
-updated: "2011-01-21"
 categories: [fifthwave, SuperGen, wave energy, waves, currents, CFD, Python]
 ---
 

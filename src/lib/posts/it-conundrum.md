@@ -1,7 +1,6 @@
 ---
 title: The I.T. Conundrum
 date: "2010-03-27"
-updated: "2010-03-27"
 categories: [IT, simulation, waves, currents]
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: The Dilemma of Thatcher's Children
 date: "2008-10-24"
-updated: "2008-10-24"
 categories: [politics, revolution, values, biographical]
 ---
 

@@ -49,11 +49,13 @@
       <span class="font-semibold italic">Published:</span>
       {date}
     </div>
-    <div>&ndash;</div>
-    <div>
-      <span class="font-semibold italic">Updated:</span>
-      {updated}
-    </div>
+    {#if updated}
+      <div>&ndash;</div>
+      <div>
+        <span class="font-semibold italic">Updated:</span>
+        {updated}
+      </div>
+    {/if}
   </div>
 
   {#if coverImage}

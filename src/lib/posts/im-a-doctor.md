@@ -1,7 +1,6 @@
 ---
 title: I'm a DOCTOR!
 date: "2011-03-21"
-updated: "2011-03-21"
 categories: [PhD, fifthwave, papers, EWTEC]
 ---
 

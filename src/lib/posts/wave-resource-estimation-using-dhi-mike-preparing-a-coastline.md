@@ -1,7 +1,6 @@
 ---
 title: Wave Resource Estimation Using DHI MIKE - Preparing a Coastline
 date: "2012-02-17"
-updated: "2012-02-17"
 excerpt: This is a guide to preparing coastline data for analysis using the SW module of DHI MIKE
 categories: [MIKE21, data, coastlines]
 ---

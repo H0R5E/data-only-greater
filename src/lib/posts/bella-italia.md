@@ -1,7 +1,6 @@
 ---
 title: Bella Italia, Viva INORE
 date: "2015-05-30"
-updated: "2015-05-30"
 coverImage: "/images/napoli_2015/piano.jpg"
 coverWidth: 800px
 coverHeight: 443px

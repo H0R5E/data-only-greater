@@ -1,7 +1,6 @@
 ---
 title: What a day for the news...
 date: "2008-10-02"
-updated: "2008-10-02"
 categories: [Austria, Monbiot, morality, news, Paulson, Pettifor, politics]
 ---
 

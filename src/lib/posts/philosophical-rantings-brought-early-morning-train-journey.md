@@ -1,7 +1,6 @@
 ---
 title: Philosophical rantings brought on by an early morning train journey
 date: "2009-05-20"
-updated: "2009-05-20"
 categories: [climate change, DNA, philosophy]
 ---
 

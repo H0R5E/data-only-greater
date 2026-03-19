@@ -1,7 +1,6 @@
 ---
 title: "DTOcean Development: Change Management"
 date: "2017-02-23"
-updated: "2017-02-23"
 categories: [DTOcean, open source, development, ocean energy]
 ---
 
