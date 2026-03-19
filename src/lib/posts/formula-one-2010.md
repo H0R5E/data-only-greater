@@ -1,7 +1,6 @@
 ---
 title: Formula One 2010
 date: "2010-11-14"
-updated: "2024-11-14"
 categories: [Formula One, PhD]
 ---
 

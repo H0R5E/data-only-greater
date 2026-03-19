@@ -1,7 +1,6 @@
 ---
 title: Change
 date: "2010-04-22"
-updated: "2024-04-24"
 categories: [politics]
 ---
 
