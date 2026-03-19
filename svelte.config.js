@@ -86,19 +86,17 @@ const config = {
   kit: {
     adapter: adapter({ fallback: "404.html" }),
     prerender: {
-      handleMissingId: "warn",
       entries: [
         "/api/posts.json/",
-        "/api/posts/nav/[slug]",
         "/api/posts/count/",
-        "/api/posts/page/[page]/",
         "/api/rss.xml/",
         "/blog/",
         "/blog/category/",
-        "/blog/category/[category]/page",
         "/blog/page",
         "/blog/post",
       ],
+      handleMissingId: "warn",
+      handleUnseenRoutes: "warn",
     },
   },
 };
