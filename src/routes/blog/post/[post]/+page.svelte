@@ -59,7 +59,7 @@
   </div>
 
   {#if coverImage}
-    <div class="mx-auto my-2 w-full border border-black">
+    <div class="mx-auto my-2 border border-black">
       <img class="mx-auto p-1" src={coverImage} alt="" />
     </div>
   {:else}

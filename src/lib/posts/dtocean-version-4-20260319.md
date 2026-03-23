@@ -12,6 +12,9 @@ categories:
     Docker,
     continuous delivery,
   ]
+coverImage: "/images/dtocean/dtocean_banner_20251712.png"
+coverWidth: 434px
+coverHeight: 136px
 ---
 
 ## TL;DR
