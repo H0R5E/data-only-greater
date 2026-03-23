@@ -129,7 +129,7 @@
               energy resource modelling, offshore mission planning, levelised
               cost of energy assessment, submarine cables, verification and
               validation and software needs assessment. This research has
-              resulted in over 150 citations to my published outputs.
+              resulted in over 250 citations to my published outputs.
             </p>
           {/snippet}
           {#snippet img()}
