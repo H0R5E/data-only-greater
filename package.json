@@ -45,7 +45,7 @@
     "remark-toc": "^9.0.0",
     "remark-wiki-link": "^0.0.4",
     "shiki": "^4.0.2",
-    "svelte": "^5.53.13",
+    "svelte": "^5.55.7",
     "svelte-check": "^4.4.5",
     "svelte-preprocess": "^6.0.3",
     "svelte-sitemap": "^3.0.1",
